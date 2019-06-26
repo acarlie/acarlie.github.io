@@ -1,0 +1,14 @@
+body{
+    padding: 20px;
+}
+
+h1{
+    font-size: 30px;
+    color: blue;
+    font-weight: bold;
+}
+
+p{
+    margin: 10px 0px;
+}
+
