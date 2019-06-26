@@ -16,7 +16,7 @@
     --shadow: 0px 3px 10px rgba(0,0,0,.10);
     --shadow-dk: 0px 5px 15px 0px rgba(0,0,0,.125);
 
-    --min-height: 1700px;
+    --min-height: 700px;
 
     --body-font: 'Open Sans', sans-serif;
     --headings-font: 'Saira Semi Condensed', sans-serif;
@@ -47,6 +47,10 @@ figure{
     margin: 0px;
 }
 
+footer{
+    background: none;
+}
+
 /************HTML, Body************/
 html{
     background: radial-gradient(#fff 40%, #ddd) no-repeat fixed;
@@ -56,12 +60,12 @@ html{
 body{
     background: repeating-linear-gradient(45deg, rgba(255,255,255,.05) 0px, rgba(255,255,255,.05) 2px, rgba(0,0,0,.025) 2px,  rgba(0,0,0,.025) 4px);
     background-attachment: fixed;
+    background-size: cover;
     font-family: var(--body-font);
     color: var(--color-neutral-dk);
     padding: 0px;
     margin: 0px;
-    height: 100%;
-    min-height: var(--min-height);
+    min-height: 100%;
 }
 
 #fade-wrapper{
@@ -252,7 +256,7 @@ ul.social-links li:hover a span{
     padding-top: 8em;
     width: 60%;
     /* height: 100%; */
-    min-height: var(--min-height);
+    /* min-height: var(--min-height); */
     display: flex;
     flex-direction: column;
     margin: 0 auto;
