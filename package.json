@@ -1,0 +1,23 @@
+{
+  "name": "acarlie.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test-command"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acarlie/acarlie.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/acarlie/acarlie.github.io/issues"
+  },
+  "homepage": "https://github.com/acarlie/acarlie.github.io#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0"
+  }
+}
