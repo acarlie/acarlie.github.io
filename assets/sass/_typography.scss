@@ -1,0 +1,38 @@
+/*-------------Typography-------------*/
+
+h1{
+    @include headings-bold;
+    font-size: 3em;
+}
+
+strong, label, .item-title{
+    @include headings-bold;
+    font-size: 1.075em;
+}
+
+p{
+    line-height: 1.75em;
+}
+
+/*H1 Underlines, couldn't use ::after - z-index related issues*/
+.u-container{
+display: inline-block;
+}
+
+h1.u{
+    z-index: 2;
+    position: relative;
+    line-height: 1.25em;
+    display: inline-block;
+    text-shadow: 2px 2px #ddd;
+}
+
+div.u-line{
+    position: relative;
+    bottom: 8px;
+    height: 6px;
+    width: 100%;
+    @include main-gradient;
+
+}
+

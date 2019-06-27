@@ -1,0 +1,25 @@
+
+@mixin main-gradient{
+    background: $color-primary;
+    background: -webkit-linear-gradient(45deg, $color-primary, $color-secondary);
+    background: linear-gradient(45deg, $color-primary, $color-secondary);
+}
+
+@mixin headings-bold{
+    font-family: $headings-font;
+    font-weight: bold;
+}
+
+@mixin shadow-box{
+    background-color: $color-neutral-lt;
+    box-shadow: $shadow;
+}
+
+@mixin skew{
+    transform: skew(-20deg);
+}
+
+@mixin unskew{
+    transform: skew(20deg);
+}
+

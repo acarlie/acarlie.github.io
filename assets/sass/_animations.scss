@@ -1,0 +1,30 @@
+/*-------------Animations-------------*/
+@keyframes social-hover {
+    100%{
+        @include main-gradient;
+        line-height: 2.75em;
+        height: 2.75em;
+        width: 2.75em;
+        margin: .375em;
+        color: $color-neutral-lt;
+        border-radius: 0px;
+    }
+}
+
+@keyframes logo-hover {
+    20%{
+        padding-right: 0em;
+    }
+    100%{
+        padding-right: 5em;
+    }
+
+}
+
+@keyframes button-hover {
+    100%{
+        @include main-gradient;
+        color: $color-neutral-lt;
+        border-radius: 0px;
+    }
+}

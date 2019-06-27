@@ -1,0 +1,29 @@
+/*-------------Reset-------------*/
+[class*="btn"]{
+    margin: 0px;
+}
+
+input, [class*="btn"]{
+    border:none;
+    background-image:none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+} 
+
+ul.social-links, h1{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+figure{
+    padding: 0px;
+    margin: 0px;
+}
+
+footer{
+    background: none;
+}
+

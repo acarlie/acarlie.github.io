@@ -1,0 +1,13 @@
+/*-------------Lists-------------*/
+ul.primary-list{
+    list-style: none;
+    padding-left: 0px;
+    margin-right: 0px;
+}
+
+ul.primary-list li::before{
+    content:"// ";
+    color: $color-primary;
+    font-weight: bold;
+}
+
