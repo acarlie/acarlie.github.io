@@ -353,6 +353,12 @@ ul.primary-list li::before{
     margin-top: -.25em;
 }
 
+.grid-item .icon-container span{
+    color: var(--color-neutral-med);
+    -moz-transition: color .75s;
+    transition: color .75s;
+}
+
 .grid-item:hover .icon-container span{
     color: var(--color-primary);
 
@@ -485,4 +491,8 @@ input[type=text]:focus, input[type=email]:focus, textarea:focus{
         color: var(--color-neutral-lt);
         border-radius: 0px;
     }
+}
+
+p{
+    line-height: 1.75em;
 }
