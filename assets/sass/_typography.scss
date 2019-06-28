@@ -1,11 +1,16 @@
 /*-------------Typography-------------*/
+body{
+    font-family: $body-font;
+    font-size: 16px;
+    color: $color-neutral-dk;
+}
 
 h1{
     @include headings-bold;
     font-size: 3em;
 }
 
-strong, label, .item-title{
+.heading, label, .item-title{
     @include headings-bold;
     font-size: 1.075em;
 }
@@ -14,9 +19,15 @@ p{
     line-height: 1.75em;
 }
 
-/*H1 Underlines, couldn't use ::after - z-index related issues*/
+
+.btn{
+    font-family: $headings-font;
+    font-size: 1.125em;
+}
+
+/*-------------H1 Underlines-------------*/
 .u-container{
-display: inline-block;
+    display: inline-block;
 }
 
 h1.u{

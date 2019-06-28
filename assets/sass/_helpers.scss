@@ -1,4 +1,13 @@
 /*-------------Helpers-------------*/
+
+.col-flex{
+    @include col-flex;
+}
+
+.row:first-child{
+    margin: 0 0 1em 0;
+}
+
 .row:not(:first-child){
     margin: 2em 0;
 }
@@ -9,6 +18,10 @@
 
 .text-center{
     text-align: center;
+}
+
+.text-sm{
+    font-size: .75em;
 }
 
 .skew{

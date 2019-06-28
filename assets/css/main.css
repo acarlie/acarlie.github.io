@@ -32,6 +32,15 @@ footer {
 }
 
 /*-------------Helpers-------------*/
+.col-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.row:first-child {
+  margin: 0 0 1em 0;
+}
+
 .row:not(:first-child) {
   margin: 2em 0;
 }
@@ -44,6 +53,10 @@ footer {
   text-align: center;
 }
 
+.text-sm {
+  font-size: 0.75em;
+}
+
 .skew {
   transform: skew(-20deg);
 }
@@ -53,13 +66,19 @@ footer {
 }
 
 /*-------------Typography-------------*/
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: #444;
+}
+
 h1 {
   font-family: "Saira Semi Condensed", sans-serif;
   font-weight: bold;
   font-size: 3em;
 }
 
-strong, label, .item-title {
+.heading, label, .item-title {
   font-family: "Saira Semi Condensed", sans-serif;
   font-weight: bold;
   font-size: 1.075em;
@@ -69,7 +88,12 @@ p {
   line-height: 1.75em;
 }
 
-/*H1 Underlines, couldn't use ::after - z-index related issues*/
+.btn {
+  font-family: "Saira Semi Condensed", sans-serif;
+  font-size: 1.125em;
+}
+
+/*-------------H1 Underlines-------------*/
 .u-container {
   display: inline-block;
 }
@@ -102,8 +126,6 @@ body {
   background: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.05) 0px, rgba(255, 255, 255, 0.05) 2px, rgba(0, 0, 0, 0.025) 2px, rgba(0, 0, 0, 0.025) 4px);
   background-attachment: fixed;
   background-size: cover;
-  font-family: "Open Sans", sans-serif;
-  color: #444;
   padding: 0px;
   margin: 0px;
   min-height: 100%;
@@ -119,16 +141,11 @@ section {
   width: 100%;
 }
 
-#container {
+.col-main {
   padding-top: 8em;
   width: 60%;
-  /* height: 100%; */
-  /* min-height: var(--min-height); */
-  display: flex;
-  flex-direction: column;
   margin: 0 auto;
-  /* align-items: center; */
-  /* justify-content: center; */
+  min-height: calc(100vh - 9em);
 }
 
 /*-------------Nav-------------*/
@@ -230,7 +247,7 @@ a:link.nav-link, a:visited.nav-link, a:active.nav-link {
 /*styles non .active link hovers*/
 a:hover.nav-link:not(.active) {
   color: #444;
-  background: #eee;
+  background: #ddd;
   background: linear-gradient(45deg, #fff, #ddd);
 }
 
@@ -325,7 +342,7 @@ ul.primary-list li::before {
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
   display: inline-block;
   align-self: stretch;
-  color: #eee;
+  color: #ddd;
 }
 
 /*Inputs*/
@@ -348,17 +365,12 @@ input[type=text]:focus, input[type=email]:focus, textarea:focus {
 }
 
 /*-------------Buttons-------------*/
-.btn {
-  font-family: "Saira Semi Condensed", sans-serif;
-}
-
 [class*=btn] {
   background-color: #fff;
   cursor: pointer;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
   width: 100%;
   padding: 1em;
-  font-size: 1.125em;
   border-radius: 2em;
 }
 
@@ -375,7 +387,7 @@ input[type=text]:focus, input[type=email]:focus, textarea:focus {
 }
 
 /*-------------Portfolio-------------*/
-#grid {
+.grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-column-gap: 1em;
@@ -388,7 +400,6 @@ input[type=text]:focus, input[type=email]:focus, textarea:focus {
   overflow: hidden;
   cursor: pointer;
   position: relative;
-  bottom: 10px;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -427,13 +438,30 @@ input[type=text]:focus, input[type=email]:focus, textarea:focus {
 }
 
 .grid-item .icon-container span {
-  color: #eee;
+  color: #ddd;
   -moz-transition: color 0.75s;
   transition: color 0.75s;
 }
 
 .grid-item:hover .icon-container span {
   color: #f857a8;
+}
+
+footer {
+  height: 9em;
+}
+
+.footer-top {
+  height: 6em;
+  line-height: 6em;
+}
+
+.footer-bottom {
+  background: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.05) 0px, rgba(255, 255, 255, 0.05) 2px, rgba(0, 0, 0, 0.025) 2px, rgba(0, 0, 0, 0.025) 4px), #444;
+  color: #ddd;
+  height: 4em;
+  line-height: 4em;
+  margin: 0;
 }
 
 /*-------------Animations-------------*/

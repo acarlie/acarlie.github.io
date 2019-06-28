@@ -1,0 +1,17 @@
+
+footer{
+    height: 9em;
+}
+
+.footer-top{
+    height: 6em;
+    line-height: 6em;
+}
+
+.footer-bottom{
+    background: repeating-linear-gradient(45deg, rgba(255,255,255,.05) 0px, rgba(255,255,255,.05) 2px, rgba(0,0,0,.025) 2px,  rgba(0,0,0,.025) 4px), $color-neutral-dk;
+    color: $color-neutral-med;
+    height: 4em;
+    line-height: 4em;
+    margin: 0;
+}

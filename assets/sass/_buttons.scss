@@ -1,15 +1,10 @@
 /*-------------Buttons-------------*/
-.btn{
-    font-family: $headings-font;
-}
-
 [class*="btn"]{
     background-color: #fff;
     cursor: pointer;
     box-shadow: $shadow;
     width: 100%;
     padding: 1em;
-    font-size: 1.125em;
     border-radius: 2em;
 }
 
