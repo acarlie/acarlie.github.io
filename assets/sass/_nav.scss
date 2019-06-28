@@ -1,5 +1,4 @@
 /*-------------Nav-------------*/
-/*Allows Flexbox to be fixed*/
 #nav-wrapper{
     width: 100%;
     margin: 0 auto;
@@ -9,14 +8,12 @@
     z-index: 100;
 }
 
-/*Flexbox*/
 #nav{
-    display: flex;
     @include shadow-box;
+    display: flex;
     font-family: $headings-font;
 }
 
-/*Flexbox - line height vertically centers text*/
 .nav{
     display: flex;
     height: 4em;
@@ -24,24 +21,10 @@
     flex-grow: 1;
 }
 
-/*Left & Right Padding*/
 .nav-link, .logo{
     padding: 0 1em;
 }
 
-/*Logo*/
-h1.logo{
-    font-weight: 300;
-    font-size: 1.75em;
-    color: $color-neutral-lt;
-}
-
-h1.logo a:link, h1.logo a:visited, h1.logo a:active, h1.logo a:hover{
-    text-decoration: none;
-    color: $color-neutral-lt;
-}
-
-/*Logo Gradient*/
 span.gradient{
     @include main-gradient;
     padding: 0 1em;
@@ -56,24 +39,31 @@ span.gradient:hover{
     animation-timing-function: cubic-bezier(.17,.57,.31,.85);
 }
 
-/*Active link has gradient background*/
+h1.logo{
+    font-weight: 300;
+    font-size: 1.75em;
+    color: $color-neutral-lt;
+}
+
+h1.logo a:link, h1.logo a:visited, h1.logo a:active, h1.logo a:hover{
+    text-decoration: none;
+    color: $color-neutral-lt;
+}
+
 .nav a:link.active, .nav a:visited.active, .nav a:active.active{
     @include main-gradient;
     color: #fff;
 }
 
-/*Links are pre-skewed, so that the hover doesn't affect the spacing just the bg*/
 .nav a:link span.nav-link-span, .nav a:visited span.nav-link-span, .nav a:active span.nav-link-span{
     @include unskew;
     display: inline-block;
 }
 
-/*last nav link edge has extra padding*/
 .nav a:link.nav-link:last-child, .nav a:visited.nav-link:last-child, .nav a:active.nav-link:last-child{
     padding-right: 3em;
 }
 
-/*right align nav-links, hides last nav link edge*/
 .right{
     justify-content: flex-end;
     padding-right: 1em;
@@ -81,7 +71,6 @@ span.gradient:hover{
     left: 2.5em;
 }
 
-/*basic nav styling, and un-skewing of text*/
 a:link.nav-link, a:visited.nav-link, a:active.nav-link{
     @include skew;
     text-transform: uppercase;
@@ -89,25 +78,15 @@ a:link.nav-link, a:visited.nav-link, a:active.nav-link{
     text-decoration: none;
 }
 
-/*styles non .active link hovers*/
 a:hover.nav-link:not(.active){
     color: $color-neutral-dk;
     background: $color-neutral-med;
     background: linear-gradient(45deg, $color-neutral-lt, #ddd);
 }
 
-
 /*-------------Social-------------*/
-
-/* #social{
-    position: fixed;
-    bottom: 1em;
-    right: 1em;
-} */
-
 ul.social-links{
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
 }

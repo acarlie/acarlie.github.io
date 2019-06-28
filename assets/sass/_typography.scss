@@ -1,4 +1,9 @@
 /*-------------Typography-------------*/
+::selection{
+    color: $color-neutral-lt;
+    background-color: $color-secondary;
+}
+
 body{
     font-family: $body-font;
     font-size: 16px;
@@ -19,7 +24,6 @@ p{
     line-height: 1.75em;
 }
 
-
 .btn{
     font-family: $headings-font;
     font-size: 1.125em;
@@ -39,11 +43,10 @@ h1.u{
 }
 
 div.u-line{
+    @include main-gradient;
     position: relative;
     bottom: 8px;
     height: 6px;
     width: 100%;
-    @include main-gradient;
-
 }
 

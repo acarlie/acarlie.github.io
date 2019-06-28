@@ -1,11 +1,6 @@
 /*-------------Forms-------------*/
 /*Required*/
-.required::before{
-    content: "*";
-    color: $color-danger;
-}
 
-/*Labels Left, Inputs Right*/
 .row-flex{
     display: flex;
     flex-wrap: wrap;
@@ -21,44 +16,8 @@
     flex-basis: 200px; 
 }
 
-.icon-container input, .icon-container span, [class*="btn"],  .icon-container .icon-text{
-    padding: .8em;
-}
-
-/*Accounts for larger label font*/
 .row .left{
     padding: .6em;
 }
 
-/*Inputs with Icons Wrapper*/
-.icon-container{
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
-}
 
-/*Icons*/
-.icon-container span{
-    @include shadow-box;
-    display: inline-block;
-    align-self: stretch;
-    color: $color-neutral-med;
-}
-
-/*Inputs*/
-.icon-container input, .icon-container .icon-text{
-    @include shadow-box;
-    width: 100%;
-}
-
-/*Textareas*/
-textarea{
-    width: 100%;
-    border: none;
-    box-shadow: $shadow;
-}
-
-/*Active Inputs - Focus*/
-input[type=text]:focus, input[type=email]:focus, textarea:focus{
-    outline: 2px solid $color-primary;
-}

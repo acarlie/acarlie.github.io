@@ -1,14 +1,14 @@
 /*-------------Buttons-------------*/
-[class*="btn"]{
+.btn{
     background-color: #fff;
     cursor: pointer;
     box-shadow: $shadow;
     width: 100%;
-    padding: 1em;
+    padding: $box-padding;
     border-radius: 2em;
 }
 
-[class*="btn"]:hover{
+.btn:hover{
     @include main-gradient;
     color:  #fff;
     box-shadow: 0px 5px 5px rgba(0,0,0,.125);

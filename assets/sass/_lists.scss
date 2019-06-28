@@ -1,8 +1,7 @@
 /*-------------Lists-------------*/
 ul.primary-list{
     list-style: none;
-    padding-left: 0px;
-    margin-right: 0px;
+    @include no-space;
 }
 
 ul.primary-list li::before{

@@ -31,6 +31,10 @@ footer {
   background: none;
 }
 
+textarea {
+  border: none;
+}
+
 /*-------------Helpers-------------*/
 .col-flex {
   display: flex;
@@ -65,7 +69,44 @@ footer {
   transform: skew(20deg);
 }
 
+.required::before {
+  content: "*";
+  color: #ff5858;
+}
+
+/*-------------Icon Containers-------------*/
+.icon-container {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.icon {
+  background-color: #fff;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 0.8em;
+  display: inline-block;
+  align-self: stretch;
+  color: #ddd;
+}
+
+.icon-content {
+  background-color: #fff;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 0.8em;
+  width: 100%;
+}
+
+.icon-content:focus {
+  outline: 2px solid #f857a8;
+}
+
 /*-------------Typography-------------*/
+::selection {
+  color: #fff;
+  background-color: #ff5858;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
@@ -107,34 +148,32 @@ h1.u {
 }
 
 div.u-line {
+  background: #f857a8;
+  background: -webkit-linear-gradient(45deg, #f857a8, #ff5858);
+  background: linear-gradient(45deg, #f857a8, #ff5858);
   position: relative;
   bottom: 8px;
   height: 6px;
   width: 100%;
-  background: #f857a8;
-  background: -webkit-linear-gradient(45deg, #f857a8, #ff5858);
-  background: linear-gradient(45deg, #f857a8, #ff5858);
 }
 
 /*-------------Layout-------------*/
 html {
   background: radial-gradient(#fff 40%, #ddd) no-repeat fixed;
-  height: 100%;
+  min-height: 100%;
 }
 
 body {
   background: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.05) 0px, rgba(255, 255, 255, 0.05) 2px, rgba(0, 0, 0, 0.025) 2px, rgba(0, 0, 0, 0.025) 4px);
   background-attachment: fixed;
   background-size: cover;
+  min-height: 100%;
   padding: 0px;
   margin: 0px;
-  min-height: 100%;
 }
 
 #fade-wrapper {
   display: none;
-  height: 100%;
-  width: 100%;
 }
 
 section {
@@ -142,14 +181,13 @@ section {
 }
 
 .col-main {
+  min-height: calc(100vh - 9em);
   padding-top: 8em;
   width: 60%;
   margin: 0 auto;
-  min-height: calc(100vh - 9em);
 }
 
 /*-------------Nav-------------*/
-/*Allows Flexbox to be fixed*/
 #nav-wrapper {
   width: 100%;
   margin: 0 auto;
@@ -159,15 +197,13 @@ section {
   z-index: 100;
 }
 
-/*Flexbox*/
 #nav {
-  display: flex;
   background-color: #fff;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
   font-family: "Saira Semi Condensed", sans-serif;
 }
 
-/*Flexbox - line height vertically centers text*/
 .nav {
   display: flex;
   height: 4em;
@@ -175,24 +211,10 @@ section {
   flex-grow: 1;
 }
 
-/*Left & Right Padding*/
 .nav-link, .logo {
   padding: 0 1em;
 }
 
-/*Logo*/
-h1.logo {
-  font-weight: 300;
-  font-size: 1.75em;
-  color: #fff;
-}
-
-h1.logo a:link, h1.logo a:visited, h1.logo a:active, h1.logo a:hover {
-  text-decoration: none;
-  color: #fff;
-}
-
-/*Logo Gradient*/
 span.gradient {
   background: #f857a8;
   background: -webkit-linear-gradient(45deg, #f857a8, #ff5858);
@@ -209,7 +231,17 @@ span.gradient:hover {
   animation-timing-function: cubic-bezier(0.17, 0.57, 0.31, 0.85);
 }
 
-/*Active link has gradient background*/
+h1.logo {
+  font-weight: 300;
+  font-size: 1.75em;
+  color: #fff;
+}
+
+h1.logo a:link, h1.logo a:visited, h1.logo a:active, h1.logo a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
 .nav a:link.active, .nav a:visited.active, .nav a:active.active {
   background: #f857a8;
   background: -webkit-linear-gradient(45deg, #f857a8, #ff5858);
@@ -217,18 +249,15 @@ span.gradient:hover {
   color: #fff;
 }
 
-/*Links are pre-skewed, so that the hover doesn't affect the spacing just the bg*/
 .nav a:link span.nav-link-span, .nav a:visited span.nav-link-span, .nav a:active span.nav-link-span {
   transform: skew(20deg);
   display: inline-block;
 }
 
-/*last nav link edge has extra padding*/
 .nav a:link.nav-link:last-child, .nav a:visited.nav-link:last-child, .nav a:active.nav-link:last-child {
   padding-right: 3em;
 }
 
-/*right align nav-links, hides last nav link edge*/
 .right {
   justify-content: flex-end;
   padding-right: 1em;
@@ -236,7 +265,6 @@ span.gradient:hover {
   left: 2.5em;
 }
 
-/*basic nav styling, and un-skewing of text*/
 a:link.nav-link, a:visited.nav-link, a:active.nav-link {
   transform: skew(-20deg);
   text-transform: uppercase;
@@ -244,7 +272,6 @@ a:link.nav-link, a:visited.nav-link, a:active.nav-link {
   text-decoration: none;
 }
 
-/*styles non .active link hovers*/
 a:hover.nav-link:not(.active) {
   color: #444;
   background: #ddd;
@@ -252,14 +279,8 @@ a:hover.nav-link:not(.active) {
 }
 
 /*-------------Social-------------*/
-/* #social{
-    position: fixed;
-    bottom: 1em;
-    right: 1em;
-} */
 ul.social-links {
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
 }
@@ -287,8 +308,8 @@ ul.social-links li:hover a span {
 /*-------------Lists-------------*/
 ul.primary-list {
   list-style: none;
-  padding-left: 0px;
-  margin-right: 0px;
+  padding: 0px;
+  margin: 0px;
 }
 
 ul.primary-list li::before {
@@ -299,12 +320,6 @@ ul.primary-list li::before {
 
 /*-------------Forms-------------*/
 /*Required*/
-.required::before {
-  content: "*";
-  color: #ff5858;
-}
-
-/*Labels Left, Inputs Right*/
 .row-flex {
   display: flex;
   flex-wrap: wrap;
@@ -320,61 +335,21 @@ ul.primary-list li::before {
   flex-basis: 200px;
 }
 
-.icon-container input, .icon-container span, [class*=btn], .icon-container .icon-text {
-  padding: 0.8em;
-}
-
-/*Accounts for larger label font*/
 .row .left {
   padding: 0.6em;
 }
 
-/*Inputs with Icons Wrapper*/
-.icon-container {
-  display: flex;
-  flex-wrap: nowrap;
-  width: 100%;
-}
-
-/*Icons*/
-.icon-container span {
-  background-color: #fff;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
-  display: inline-block;
-  align-self: stretch;
-  color: #ddd;
-}
-
-/*Inputs*/
-.icon-container input, .icon-container .icon-text {
-  background-color: #fff;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
-  width: 100%;
-}
-
-/*Textareas*/
-textarea {
-  width: 100%;
-  border: none;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
-}
-
-/*Active Inputs - Focus*/
-input[type=text]:focus, input[type=email]:focus, textarea:focus {
-  outline: 2px solid #f857a8;
-}
-
 /*-------------Buttons-------------*/
-[class*=btn] {
+.btn {
   background-color: #fff;
   cursor: pointer;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
   width: 100%;
-  padding: 1em;
+  padding: 0.8em;
   border-radius: 2em;
 }
 
-[class*=btn]:hover {
+.btn:hover {
   background: #f857a8;
   background: -webkit-linear-gradient(45deg, #f857a8, #ff5858);
   background: linear-gradient(45deg, #f857a8, #ff5858);
@@ -397,9 +372,9 @@ input[type=text]:focus, input[type=email]:focus, textarea:focus {
 .grid-item {
   display: flex;
   flex-direction: column;
+  position: relative;
   overflow: hidden;
   cursor: pointer;
-  position: relative;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -427,10 +402,10 @@ input[type=text]:focus, input[type=email]:focus, textarea:focus {
   position: absolute;
   padding: 0.5em 1em;
   text-align: right;
-  background: linear-gradient(-135deg, rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
   color: #444;
   width: 100%;
   height: 100%;
+  background: linear-gradient(-135deg, rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
 }
 
 .grid-item .icon-container {
@@ -439,7 +414,6 @@ input[type=text]:focus, input[type=email]:focus, textarea:focus {
 
 .grid-item .icon-container span {
   color: #ddd;
-  -moz-transition: color 0.75s;
   transition: color 0.75s;
 }
 
@@ -457,6 +431,7 @@ footer {
 }
 
 .footer-bottom {
+  box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.3) inset;
   background: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.05) 0px, rgba(255, 255, 255, 0.05) 2px, rgba(0, 0, 0, 0.025) 2px, rgba(0, 0, 0, 0.025) 4px), #444;
   color: #ddd;
   height: 4em;

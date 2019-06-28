@@ -14,16 +14,18 @@ input, [class*="btn"]{
 
 ul.social-links, h1{
     list-style: none;
-    padding: 0px;
-    margin: 0px;
+    @include no-space;
 }
 
 figure{
-    padding: 0px;
-    margin: 0px;
+    @include no-space;
 }
 
 footer{
     background: none;
+}
+
+textarea{
+    border: none;
 }
 

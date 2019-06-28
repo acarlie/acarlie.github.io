@@ -8,10 +8,9 @@
 
 .grid-item{
     @include col-flex;
+    position: relative;
     overflow: hidden;
     cursor: pointer;
-    position: relative;
-    // bottom: 10px;
     box-shadow: $shadow;
 }
 
@@ -39,10 +38,10 @@
     position: absolute;
     padding: .5em 1em;
     text-align: right;
-    background: linear-gradient(-135deg, rgba(255,255,255,.6), rgba(0,0,0,0), rgba(0,0,0,0));
     color: $color-neutral-dk;
     width: 100%;
     height: 100%;
+    background: linear-gradient(-135deg, rgba(255,255,255,.6), rgba(0,0,0,0), rgba(0,0,0,0));
 }
 
 .grid-item .icon-container{
@@ -51,7 +50,6 @@
 
 .grid-item .icon-container span{
     color: $color-neutral-med;
-    -moz-transition: color .75s;
     transition: color .75s;
 }
 
