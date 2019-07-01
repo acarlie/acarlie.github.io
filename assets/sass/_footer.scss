@@ -1,6 +1,8 @@
 
 footer{
     height: 9em;
+    box-shadow: 0px 6px 25px rgba(0,0,0,.30) inset;
+    background: repeating-linear-gradient(45deg, rgba(255,255,255,.05) 0px, rgba(255,255,255,.05) 2px, rgba(0,0,0,.025) 2px,  rgba(0,0,0,.025) 4px), $color-neutral-dk;
 }
 
 .footer-top{
@@ -9,8 +11,6 @@ footer{
 }
 
 .footer-bottom{
-    box-shadow: 0px 6px 25px rgba(0,0,0,.30) inset;
-    background: repeating-linear-gradient(45deg, rgba(255,255,255,.05) 0px, rgba(255,255,255,.05) 2px, rgba(0,0,0,.025) 2px,  rgba(0,0,0,.025) 4px), $color-neutral-dk;
     color: $color-neutral-med;
     height: 4em;
     line-height: 4em;

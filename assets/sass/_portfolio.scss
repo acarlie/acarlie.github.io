@@ -12,6 +12,7 @@
     overflow: hidden;
     cursor: pointer;
     box-shadow: $shadow;
+    background-color: $color-neutral-lt;
 }
 
 .grid-item:hover{
@@ -55,6 +56,5 @@
 
 .grid-item:hover .icon-container span{
     color: $color-primary;
-
 }
 

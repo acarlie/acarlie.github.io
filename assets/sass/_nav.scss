@@ -60,10 +60,6 @@ h1.logo a:link, h1.logo a:visited, h1.logo a:active, h1.logo a:hover{
     display: inline-block;
 }
 
-.nav-link:last-child{
-    padding-right: 3em;
-}
-
 .right{
     justify-content: flex-end;
     position: relative;
@@ -75,6 +71,10 @@ h1.logo a:link, h1.logo a:visited, h1.logo a:active, h1.logo a:hover{
     text-transform: uppercase;
     color: #777;
     text-decoration: none;
+}
+
+.nav-link:last-child{
+    padding-right: 3em;
 }
 
 a:hover.nav-link:not(.active){
@@ -109,3 +109,37 @@ ul.social-links li:hover a span{
     transition-timing-function: cubic-bezier(.38,.38,.12,.96);
 }
 
+/*--------------Mobile Menu--------------*/
+
+// .nav-menu{
+//     display: block;
+//     position: relative;
+//     cursor: pointer;
+//     margin: 0px;
+//     padding-left: 0px;
+//     -webkit-user-select: none;
+//     -moz-user-select: none;
+//     -ms-user-select: none;
+//     user-select: none;
+// }
+
+// /*Gets rid of default checkbox*/
+// .nav-menu input{
+//     position: absolute;
+//     opacity: 0;
+//     cursor: pointer;
+//     height: 0; 
+//     width: 0;
+// }
+
+// /*Creates new checkbox*/
+// .nav-button{
+//     position: absolute;
+//     top: .5em;
+//     right: .5em;
+//     height: 2em;
+//     width: 2em;
+//     z-index: 101;
+//     background-color: blue;
+//     // @include main-gradient;
+// }

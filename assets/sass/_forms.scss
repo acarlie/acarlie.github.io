@@ -1,23 +1,28 @@
 /*-------------Forms-------------*/
-/*Required*/
 
-.row-flex{
+.input{
+    width: 100%;
+}
+
+/*-------------Icon Containers-------------*/
+.icon-container{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    width: 100%;
 }
 
-.row-flex .left{
-    flex-grow: 1; 
-    flex-basis: 100px;
+.icon{
+    @include icon-box;
+    display: inline-block;
+    align-self: stretch;
+    color: $color-neutral-med;
 }
 
-.row-flex .right{
-    flex-grow: 9;
-    flex-basis: 200px; 
+.icon-content{
+    @include icon-box;
+    width: 100%;
 }
 
-.row .left{
-    padding: .6em;
+.icon-content:focus{
+    outline: 2px solid $color-primary;
 }
-
-
