@@ -410,33 +410,6 @@ textarea {
   width: 100%;
 }
 
-/*-------------Icon Containers-------------*/
-.icon-container {
-  display: flex;
-  flex-wrap: nowrap;
-  width: 100%;
-}
-
-.icon {
-  background-color: #fff;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
-  padding: 0.8em;
-  display: inline-block;
-  align-self: stretch;
-  color: #ddd;
-}
-
-.icon-content {
-  background-color: #fff;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
-  padding: 0.8em;
-  width: 100%;
-}
-
-.icon-content:focus {
-  outline: 2px solid #f857a8;
-}
-
 /*-------------Typography-------------*/
 ::selection {
   color: #fff;
@@ -751,6 +724,7 @@ ul.primary-list li::before {
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
   padding: 0.8em;
   width: 100%;
+  z-index: 2;
 }
 
 .icon-content:focus {

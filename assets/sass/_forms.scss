@@ -23,6 +23,7 @@
 .icon-content{
     @include icon-box;
     width: 100%;
+    z-index: 2;
 }
 
 .icon-content:focus{
