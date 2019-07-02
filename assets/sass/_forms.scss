@@ -7,6 +7,7 @@
 /*-------------Icon Containers-------------*/
 .icon-container{
     display: flex;
+    flex-direction: row-reverse;
     flex-wrap: nowrap;
     width: 100%;
 }
@@ -16,6 +17,7 @@
     display: inline-block;
     align-self: stretch;
     color: $color-neutral-med;
+    transition: color .75s;
 }
 
 .icon-content{
@@ -25,4 +27,8 @@
 
 .icon-content:focus{
     outline: 2px solid $color-primary;
+}
+
+.icon-content:focus ~ .icon{
+    color: $color-primary;
 }

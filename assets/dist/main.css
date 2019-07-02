@@ -786,6 +786,10 @@ ul.primary-list li::before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 100%;
@@ -800,6 +804,8 @@ ul.primary-list li::before {
   -ms-flex-item-align: stretch;
   align-self: stretch;
   color: #ddd;
+  -webkit-transition: color 0.75s;
+  transition: color 0.75s;
 }
 
 .icon-content {
@@ -812,6 +818,10 @@ ul.primary-list li::before {
 
 .icon-content:focus {
   outline: 2px solid #f857a8;
+}
+
+.icon-content:focus ~ .icon {
+  color: #f857a8;
 }
 
 /*-------------Buttons-------------*/
@@ -898,6 +908,10 @@ ul.primary-list li::before {
 
 .grid-item .icon-container {
   margin-top: -0.25em;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .grid-item .icon-container span {
