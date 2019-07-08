@@ -16,9 +16,28 @@ h1{
     font-size: 3em;
 }
 
-.heading, label, .item-title{
+h2,h3,h4,h5,h6{
+    @include headings-bold;
+}
+
+.section-heading{
+    margin:0;
+    margin-bottom: .5em;
+    border-bottom: 1.5px solid $color-primary;
+}
+
+.section-heading:not(:first-child){
+    margin-top: 2em;
+}
+
+
+label, .item-title{
     @include headings-bold;
     font-size: 1.075em;
+}
+
+.heading{
+    color: $color-primary;
 }
 
 .btn{

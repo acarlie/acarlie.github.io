@@ -429,10 +429,29 @@ h1 {
   font-size: 3em;
 }
 
-.heading, label, .item-title {
+h2, h3, h4, h5, h6 {
+  font-family: "Saira Semi Condensed", sans-serif;
+  font-weight: bold;
+}
+
+.section-heading {
+  margin: 0;
+  margin-bottom: 0.5em;
+  border-bottom: 1.5px solid #f857a8;
+}
+
+.section-heading:not(:first-child) {
+  margin-top: 2em;
+}
+
+label, .item-title {
   font-family: "Saira Semi Condensed", sans-serif;
   font-weight: bold;
   font-size: 1.075em;
+}
+
+.heading {
+  color: #f857a8;
 }
 
 .btn {
