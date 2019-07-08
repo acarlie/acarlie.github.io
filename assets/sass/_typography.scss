@@ -23,11 +23,9 @@ h2,h3,h4,h5,h6{
 .section-heading{
     margin:0;
     margin-bottom: .5em;
-    border-bottom: 1.5px solid $color-primary;
-}
-
-.section-heading:not(:first-child){
     margin-top: 2em;
+    border-bottom: 1.5px solid $color-primary;
+
 }
 
 
@@ -53,6 +51,17 @@ a:link, a:visited, a:active{
 a:hover{
     text-decoration: underline;
 }
+
+
+@media only screen and (min-width:800px){
+
+    .section-heading:first-child{
+        margin-top: 0;
+    }
+    
+
+}
+
 
 /*-------------H1 Underlines-------------*/
 .u-container{

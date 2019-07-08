@@ -437,8 +437,11 @@ h2, h3, h4, h5, h6 {
 .section-heading {
   margin: 0;
   margin-bottom: 0.5em;
-  margin-top: 2em;
   border-bottom: 1.5px solid #f857a8;
+}
+
+.section-heading:not(:first-child) {
+  margin-top: 2em;
 }
 
 label, .item-title {
@@ -465,11 +468,6 @@ a:hover {
   text-decoration: underline;
 }
 
-@media only screen and (min-width: 800px) {
-  .section-heading:first-child {
-    margin-top: 0;
-  }
-}
 /*-------------H1 Underlines-------------*/
 .u-container {
   display: inline-block;
@@ -563,6 +561,7 @@ section {
   display: flex;
   flex-direction: column;
   padding: 0px 0.5em;
+  margin-top: 2em;
 }
 
 [class*=" col-"] {
@@ -570,6 +569,10 @@ section {
 }
 
 @media only screen and (min-width: 800px) {
+  .col {
+    margin-top: 0;
+  }
+
   .wrapper {
     width: 65%;
     margin: 0 auto;

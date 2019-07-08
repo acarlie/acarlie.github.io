@@ -66,6 +66,7 @@ section{
     display: flex;
     flex-direction: column;
     padding: 0px .5em;
+
 }
 
 [class*=" col-"]{
@@ -74,6 +75,8 @@ section{
 
 
 @media only screen and (min-width: 800px){
+
+
     .wrapper{
         width: 65%;
         margin: 0 auto;
