@@ -53,6 +53,7 @@ section{
 
 .row{
     display: flex;
+    flex-direction: column;
 }
 
 .wrapper .row:not(:last-child){
@@ -65,26 +66,37 @@ section{
     padding: 0px .5em;
 }
 
-.col-1{
-    width: $col-basis;
-}
-
-.col-2{
-    width: calc( #{$col-basis} * 2);
-}
-
-.col-3{
-    width: 50%;
-}
-
-.col-4{
-    width: calc(#{$col-basis} * 4);
-}
-
-.col-5{
-    width: calc(#{$col-basis} * 5);
-}
-
-.col-6{
+[class*=" col-"]{
     width: 100%;
+}
+
+@media only screen and (min-width:768px){
+    .row{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .col-1{
+        width: $col-basis;
+    }
+    
+    .col-2{
+        width: calc( #{$col-basis} * 2);
+    }
+    
+    .col-3{
+        width: 50%;
+    }
+    
+    .col-4{
+        width: calc(#{$col-basis} * 4);
+    }
+    
+    .col-5{
+        width: calc(#{$col-basis} * 5);
+    }
+    
+    .col-6{
+        width: 100%;
+    }
 }

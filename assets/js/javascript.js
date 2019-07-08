@@ -1,7 +1,13 @@
 $(document).ready(function(){
-    $('#fade-wrapper').fadeIn(1000);
+
 
     var scrollMenuIds = $('a.nav-link[href]');
+
+    $("#menu").click(function() {
+        $('#nav').toggleClass('nav-visible');
+    });
+
+    $('#fade-wrapper').fadeIn(1000);
 
     $(document).scroll(function(){
         scrollMenuIds.each(function(){

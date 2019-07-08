@@ -11,7 +11,15 @@
 #nav{
     @include shadow-box;
     display: flex;
+    flex-direction: column;
     font-family: $headings-font;
+    height: 4em;
+    overflow: hidden;
+}
+
+#nav.nav-visible{
+    height: 100%;
+    overflow: auto;
 }
 
 .nav{
@@ -30,6 +38,7 @@ span.gradient{
     padding: 0 1em;
     position: relative;
     right: 1em;
+    margin-right: auto;
 }
 
 span.gradient:hover{
@@ -50,37 +59,69 @@ h1.logo a:link, h1.logo a:visited, h1.logo a:active, h1.logo a:hover{
     color: $color-neutral-lt;
 }
 
-.nav a:link.active, .nav a:visited.active, .nav a:active.active{
-    @include main-gradient;
-    color: #fff;
+.nav-link{
+    text-transform: uppercase;
+    text-align: center;
 }
 
-.nav-link-span{
-    @include unskew;
-    display: inline-block;
+
+.nav-link{
+    border-top: .5px solid $color-neutral-med;
 }
 
 .right{
-    justify-content: flex-end;
-    position: relative;
-    left: 1.5em;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
-.nav-link{
-    @include skew;
-    text-transform: uppercase;
-    color: #777;
-    text-decoration: none;
-}
 
-.nav-link:last-child{
-    padding-right: 3em;
-}
+@media only screen and (min-width:768px){
+    #nav{
+        flex-direction: row;
+    }
 
-a:hover.nav-link:not(.active){
-    color: $color-neutral-dk;
-    background: $color-neutral-med;
-    background: linear-gradient(45deg, $color-neutral-lt, #ddd);
+    .nav-link{
+        border-top: none;
+    }
+
+    .right{
+        flex-direction: row;
+        justify-content: flex-end;
+        position: relative;
+        left: 1.5em;
+        height: auto;
+    }
+
+    .btn-nav{
+        display: none;
+    }
+
+    .nav a:link.active, .nav a:visited.active, .nav a:active.active{
+        @include main-gradient;
+        color: #fff;
+    }
+    
+    .nav-link-span{
+        @include unskew;
+        display: inline-block;
+    }
+    
+    .nav-link{
+        @include skew;
+        color: #777;
+        text-decoration: none;
+    }
+
+    .nav-link:last-child{
+        padding-right: 3em;
+    }
+
+    a:hover.nav-link:not(.active){
+        color: $color-neutral-dk;
+        background: $color-neutral-med;
+        background: linear-gradient(45deg, $color-neutral-lt, #ddd);
+    }
 }
 
 /*-------------Social-------------*/
@@ -109,37 +150,3 @@ ul.social-links li:hover a span{
     transition-timing-function: cubic-bezier(.38,.38,.12,.96);
 }
 
-/*--------------Mobile Menu--------------*/
-
-// .nav-menu{
-//     display: block;
-//     position: relative;
-//     cursor: pointer;
-//     margin: 0px;
-//     padding-left: 0px;
-//     -webkit-user-select: none;
-//     -moz-user-select: none;
-//     -ms-user-select: none;
-//     user-select: none;
-// }
-
-// /*Gets rid of default checkbox*/
-// .nav-menu input{
-//     position: absolute;
-//     opacity: 0;
-//     cursor: pointer;
-//     height: 0; 
-//     width: 0;
-// }
-
-// /*Creates new checkbox*/
-// .nav-button{
-//     position: absolute;
-//     top: .5em;
-//     right: .5em;
-//     height: 2em;
-//     width: 2em;
-//     z-index: 101;
-//     background-color: blue;
-//     // @include main-gradient;
-// }

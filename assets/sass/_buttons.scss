@@ -1,7 +1,10 @@
 /*-------------Buttons-------------*/
+[class^="btn"]{
+    cursor: pointer;
+}
+
 .btn{
     background-color: #fff;
-    cursor: pointer;
     box-shadow: $shadow;
     width: 100%;
     padding: $box-padding;
@@ -16,4 +19,10 @@
     animation-duration: 1s;
     animation-fill-mode: forwards;
     animation-timing-function: cubic-bezier(.38,.38,.12,.96);
+}
+
+.btn-nav{
+    color: $color-primary;
+    padding-left: 2em;
+    padding-right: 2em;
 }
