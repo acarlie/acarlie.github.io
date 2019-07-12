@@ -2,8 +2,8 @@ var website = {
     portfolio: document.getElementById('portfolio'),
     portfolioItems:[
         // {title: "title", img: "http://", desc: "", tags: "", url: ""},
-        {title: "Color Me ____.", img: "assets/images/portfolio/color-me.jpg", desc: "Word game using Vanilla JS", tags: ["Vanilla JS", "UI/UX"], url: "https://acarlie.github.io/Word_Guess_Game/"},
-        {title: "Wikipedia Search", img: "assets/images/portfolio/wikipedia-viewer.jpg", desc: "Wikipedia search using Vanilla JS and Wikipedia's API", tags: ["Vanilla JS", "Rest APIs", "UI/UX", "SCSS", "Bootstrap"], url: "https://codepen.io/acarlie/full/mERLej"},
+        {title: "Color Me ____.", img: "assets/images/portfolio/color-me.JPG", desc: "Word game using Vanilla JS", tags: ["Vanilla JS", "UI/UX"], url: "https://acarlie.github.io/Word_Guess_Game/"},
+        {title: "Wikipedia Search", img: "assets/images/portfolio/wikipedia-viewer.JPG", desc: "Wikipedia search using Vanilla JS and Wikipedia's API", tags: ["Vanilla JS", "Rest APIs", "UI/UX", "SCSS", "Bootstrap"], url: "https://codepen.io/acarlie/full/mERLej"},
     ]
 }
 
