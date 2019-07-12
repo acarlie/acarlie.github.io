@@ -410,6 +410,19 @@ textarea {
   width: 100%;
 }
 
+.img-profile {
+  border-radius: 100%;
+  width: 50%;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 800px) {
+  .img-profile {
+    border-radius: 0;
+    width: 100%;
+    height: auto;
+  }
+}
 /*-------------Typography-------------*/
 ::selection {
   color: #fff;
@@ -427,6 +440,12 @@ h1 {
   font-family: "Saira Semi Condensed", sans-serif;
   font-weight: bold;
   font-size: 3em;
+}
+
+h3 {
+  font-size: 1.125em;
+  padding: 0;
+  margin: 0;
 }
 
 h2, h3, h4, h5, h6 {
@@ -524,8 +543,8 @@ section {
 }
 
 .container-dark {
-  box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.3) inset;
-  background: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.05) 0px, rgba(255, 255, 255, 0.05) 2px, rgba(0, 0, 0, 0.025) 2px, rgba(0, 0, 0, 0.025) 4px), #444;
+  box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.5) inset;
+  background: radial-gradient(circle, #464646 0%, #131313 100%);
 }
 
 .container-light {
@@ -850,9 +869,19 @@ ul.primary-list li::before {
 /*-------------Portfolio-------------*/
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-column-gap: 1em;
-  grid-row-gap: 2em;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-column-gap: 0.5em;
+  grid-row-gap: 0.5em;
+}
+
+.port-link:link, .port-link:visited, .port-link:active {
+  color: #444;
+  transition: color 0.75s;
+}
+
+.port-link:hover {
+  color: #f857a8;
+  text-decoration: none;
 }
 
 .grid-item {
@@ -861,7 +890,7 @@ ul.primary-list li::before {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.125);
   background-color: #fff;
 }
 
@@ -869,9 +898,8 @@ ul.primary-list li::before {
   box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.125);
 }
 
-.grid-hover-wrapper:hover {
-  position: relative;
-  bottom: 10px;
+.grid-item:hover .img-wrapper .item-img {
+  opacity: 1;
 }
 
 .img-wrapper {
@@ -882,7 +910,10 @@ ul.primary-list li::before {
 
 .item-img {
   width: 100%;
-  height: auto;
+  opacity: 0.9;
+  min-height: 300px;
+  object-fit: cover;
+  transition: opacity 0.75s;
 }
 
 .item-title {
@@ -892,7 +923,6 @@ ul.primary-list li::before {
   color: #444;
   width: 100%;
   height: 100%;
-  background: linear-gradient(-135deg, rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
 }
 
 .grid-item .icon-container {

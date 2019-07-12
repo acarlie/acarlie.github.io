@@ -35,3 +35,17 @@
     width: 100%;
 }
 
+.img-profile{
+    border-radius: 100%;
+    width: 50%;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width:800px){
+    .img-profile{
+        border-radius: 0;
+        width: 100%;
+        height: auto;
+    }
+}
+
