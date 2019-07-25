@@ -3,25 +3,10 @@ var website = {
     portfolioItems:[
         // {title: "title", img: "http://", desc: "", tags: "", url: ""},
         {title: "Color Me ____.", img: "assets/images/portfolio/color-me.JPG", desc: "Word game using Vanilla JS", tags: ["Vanilla JS", "UI/UX"], url: "https://acarlie.github.io/Word_Guess_Game/"},
+        {title: "A Stranger Game", img: "assets/images/portfolio/a-stranger-game-2.JPG", desc: "Player vs algorithm game using jQuery and JavaScript", tags: ["jQuery"], url: "https://acarlie.github.io/Stranger_Things_Game/"},
         {title: "Wikipedia Search", img: "assets/images/portfolio/wikipedia-viewer.JPG", desc: "Wikipedia search using Vanilla JS and Wikipedia's API", tags: ["Vanilla JS", "Rest APIs", "UI/UX", "SCSS", "Bootstrap"], url: "https://codepen.io/acarlie/full/mERLej"},
     ]
 }
-
-
-
-/* <div class="grid-hover-wrapper">
-<div class="grid-item">
-    <figure class="img-wrapper">
-        <figcaption class="item-title">Lorem Ipsum</figcaption>
-        
-        <img src="https://via.placeholder.com/300/ddd" alt="" class="item-img">
-    </figure>
-    <div class="icon-container">
-        <span class="fas fa-code icon"></span>
-        <div class="icon-content">Technologies Here. BootStrap, Vanilla JS</div>
-    </div>
-</div>
-</div> */
 
 $(document).ready(function(){
 
