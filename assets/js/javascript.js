@@ -1,12 +1,26 @@
-var website = {
+var port = {
     portfolio: document.getElementById('portfolio'),
-    portfolioItems:[
+    items:[
         // {title: "title", img: "http://", desc: "", tags: "", url: ""},
         {title: "Color Me ____.", img: "assets/images/portfolio/color-me-5.JPG", desc: "Word game created with Vanilla JS", tags: ["Vanilla JS", "UI/UX"], url: "https://acarlie.github.io/Word_Guess_Game/"},
         {title: "Trivia Game", img: "assets/images/portfolio/trivia-game.JPG", desc: "Timed Trivia Game created using jQuery and JavaScript", tags: ["jQuery, JavaScript"], url: "https://acarlie.github.io/Trivia_Game/"},
         {title: "A Stranger Game", img: "assets/images/portfolio/a-stranger-game-2.JPG", desc: "Player vs algorithm game created using jQuery and JavaScript", tags: ["jQuery"], url: "https://acarlie.github.io/Stranger_Things_Game/"},
         {title: "Wikipedia Search", img: "assets/images/portfolio/wikipedia-viewer.JPG", desc: "Wikipedia search using Vanilla JS and Wikipedia's API", tags: ["Vanilla JS", "Rest APIs", "UI/UX", "SCSS", "Bootstrap"], url: "https://codepen.io/acarlie/full/mERLej"},
-    ]
+    ],
+    generate(){
+        $.each(port.items, function(i){
+            var arr = port.items;
+            var itemWrap = $('<div>').addClass('grid-hover-wrapper').appendTo(port.portfolio);
+            var link = $('<a>').addClass('port-link').attr('href', arr[i].url).attr('target', '_blank').appendTo(itemWrap);
+            var item = $('<div>').addClass('grid-item').appendTo(link);
+            var figWrap = $('<figure>').addClass('img-wrapper').appendTo(item);
+            var figCap = $('<figcaption>').addClass('item-title').appendTo(figWrap);
+            var img = $('<img>').addClass('item-img').attr('src', arr[i].img).attr('alt', arr[i].desc).appendTo(figWrap);
+            var iconCont = $('<div>').addClass('icon-container').appendTo(item);
+            var iconSpan = $('<span>').addClass('fas fa-code icon').appendTo(iconCont);
+            var tech = $('<div>').addClass('icon-content').html('<h3>' + arr[i].title + '</h3>').appendTo(iconCont);
+        }); 
+    }
 }
 
 var typewriter = {
@@ -67,56 +81,23 @@ var typewriter = {
     }
 }
 
-typewriter.type();
+var utilities = {
+    menuFadeIn(){
+
+    },
+    scrollSpy(){
+
+    }
+}
+
 
 $(document).ready(function(){
 
     $('#fade-wrapper').fadeIn(1000);
-    
-    website.portfolioItems.forEach(function(i){
-        var itemWrap = document.createElement("div");
-        itemWrap.className = "grid-hover-wrapper";
-        website.portfolio.appendChild(itemWrap);
-    
-        var link = document.createElement("a");
-        link.classList = "port-link";
-        link.setAttribute("href", i.url);
-        link.setAttribute("target", "_blank");
-        itemWrap.appendChild(link);
-    
-        var item = document.createElement("div");
-        item.className = "grid-item";
-        link.appendChild(item);
-    
-        var figWrap = document.createElement("figure");
-        figWrap.className = "img-wrapper";
-        item.appendChild(figWrap);
-    
-        var figCap = document.createElement("figcaption");
-        figCap.className = "item-title";
-        figCap.innerHTML = "";
-        figWrap.appendChild(figCap);
-    
-        var img = document.createElement("img");
-        img.setAttribute("src", i.img);
-        img.setAttribute("alt", i.desc)
-        img.className = "item-img";
-        figWrap.appendChild(img);
-    
-        var iconCont = document.createElement("div");
-        iconCont.className = "icon-container";
-        item.appendChild(iconCont);
-    
-        var iconSpan = document.createElement("span");
-        iconSpan.classList = "fas fa-code icon";
-        iconCont.appendChild(iconSpan);
-    
-        var tech = document.createElement("div");
-        tech.className = "icon-content";
-        tech.innerHTML = '<h3>'+ i.title + '</h3>';
-        iconCont.appendChild(tech);
-    });
 
+    typewriter.type();
+
+    port.generate();
 
     var scrollMenuIds = $('a.nav-link[href]');
 
@@ -125,6 +106,7 @@ $(document).ready(function(){
     });
 
     $('#nav-wrapper').hide();
+
     var secondChildPos = $('main section:nth-child(2)').offset().top * .75;
 
     $(document).scroll(function(){
@@ -136,7 +118,6 @@ $(document).ready(function(){
             $('#nav-wrapper').fadeIn(500);
 
         }
-
 
         scrollMenuIds.each(function(){
 
