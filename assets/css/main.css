@@ -416,6 +416,13 @@ textarea {
   margin: 0 auto;
 }
 
+hr.home {
+  border: none;
+  background-color: #ddd;
+  height: 1px;
+  margin: 1em 0 0 0;
+}
+
 @media only screen and (min-width: 800px) {
   .img-profile {
     border-radius: 0;
@@ -440,6 +447,21 @@ h1 {
   font-family: "Saira Semi Condensed", sans-serif;
   font-weight: bold;
   font-size: 3em;
+}
+
+h1#type, h1#blinker, h1#type-hidden {
+  line-height: 1em;
+}
+
+h1#type {
+  text-shadow: 2px 2px #ddd;
+}
+
+hr.home {
+  border: none;
+  background-color: #ddd;
+  height: 1px;
+  margin: 2em 1em;
 }
 
 h3 {
@@ -581,6 +603,22 @@ section {
   margin-bottom: 1em;
 }
 
+.box {
+  background-color: #fff;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 0.8em;
+  border-radius: 1em;
+  padding: 3em 2em;
+}
+
+#home .wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
 .col {
   display: flex;
   flex-direction: column;
@@ -591,7 +629,7 @@ section {
   width: 100%;
 }
 
-@media only screen and (min-width: 800px) {
+@media (min-width: 800px) {
   .wrapper {
     width: 65%;
     margin: 0 auto;
@@ -710,7 +748,7 @@ h1.logo a:link, h1.logo a:visited, h1.logo a:active, h1.logo a:hover {
   height: 100%;
 }
 
-@media only screen and (min-width: 800px) {
+@media (min-width: 800px) {
   #nav {
     flex-direction: row;
   }
@@ -759,6 +797,16 @@ h1.logo a:link, h1.logo a:visited, h1.logo a:active, h1.logo a:hover {
     background: linear-gradient(45deg, #fff, #ddd);
   }
 }
+/*-------------Home Nav------------*/
+.home-nav a:link, .home-nav a:visited, .home-nav a:active {
+  padding: 0 0.5em;
+  color: #999;
+}
+.home-nav a:hover {
+  color: #f857a8;
+  text-decoration: none;
+}
+
 /*-------------Social-------------*/
 ul.social-links {
   display: flex;
@@ -849,6 +897,13 @@ ul.primary-list li::before {
   width: 100%;
   padding: 0.8em;
   border-radius: 2em;
+}
+
+.btn-home {
+  font-family: "Saira Semi Condensed", sans-serif;
+  width: 100%;
+  border-radius: 2em;
+  text-transform: uppercase;
 }
 
 .btn:hover {
@@ -989,6 +1044,45 @@ footer {
     background: linear-gradient(45deg, #f857a8, #ff5858);
     color: #fff;
     border-radius: 0px;
+  }
+}
+#type-wrap {
+  margin: 0 auto;
+  margin-bottom: 1em;
+}
+
+#type {
+  display: inline-block;
+  height: 100%;
+}
+
+#type-hidden {
+  visibility: hidden;
+  height: 0;
+}
+
+#blinker {
+  display: inline-block;
+  background: #f857a8;
+  background: -webkit-linear-gradient(45deg, #f857a8, #ff5858);
+  background: linear-gradient(45deg, #f857a8, #ff5858);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+#blinker.blink {
+  animation-name: type;
+  animation-duration: 0.75s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes type {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 

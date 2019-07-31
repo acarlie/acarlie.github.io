@@ -64,7 +64,6 @@ h1.logo a:link, h1.logo a:visited, h1.logo a:active, h1.logo a:hover{
     text-align: center;
 }
 
-
 .nav-link{
     border-top: .5px solid $color-neutral-med;
 }
@@ -76,7 +75,7 @@ h1.logo a:link, h1.logo a:visited, h1.logo a:active, h1.logo a:hover{
 }
 
 
-@media only screen and (min-width:800px){
+@media (min-width:800px){
     #nav{
         flex-direction: row;
     }
@@ -122,6 +121,24 @@ h1.logo a:link, h1.logo a:visited, h1.logo a:active, h1.logo a:hover{
         background: $color-neutral-med;
         background: linear-gradient(45deg, $color-neutral-lt, #ddd);
     }
+}
+
+
+/*-------------Home Nav------------*/
+.home-nav{
+
+    a:link:not(:last-child){
+    }
+
+    a:link, a:visited, a:active{
+        padding: 0 .5em;
+        color: #999;
+    }
+    a:hover{
+        color: $color-primary;
+        text-decoration: none;
+    }
+
 }
 
 /*-------------Social-------------*/

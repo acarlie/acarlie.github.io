@@ -28,3 +28,44 @@
         border-radius: 0px;
     }
 }
+
+#type-wrap{
+    margin: 0 auto;
+    margin-bottom: 1em;
+
+}
+
+#type{
+    display: inline-block;
+    height: 100%;
+
+}
+
+#type-hidden{
+    visibility: hidden;
+    height: 0;
+}
+
+#blinker{
+    display: inline-block;
+    @include main-gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+#blinker.blink{
+    animation-name: type;
+    animation-duration: .75s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes type{
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+

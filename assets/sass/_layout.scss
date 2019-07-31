@@ -15,6 +15,7 @@ body{
 
 #fade-wrapper{
     display: none;
+
 }
 
 section{
@@ -45,6 +46,7 @@ section{
     padding: 7em 0;
     display: flex;
     flex-direction: column;
+
 }
 
 .wrapper-footer{
@@ -59,8 +61,23 @@ section{
     flex-direction: column;
 }
 
+
 .wrapper .row:not(:last-child){
     margin-bottom: 1em;
+}
+
+.box{
+    @include icon-box;
+    border-radius: 1em;
+    padding: 3em 2em;
+}
+
+#home .wrapper{
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: center; 
+    min-height: 100vh;
 }
 
 .col{
@@ -75,9 +92,8 @@ section{
 }
 
 
-@media only screen and (min-width: 800px){
-
-
+@media (min-width: 800px){
+    
     .wrapper{
         width: 65%;
         margin: 0 auto;
@@ -116,5 +132,7 @@ section{
     .col-6{
         width: 100%;
     }
+
+
 }
 

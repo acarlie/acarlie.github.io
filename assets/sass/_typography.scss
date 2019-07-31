@@ -16,6 +16,24 @@ h1{
     font-size: 3em;
 }
 
+h1#type, h1#blinker, h1#type-hidden{
+    line-height: 1em;
+
+}
+
+
+h1#type{
+    text-shadow: 2px 2px #ddd;
+
+}
+
+hr.home{
+    border: none;
+    background-color: $color-neutral-med;
+    height: 1px;
+    margin: 2em 1em;
+}
+
 h3{
     font-size: 1.125em;
 }

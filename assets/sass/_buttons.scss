@@ -11,6 +11,13 @@
     border-radius: 2em;
 }
 
+.btn-home{
+    font-family: $headings-font;
+    width: 100%;
+    border-radius: 2em;
+    text-transform: uppercase;
+}
+
 .btn:hover{
     @include main-gradient;
     color:  #fff;
