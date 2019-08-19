@@ -12,20 +12,16 @@ body{
     font-weight: 400;
 }
 
-h1{
+h1,h2,h3,h4,h5,h6{
     @include headings-bold;
-    font-size: 3em;
 }
 
 h1#type, h1#blinker, h1#type-hidden{
     line-height: 1em;
-
 }
-
 
 h1#type{
     text-shadow: 2px 2px #ddd;
-
 }
 
 h3{
@@ -37,71 +33,17 @@ h3{
     margin: 0;
 }
 
-h2,h3,h4,h5,h6{
-    @include headings-bold;
-}
-
-.section-heading{
-    margin:0;
-    margin-bottom: .5em;
-    margin-top: 2em;
-    border-bottom: 1.5px solid $color-primary;
-}
-
-
-label, .item-title{
+.item-title{
     @include headings-bold;
     font-size: 1.075em;
 }
 
 .heading{
-    // color: $color-primary;
     font-weight: bold;
 }
 
-.btn{
-    font-family: $headings-font;
-    font-size: 1.125em;
+p:not(:last-child){
+    margin-bottom: .5em;
 }
 
-a:link, a:visited, a:active{
-    text-decoration: none;
-    color: $color-primary;
-}
-
-a:hover{
-    text-decoration: underline;
-}
-
-
-@media only screen and (min-width:800px){
-
-    .section-heading:first-child{
-        margin-top: 0;
-    }
-    
-
-}
-
-
-/*-------------H1 Underlines-------------*/
-.u-container{
-    display: inline-block;
-}
-
-h1.u{
-    z-index: 2;
-    position: relative;
-    line-height: 1.25em;
-    display: inline-block;
-    text-shadow: 2px 2px #ddd;
-}
-
-div.u-line{
-    @include main-gradient;
-    position: relative;
-    bottom: 8px;
-    height: 6px;
-    width: 100%;
-}
 

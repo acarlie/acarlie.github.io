@@ -1,9 +1,21 @@
+/*-------------Link Styling------------*/
+#{$links-not-hover}{
+    text-decoration: none;
+    color: $color-primary;
+}
+
+a:hover{
+    text-decoration: underline;
+}
 
 
 /*-------------Home Nav------------*/
 .home-nav{
 
-    a:link, a:visited, a:active{
+    font-family: $headings-font;
+    text-transform: uppercase;
+
+    #{$links-not-hover}{
         padding: 0 .5em;
         color: $color-neutral-mddk;
     }
@@ -14,52 +26,58 @@
     }
 
 }
-.wrapper-footer{
+
+/*-------------Wrapper Nav------------*/
+.wrapper-nav{
     display: flex;
     align-items: center;
     flex-direction: column;
     font-family: $headings-font;
     text-transform: uppercase;
 
-    a:link, a:visited, a:active {
-        &.wrapper-nav{
+    #{$links-not-hover} {
+        &.wrapper-link{
             color: $color-neutral-mddk;
             transition: color .75s;
         }
     
     }
 
-    a:hover.wrapper-nav{
+    a:hover.wrapper-link{
         color: $color-neutral-lt;
         text-decoration: none;
     }
 
 }
 
-
 /*-------------Social-------------*/
 ul.social-links{
+    list-style: none;
+    @include no-space;
     display: flex;
     justify-content: center;
     align-items: center;
-}
 
-ul.social-links li a span{
-    @include shadow-box;
-    font-size: 1.2em;
-    height: 2.5em;
-    width: 2.5em;
-    line-height: 2.5em;
-    text-align: center;
-    border-radius: 100%;
-    margin: .5em;
-    color: $color-neutral-dk;
-}
+    li{
+        a span{
+            @include shadow-box;
+            font-size: 1.2em;
+            height: 2.5em;
+            width: 2.5em;
+            line-height: 2.5em;
+            text-align: center;
+            border-radius: 100%;
+            margin: .5em;
+            color: $color-neutral-dk;
+        }
 
-ul.social-links li:hover a span{
-    animation-name: social-hover;
-    animation-duration: .75s;
-    animation-fill-mode: forwards;
-    transition-timing-function: cubic-bezier(.38,.38,.12,.96);
+        &:hover a span{
+            animation-name: social-hover;
+            animation-duration: .75s;
+            animation-fill-mode: forwards;
+            transition-timing-function: cubic-bezier(.38,.38,.12,.96);
+        }
+        
+    }
 }
 

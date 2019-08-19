@@ -1,4 +1,3 @@
-
 @mixin main-gradient{
     background: $color-primary;
     background: -webkit-linear-gradient(45deg, $color-primary, $color-secondary);
@@ -36,14 +35,6 @@
 @mixin col-flex{
     display: flex;
     flex-direction: column;
-}
-
-@mixin skew{
-    transform: skew(-20deg);
-}
-
-@mixin unskew{
-    transform: skew(20deg);
 }
 
 @mixin no-space{
