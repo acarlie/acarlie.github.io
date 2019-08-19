@@ -13,14 +13,19 @@
 }
 
 .profile-wrapper{
+    margin-bottom: .5em;
+
     .img-profile{
         border-radius: .75em .75em 0 0;
+        margin-bottom: -.5em;
+
     }    
-    .icon-container{
-        margin-top: -.5em;
+    .icon-container:last-child{
         border-radius: 0 0 .75em .75em;
+        border-top: 1px solid $color-neutral-med;
         overflow: hidden;
     }
+    
 }
 
 .icon-container-info{

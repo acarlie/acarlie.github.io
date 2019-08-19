@@ -27,7 +27,7 @@ var port = {
 var typewriter = {
     el: document.getElementById('type'),
     elLength: document.getElementById('type').textContent.length,
-    period: 150,
+    period: 200,
     interval: '',
     deleteInterval: '',
     word: '',
@@ -96,6 +96,27 @@ var util = {
             $('#nav-wrapper').fadeIn(500);
 
         }
+    },
+    granim(id){
+      var obj = {
+        element: id,
+        direction: 'left-right',
+        states : {
+            "default-state": {
+                gradients: [
+                  ['#F857A8', '#FF5858'],
+                  ['#DA22FF', '#9733EE'],  
+                  ['#24C6DC', '#514A9D'],  
+                  ['#4CB8C4', '#3CD3AD'],
+                  ['#24C6DC', '#514A9D'],  
+                  ['#DA22FF', '#9733EE'], 
+                  ['#F857A8', '#FF5858']
+                ],
+                transitionSpeed: 10000
+            }
+        }
+      }
+      return obj;
     }
 }
 
@@ -108,25 +129,8 @@ $(document).ready(function(){
     typewriter.type();
     port.generate();
 
-    var granimInstance = new Granim({
-        element: '#canvas-basic',
-        direction: 'left-right',
-        states : {
-            "default-state": {
-                gradients: [
-                    ['#F857A8', '#FF5858'],
-                    ['#FF8008', '#FFC837'],       
-                    ['#FF8008', '#FFC837'],
-                    ['#4CB8C4', '#3CD3AD'],
-                    ['#24C6DC', '#514A9D'],
-                    ['#FF512F', '#DD2476'],
-                    ['#DA22FF', '#9733EE']           
-                ],
-                transitionSpeed: 7000
-
-            }
-        }
-    });
+    var granimBg = util.granim('#canvas-basic');
+    var granimBgInst = new Granim(granimBg);
 
     particlesJS("bg", {
         "particles": {

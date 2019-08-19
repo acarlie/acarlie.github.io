@@ -11,6 +11,12 @@
     background: linear-gradient(45deg, rgba(70,70,70,1), rgba(19,19,19,1));
 }
 
+@mixin light-gradient{
+    background: #ddd;
+    background: -webkit-linear-gradient(45deg, #f9f9f9, #ddd);
+    background: linear-gradient(45deg, #f9f9f9, #ddd);
+}
+
 @mixin headings-bold{
     font-family: $headings-font;
     font-weight: bold;

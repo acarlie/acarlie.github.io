@@ -3,19 +3,39 @@
 /*-------------Home Nav------------*/
 .home-nav{
 
-    a:link:not(:last-child){
-    }
-
     a:link, a:visited, a:active{
         padding: 0 .5em;
         color: $color-neutral-mddk;
     }
+
     a:hover{
         color: $color-primary;
         text-decoration: none;
     }
 
 }
+.wrapper-footer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: $headings-font;
+    text-transform: uppercase;
+
+    a:link, a:visited, a:active {
+        &.wrapper-nav{
+            color: $color-neutral-mddk;
+            transition: color .75s;
+        }
+    
+    }
+
+    a:hover.wrapper-nav{
+        color: $color-neutral-lt;
+        text-decoration: none;
+    }
+
+}
+
 
 /*-------------Social-------------*/
 ul.social-links{
