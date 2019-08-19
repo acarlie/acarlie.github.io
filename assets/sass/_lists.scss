@@ -4,9 +4,9 @@ ul.primary-list{
     @include no-space;
 }
 
-ul.primary-list li::before{
-    content:"// ";
-    color: $color-primary;
-    font-weight: bold;
-}
+// ul.primary-list li::before{
+//     content:"// ";
+//     color: $color-primary;
+//     font-weight: bold;
+// }
 

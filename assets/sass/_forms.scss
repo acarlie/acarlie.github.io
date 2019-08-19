@@ -12,9 +12,37 @@
     width: 100%;
 }
 
+.profile-wrapper{
+    .img-profile{
+        border-radius: .75em .75em 0 0;
+    }    
+    .icon-container{
+        margin-top: -.5em;
+        border-radius: 0 0 .75em .75em;
+        overflow: hidden;
+    }
+}
+
+.icon-container-info{
+    margin-bottom: .5em;
+
+    .icon{
+        border-radius: .75em 0 0 .75em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .icon-content{
+        border-radius: 0 .75em .75em 0;
+        padding: 1.25em;
+    }
+}
+
 .icon{
+    min-width: 50px;
+    text-align: center;
     @include icon-box;
-    display: inline-block;
     align-self: stretch;
     color: $color-neutral-med;
     transition: color .75s;
@@ -30,6 +58,8 @@
     outline: 2px solid $color-primary;
 }
 
-.icon-content:focus ~ .icon{
+.icon-content:focus ~ .icon, .icon-content:hover ~ .icon{
     color: $color-primary;
 }
+
+

@@ -9,6 +9,7 @@ body{
     font-size: 16px;
     color: $color-neutral-dk;
     line-height: 1.5em;
+    font-weight: 400;
 }
 
 h1{
@@ -25,13 +26,6 @@ h1#type, h1#blinker, h1#type-hidden{
 h1#type{
     text-shadow: 2px 2px #ddd;
 
-}
-
-hr.home{
-    border: none;
-    background-color: $color-neutral-med;
-    height: 1px;
-    margin: 2em 1em;
 }
 
 h3{
@@ -61,7 +55,8 @@ label, .item-title{
 }
 
 .heading{
-    color: $color-primary;
+    // color: $color-primary;
+    font-weight: bold;
 }
 
 .btn{

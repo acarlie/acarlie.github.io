@@ -1,12 +1,12 @@
 /*-------------Animations-------------*/
 @keyframes social-hover {
     100%{
-        @include main-gradient;
+        // @include main-gradient;
         line-height: 2.75em;
         height: 2.75em;
         width: 2.75em;
         margin: .375em;
-        color: $color-neutral-lt;
+        color: $color-neutral-dk;
         border-radius: 0px;
     }
 }
