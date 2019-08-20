@@ -11,7 +11,7 @@ var port = {
   generate() {
     $.each(port.items, function (i) {
       var arr = port.items;
-      var itemWrap = $('<div>').addClass('grid-hover-wrapper').appendTo(port.portfolio);
+      var itemWrap = $('<div>').addClass('grid-hover-wrapper').appendTo(port.portfolio).attr('data-aos', 'fade-up');
       var link = $('<a>').addClass('port-link').attr('href', arr[i].url).attr('target', '_blank').appendTo(itemWrap);
       var item = $('<div>').addClass('grid-item').appendTo(link);
       var figWrap = $('<figure>').addClass('img-wrapper').appendTo(item);
@@ -225,4 +225,6 @@ $(document).ready(function () {
   util.init();
   typewriter.type();
   port.generate();
+  $('.icon-container-info, .profile-wrapper').attr('data-aos', 'fade-up');
+  $('.social-links').attr('data-aos', 'zoom-in');
 });

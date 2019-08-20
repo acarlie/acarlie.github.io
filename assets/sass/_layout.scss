@@ -13,12 +13,17 @@ body{
     display: none;
 }
 
-
 /*-------------Area Specific Styles-------------*/
-
 /*Granim & Particles BG*/
 #bg{
+    width: 100%;
+    height: 100%;
     position: fixed;
+    background-color: #000;
+    background-image: url('');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
     z-index: -10;
 }
 
@@ -38,7 +43,6 @@ body{
     justify-content: center; 
     min-height: 100vh;
 }
-
 
 /*-------------Layout-------------*/
 section{
