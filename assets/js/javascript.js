@@ -7,7 +7,8 @@ var port = {
     { title: "Train Scheduler", img: "assets/images/portfolio/train-schedule.JPG", desc: "Train scheduling app created using jQuery, Firebase, and Materialize.", tags: ["jQuery, Firebase, Materialize"], url: "https://acarlie.github.io/Train_Scheduler/" },
     { title: "Women of Scifi and Fantasy Trivia", img: "assets/images/portfolio/trivia-game.JPG", desc: "Timed trivia game created with jQuery and JavaScript", tags: ["jQuery, JavaScript"], url: "https://acarlie.github.io/Trivia_Game/" },
     { title: "A Stranger Game", img: "assets/images/portfolio/a-stranger-game-2.JPG", desc: "Player vs algorithm game created using jQuery and JavaScript", tags: ["jQuery"], url: "https://acarlie.github.io/Stranger_Things_Game/" },
-    { title: "Wikipedia Search", img: "assets/images/portfolio/wikipedia-viewer.JPG", desc: "Wikipedia search using Vanilla JS and Wikipedia's API", tags: ["Vanilla JS", "Rest APIs", "UI/UX", "SCSS", "Bootstrap"], url: "https://codepen.io/acarlie/full/mERLej" }
+    { title: "Wikipedia Search", img: "assets/images/portfolio/wikipedia-viewer.JPG", desc: "Wikipedia search using Vanilla JS and Wikipedia's API", tags: ["Vanilla JS", "Rest APIs", "UI/UX", "SCSS", "Bootstrap"], url: "https://codepen.io/acarlie/full/mERLej" },
+    { title: "Vanilla JS Typewriter", img: "assets/images/portfolio/typewriter.JPG", desc: "Vanilla JS typerwiter created using setInterval, clearInterval, and setTimeout", tags: ["Vanilla JS"], url: "https://codepen.io/acarlie/full/KOqmPN" }
   ],
   generate() {
     $.each(port.items, function (i) {
@@ -22,7 +23,6 @@ var port = {
       var figView = $('<p>').addClass('grid-item-view');
       if (arr[i].url.indexOf('codepen') > -1){
         figView.html('View on CodePen ⟶');
-        console.log('CodePen' + arr[i].url);
       } else {
         figView.html('View Project ⟶');
       }
