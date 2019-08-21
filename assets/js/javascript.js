@@ -1,26 +1,33 @@
 var port = {
   portfolio: document.getElementById('portfolio'),
   items: [
-    { title: "Color Me ____.", img: "assets/images/portfolio/color-me-5.JPG", desc: "Word game created with Vanilla JS", tags: ["Vanilla JS", "UI/UX"], url: "https://acarlie.github.io/Word_Guess_Game/" },
-    { title: "Giphy Search", img: "assets/images/portfolio/giphy-2.JPG", desc: "Giphy search using Giphy's API", tags: ["jQuery, JavaScript, AJAX"], url: "https://acarlie.github.io/Giphy_Project/" },
-    { title: "Movie Comparison App", img: "assets/images/portfolio/movie-comp.JPG", desc: "Movie Comparison App using AJAX", tags: ["jQuery, JavaScript, UI/UX, Materialize, AJAX"], url: "https://fzachary.github.io/project1/" },
+    { title: "Color Me ____.", img: "assets/images/portfolio/color-me-5.JPG", desc: "'Color Me ___' is a word guessing game created with Vanilla JS.", tags: ["Vanilla JS", "UI/UX"], url: "https://acarlie.github.io/Word_Guess_Game/" },
+    { title: "Giphy Search", img: "assets/images/portfolio/giphy-2.JPG", desc: "'Giphy Search' was created using Giphy's API. Users can favorite gifs and copy gif embed links.", tags: ["jQuery, JavaScript, AJAX"], url: "https://acarlie.github.io/Giphy_Project/" },
+    { title: "Movie Comparison App", img: "assets/images/portfolio/movie-comp.JPG", desc: "Movie comparison app created with AJAX, jQuery, Chart.JS, and Materialize.", tags: ["jQuery, JavaScript, UI/UX, Materialize, AJAX"], url: "https://fzachary.github.io/project1/" },
     { title: "Train Scheduler", img: "assets/images/portfolio/train-schedule.JPG", desc: "Train scheduling app created using jQuery, Firebase, and Materialize.", tags: ["jQuery, Firebase, Materialize"], url: "https://acarlie.github.io/Train_Scheduler/" },
-    { title: "Trivia Game", img: "assets/images/portfolio/trivia-game.JPG", desc: "Timed Trivia Game created using jQuery and JavaScript", tags: ["jQuery, JavaScript"], url: "https://acarlie.github.io/Trivia_Game/" },
+    { title: "Women of Scifi and Fantasy Trivia", img: "assets/images/portfolio/trivia-game.JPG", desc: "Timed trivia game created with jQuery and JavaScript", tags: ["jQuery, JavaScript"], url: "https://acarlie.github.io/Trivia_Game/" },
     { title: "A Stranger Game", img: "assets/images/portfolio/a-stranger-game-2.JPG", desc: "Player vs algorithm game created using jQuery and JavaScript", tags: ["jQuery"], url: "https://acarlie.github.io/Stranger_Things_Game/" },
     { title: "Wikipedia Search", img: "assets/images/portfolio/wikipedia-viewer.JPG", desc: "Wikipedia search using Vanilla JS and Wikipedia's API", tags: ["Vanilla JS", "Rest APIs", "UI/UX", "SCSS", "Bootstrap"], url: "https://codepen.io/acarlie/full/mERLej" }
   ],
   generate() {
     $.each(port.items, function (i) {
       var arr = port.items;
-      var itemWrap = $('<div>').addClass('grid-hover-wrapper').appendTo(port.portfolio).attr('data-aos', 'fade-up');
-      var link = $('<a>').addClass('port-link').attr('href', arr[i].url).attr('target', '_blank').appendTo(itemWrap);
-      var item = $('<div>').addClass('grid-item').appendTo(link);
-      var figWrap = $('<figure>').addClass('img-wrapper').appendTo(item);
-      var figCap = $('<figcaption>').addClass('item-title').appendTo(figWrap);
-      var img = $('<img>').addClass('item-img').attr('src', arr[i].img).attr('alt', arr[i].desc).appendTo(figWrap);
-      var iconCont = $('<div>').addClass('icon-container').appendTo(item);
-      var iconSpan = $('<span>').addClass('fas fa-code icon').appendTo(iconCont);
-      var tech = $('<div>').addClass('icon-content').html('<h3>' + arr[i].title + '</h3>').appendTo(iconCont);
+      var link = $('<a>').attr('href', arr[i].url).attr('target', '_blank').appendTo(port.portfolio);
+      var figWrap = $('<figure>').addClass('grid-item').appendTo(link).attr('data-aos', 'fade-up');
+      var img = $('<img>').addClass('grid-item-img').attr('src', arr[i].img).attr('alt', arr[i].desc).appendTo(figWrap);
+      var info = $('<div>').addClass('grid-item-info').appendTo(figWrap);
+      var infoWrap = $('<div>').addClass('grid-item-info-wrap').appendTo(info);
+      var figTitle = $('<h4>').addClass('grid-item-title').text(arr[i].title);
+      var figCap = $('<figcaption>').addClass('grid-item-cap').text(arr[i].desc);
+      var figView = $('<p>').addClass('grid-item-view');
+      if (arr[i].url.indexOf('codepen') > -1){
+        figView.html('View on CodePen ⟶');
+        console.log('CodePen' + arr[i].url);
+      } else {
+        figView.html('View Project ⟶');
+      }
+
+      infoWrap.append(figTitle, figCap, figView);
     });
   }
 }

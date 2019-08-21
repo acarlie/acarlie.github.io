@@ -566,17 +566,6 @@ ul.primary-list li:not(:first-child) {
   grid-row-gap: 0.5em;
 }
 
-.port-link:link, .port-link:visited, .port-link:active {
-  color: #444;
-  -webkit-transition: color 0.75s;
-  transition: color 0.75s;
-}
-
-.port-link:hover {
-  color: #f857a8;
-  text-decoration: none;
-}
-
 .grid-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -591,24 +580,13 @@ ul.primary-list li:not(:first-child) {
   -webkit-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.125);
   box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.125);
   background-color: #fff;
+  height: 100%;
 }
-
-.grid-item:hover {
-  -webkit-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.125);
-  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.125);
-}
-
-.grid-item:hover .img-wrapper .item-img {
+.grid-item:hover .grid-item-info {
   opacity: 1;
 }
 
-.img-wrapper {
-  position: relative;
-  height: 100%;
-  overflow: hidden;
-}
-
-.item-img {
+.grid-item-img {
   width: 100%;
   opacity: 0.9;
   min-height: 300px;
@@ -618,31 +596,43 @@ ul.primary-list li:not(:first-child) {
   transition: opacity 0.75s;
 }
 
-.item-title {
+.grid-item-info {
   position: absolute;
-  padding: 0.5em 1em;
-  text-align: right;
-  color: #444;
-  width: 100%;
+  top: 0;
   height: 100%;
-}
-
-.grid-item .icon-container {
-  margin-top: -0.25em;
-  -webkit-box-orient: horizontal;
+  width: 100%;
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0));
+  opacity: 0;
+  -webkit-transition: opacity 0.75s ease, visibility 1s ease;
+  transition: opacity 0.75s ease, visibility 1s ease;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
 }
 
-.grid-item .icon-container span {
-  color: #ddd;
-  -webkit-transition: color 0.75s;
-  transition: color 0.75s;
+.grid-item-title {
+  color: white;
 }
 
-.grid-item:hover .icon-container span {
-  color: #f857a8;
+.grid-item-cap {
+  color: white;
+  margin-bottom: 0.5em;
+}
+
+.grid-item-view {
+  color: #999;
+  font-family: "Saira Semi Condensed", sans-serif;
+  text-transform: uppercase;
 }
 
 footer {

@@ -1,6 +1,9 @@
 var gulp = require('gulp');
 const autoprefixer = require('gulp-autoprefixer');
 
+let cleanCSS = require('gulp-clean-css');
+ 
+
 gulp.task('message', async function() {
     console.log("Good News Everyone!");
 });
@@ -13,3 +16,10 @@ gulp.task('prefix', () =>
         }))
         .pipe(gulp.dest('assets/dist'))
 );
+
+gulp.task('minify-css', () => {
+    return gulp.src('assets/dist/*.css')
+      .pipe(cleanCSS({compatibility: 'ie8'}))
+      .pipe(gulp.dest('assets/dist/min'));
+  });
+  
