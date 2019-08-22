@@ -206,9 +206,11 @@ hr.home {
   border-radius: 0.75em 0.75em 0 0;
   margin-bottom: -0.5em;
 }
+.profile-wrapper .icon-container:not(:first-child) {
+  border-top: 0.75px solid #ddd;
+}
 .profile-wrapper .icon-container:last-child {
   border-radius: 0 0 0.75em 0.75em;
-  border-top: 1px solid #ddd;
   overflow: hidden;
 }
 
