@@ -5,13 +5,39 @@ html{
 }
 
 body{
+    position: relative;
+
     min-height: 100%;
     @include no-space;
 }
 
-#fade-wrapper{
+#loader{
+    @include flex-col-center;
+    color: #fff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#loader-inner{
     display: none;
 }
+
+#loader-expand{
+    @include main-gradient;
+    width: 0;
+    height: .25em;
+    overflow: hidden;
+    animation: loader 3s ease-in;
+    animation-fill-mode: forwards;
+}
+
 
 /*-------------Area Specific Styles-------------*/
 /*Granim & Particles BG*/

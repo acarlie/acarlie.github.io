@@ -12,7 +12,7 @@ body{
     font-weight: 400;
 }
 
-h1,h2,h3,h4,h5,h6{
+h1,h2,h3,h4{
     @include headings-bold;
 }
 
@@ -25,6 +25,14 @@ h1#type{
 }
 
 h3{
+    font-size: 1.125em;
+}
+
+h5, h6{
+    @include headings-upper;
+}
+
+h5{
     font-size: 1.125em;
 }
 

@@ -32,6 +32,7 @@ var port = {
   }
 }
 
+
 var typewriter = {
   el: document.getElementById('type'),
   elLength: document.getElementById('type').textContent.length,
@@ -91,8 +92,6 @@ var typewriter = {
 
 var util = {
   init() {
-    $('#fade-wrapper').fadeIn(1000);
-    $('#nav-wrapper').hide();
     var granimBg = this.granim('#canvas-basic');
     var granimBgInst = new Granim(granimBg);
     particlesJS("bg", {
@@ -233,6 +232,8 @@ $(document).ready(function () {
   util.init();
   typewriter.type();
   port.generate();
+  $('#loader-inner').fadeIn(200);
+  $('#loader').delay(3000).fadeOut(500);
   $('.icon-container-info, .profile-wrapper').attr('data-aos', 'fade-up');
   $('.social-links').attr('data-aos', 'zoom-in');
 });
