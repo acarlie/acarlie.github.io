@@ -230,10 +230,10 @@ var util = {
 
 $(document).ready(function () {
   util.init();
-  typewriter.type();
   port.generate();
   $('#loader-inner').fadeIn(200);
   $('#loader').delay(3000).fadeOut(500);
+  setTimeout(  function(){ typewriter.type(); }, 3000  );
   $('.icon-container-info, .profile-wrapper').attr('data-aos', 'fade-up');
   $('.social-links').attr('data-aos', 'zoom-in');
 });
