@@ -230,6 +230,8 @@ hr.home {
 }
 
 body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   color: #444;
@@ -461,6 +463,7 @@ a:hover {
 .home-nav {
   font-family: "Saira Semi Condensed", sans-serif;
   text-transform: uppercase;
+  font-weight: 500;
 }
 .home-nav a:link, .home-nav a:visited, .home-nav a:active {
   padding: 0 0.5em;
@@ -478,7 +481,7 @@ a:hover {
   flex-direction: column;
   font-family: "Saira Semi Condensed", sans-serif;
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 500;
 }
 .wrapper-nav a:link.wrapper-link, .wrapper-nav a:visited.wrapper-link, .wrapper-nav a:active.wrapper-link {
   color: #999;

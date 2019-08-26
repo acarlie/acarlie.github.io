@@ -13,6 +13,7 @@ a:hover{
 .home-nav{
 
     @include headings-upper;
+    font-weight: 500;
 
     #{$links-not-hover}{
         padding: 0 .5em;
@@ -32,7 +33,7 @@ a:hover{
     align-items: center;
     flex-direction: column;
     @include headings-upper;
-    font-weight: bold;
+    font-weight: 500;
 
     #{$links-not-hover} {
         &.wrapper-link{
