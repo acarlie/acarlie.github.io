@@ -69,31 +69,10 @@ hr.home{
     @include icon-box;
     width: 100%;
     z-index: 2;
+
     &:focus  ~ .icon, &:hover ~ .icon{
         color: $color-primary;
     }
-
-
-}
-
-.profile-wrapper{
-    margin-bottom: .5em;
-
-    .img-profile{
-        border-radius: .75em .75em 0 0;
-        margin-bottom: -.5em;
-
-    }    
-
-    .icon-container:not(:first-child){
-        border-top: .75px solid $color-neutral-med;
-    }
-
-    .icon-container:last-child{
-        border-radius: 0 0 .75em .75em;
-        overflow: hidden;
-    }
-    
 }
 
 .icon-container-info{
@@ -113,6 +92,37 @@ hr.home{
     }
 
 }
+
+
+#profile-wrapper.profile-wrapper{
+    margin-bottom: .5em;
+
+    .img-profile{
+        border-radius: .75em .75em 0 0;
+        margin-bottom: -.5em;
+    }    
+
+    .icon-container{
+        border-top: .75px solid $color-neutral-med;
+
+        .icon{
+            box-shadow: $shadow-inset;
+        }
+
+        .icon-content{
+            box-shadow: none;
+        }
+
+        &:last-child{
+            border-radius: 0 0 .75em .75em;
+            overflow: hidden;
+        }
+       
+    }
+
+
+}
+
 
 @media only screen and (min-width:800px){
     .img-profile{

@@ -12,15 +12,16 @@ var port = {
   ],
   generate() {
     $.each(port.items, function (i) {
-      var arr = port.items;
-      var link = $('<a>').attr('href', arr[i].url).attr('target', '_blank').appendTo(port.portfolio);
-      var figWrap = $('<figure>').addClass('grid-item').appendTo(link).attr('data-aos', 'fade-up');
-      var img = $('<img>').addClass('grid-item-img').attr('src', arr[i].img).attr('alt', arr[i].desc).appendTo(figWrap);
-      var info = $('<div>').addClass('grid-item-info').appendTo(figWrap);
-      var infoWrap = $('<div>').addClass('grid-item-info-wrap').appendTo(info);
-      var figTitle = $('<h4>').addClass('grid-item-title').text(arr[i].title);
-      var figCap = $('<figcaption>').addClass('grid-item-cap').text(arr[i].desc);
-      var figView = $('<p>').addClass('grid-item-view');
+      var arr = port.items,
+          link = $('<a>').attr('href', arr[i].url).attr('target', '_blank').appendTo(port.portfolio),
+          figWrap = $('<figure>').addClass('grid-item').appendTo(link).attr('data-aos', 'fade-up'),
+          img = $('<img>').addClass('grid-item-img').attr('src', arr[i].img).attr('alt', arr[i].desc).appendTo(figWrap),
+          info = $('<div>').addClass('grid-item-info').appendTo(figWrap),
+          infoWrap = $('<div>').addClass('grid-item-info-wrap').appendTo(info),
+          figTitle = $('<h4>').addClass('grid-item-title').text(arr[i].title),
+          figCap = $('<figcaption>').addClass('grid-item-cap').text(arr[i].desc),
+          figView = $('<p>').addClass('grid-item-view');
+
       if (arr[i].url.indexOf('codepen') > -1){
         figView.html('View on CodePen ⟶');
       } else {
@@ -237,12 +238,12 @@ $(document).ready(function () {
 
   util.init();
   port.generate();
-
+  
   $('#loader-inner').fadeIn(200);
   $('#loader').delay(3000).fadeOut(500);
 
   setTimeout(  function(){   type.type();  }, 3000  );
-  
+
   $('.icon-container-info, .profile-wrapper').attr('data-aos', 'fade-up');
   $('.social-links').attr('data-aos', 'zoom-in');
 });

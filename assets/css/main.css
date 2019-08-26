@@ -181,21 +181,6 @@ hr.home {
   color: #f857a8;
 }
 
-.profile-wrapper {
-  margin-bottom: 0.5em;
-}
-.profile-wrapper .img-profile {
-  border-radius: 0.75em 0.75em 0 0;
-  margin-bottom: -0.5em;
-}
-.profile-wrapper .icon-container:not(:first-child) {
-  border-top: 0.75px solid #ddd;
-}
-.profile-wrapper .icon-container:last-child {
-  border-radius: 0 0 0.75em 0.75em;
-  overflow: hidden;
-}
-
 .icon-container-info {
   margin-bottom: 0.5em;
 }
@@ -209,6 +194,27 @@ hr.home {
 .icon-container-info .icon-content {
   border-radius: 0 0.75em 0.75em 0;
   padding: 1.25em;
+}
+
+#profile-wrapper.profile-wrapper {
+  margin-bottom: 0.5em;
+}
+#profile-wrapper.profile-wrapper .img-profile {
+  border-radius: 0.75em 0.75em 0 0;
+  margin-bottom: -0.5em;
+}
+#profile-wrapper.profile-wrapper .icon-container {
+  border-top: 0.75px solid #ddd;
+}
+#profile-wrapper.profile-wrapper .icon-container .icon {
+  box-shadow: -3px 0px 10px rgba(0, 0, 0, 0.05) inset;
+}
+#profile-wrapper.profile-wrapper .icon-container .icon-content {
+  box-shadow: none;
+}
+#profile-wrapper.profile-wrapper .icon-container:last-child {
+  border-radius: 0 0 0.75em 0.75em;
+  overflow: hidden;
 }
 
 @media only screen and (min-width: 800px) {
