@@ -1,7 +1,12 @@
 /*-------------Typewriter-------------*/
 #type-wrap{
     margin: 0 auto;
+    border-radius: .75em;
+    overflow: hidden;
     margin-bottom: 1em;
+}
+
+#type-wrap-inner{
 
 }
 

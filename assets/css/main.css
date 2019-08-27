@@ -130,8 +130,7 @@ textarea {
   background-color: #fff;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
   padding: 0.8em;
-  border-radius: 0.75em;
-  padding: 3em 2em;
+  padding: 2em;
 }
 
 .container-dark {
@@ -470,8 +469,8 @@ a:hover {
   color: #999;
 }
 .home-nav a:hover {
-  color: #f857a8;
-  text-decoration: none;
+  color: #444;
+  text-decoration: underline;
 }
 
 /*-------------Wrapper Nav------------*/
@@ -521,27 +520,32 @@ ul.social-links li:hover a span {
 }
 
 /*-------------Buttons------------*/
-a:link.btn-dark, a:visited.btn-dark, a:active.btn-dark {
+button.btn-dark {
   display: block;
-  height: 2.5em;
-  line-height: 2.5em;
+  padding: 1em;
   text-align: center;
-  border-radius: 0.5em;
-  background: #131313;
-  background: -webkit-linear-gradient(45deg, #464646, #131313);
-  background: linear-gradient(45deg, #464646, #131313);
-  color: #ddd;
-  transition: color 0.75s;
+  border-top: 1px solid #ddd;
+  background: #ddd;
+  background: -webkit-linear-gradient(45deg, #f9f9f9, #ddd);
+  background: linear-gradient(45deg, #f9f9f9, #ddd);
+  color: #444;
   width: 100%;
-  margin-top: 2em;
+  margin-top: 0;
   margin-bottom: 0;
   font-family: "Saira Semi Condensed", sans-serif;
   text-transform: uppercase;
 }
 
-a:hover.btn-dark {
+button:hover.btn-dark {
   text-decoration: none;
+  background: #131313;
+  background: -webkit-linear-gradient(45deg, #464646, #131313);
+  background: linear-gradient(45deg, #464646, #131313);
   color: #fff;
+}
+
+a:hover.btn-link {
+  text-decoration: none;
 }
 
 /*-------------Lists-------------*/
@@ -638,6 +642,8 @@ footer {
 /*-------------Typewriter-------------*/
 #type-wrap {
   margin: 0 auto;
+  border-radius: 0.75em;
+  overflow: hidden;
   margin-bottom: 1em;
 }
 
