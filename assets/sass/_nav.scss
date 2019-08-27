@@ -1,3 +1,5 @@
+
+
 /*-------------Link Styling------------*/
 #{$links-not-hover}{
     text-decoration: none;
@@ -80,4 +82,29 @@ ul.social-links{
         
     }
 }
+
+/*-------------Buttons------------*/
+#{$links-not-hover}{
+    &.btn-dark{
+        display: block;
+        height: 2.5em;
+        line-height: 2.5em;
+        text-align: center;
+        border-radius: .5em;
+        @include dark-gradient;
+        color: $color-neutral-med;
+        transition: color .75s;
+        width: 100%;
+        margin-top: 2em;
+        margin-bottom: 0;
+        @include headings-upper;
+       
+    }
+}
+
+a:hover.btn-dark{
+    text-decoration: none;
+    color: $color-neutral-lt;
+}
+
 
