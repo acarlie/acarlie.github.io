@@ -10,6 +10,7 @@ var port = {
     { title: "A Stranger Game", img: "assets/images/portfolio/a-stranger-game-2.JPG", desc: "Player vs algorithm game created using jQuery and JavaScript", tags: ["jQuery"], url: "https://acarlie.github.io/Stranger_Things_Game/" },
     { title: "Bamazon", img: "assets/images/portfolio/bamazon.gif", desc: "Node.JS and MySQL inventory management app with customer, manager, and supervisor views.", tags: ["Node.JS, JavaScript, MySQL"], url: "https://github.com/acarlie/bamazon" },
     { title: "CLI Word Guessing Game", img: "assets/images/portfolio/example.gif", desc: "Node.JS word guessing game using JavaScript constructors.", tags: ["Node.JS, JavaScript"], url: "https://github.com/acarlie/Constructor_Word_Guess" },
+    { title: "Star Trek Character Quiz", img: "assets/images/portfolio/star-trek.JPG", desc: "'Star Trek Character Quiz' is a quiz app created with Node.js, Express, and the Semantic UI library.", tags: ["Node.JS, JavaScript, Express"], url: "https://intense-beyond-55341.herokuapp.com/" },
     { title: "Wikipedia Search", img: "assets/images/portfolio/wikipedia-viewer.JPG", desc: "Wikipedia search using Vanilla JS and Wikipedia's API", tags: ["Vanilla JS", "Rest APIs", "UI/UX", "SCSS", "Bootstrap"], url: "https://codepen.io/acarlie/full/mERLej" },
     { title: "Vanilla JS Typewriter", img: "assets/images/portfolio/typewriter.JPG", desc: "Vanilla JS typerwiter created using setInterval, clearInterval, and setTimeout", tags: ["Vanilla JS"], url: "https://codepen.io/acarlie/full/KOqmPN" }
   ],
