@@ -4,16 +4,12 @@
     border-radius: .75em;
     overflow: hidden;
     margin-bottom: 1em;
-}
-
-#type-wrap-inner{
-
+    box-shadow: $shadow;
 }
 
 #type{
     display: inline-block;
     height: 100%;
-
 }
 
 #type-hidden{
@@ -22,8 +18,8 @@
 }
 
 #blinker{
-    display: inline-block;
     @include main-gradient;
+    display: inline-block;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;

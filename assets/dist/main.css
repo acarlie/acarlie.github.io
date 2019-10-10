@@ -133,8 +133,8 @@ textarea {
 
 .box {
   background-color: #fff;
-  -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
   padding: 0.8em;
   padding: 2em;
 }
@@ -147,8 +147,8 @@ textarea {
 
 .container-light {
   background-color: white;
-  -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 hr.home {
@@ -176,8 +176,8 @@ hr.home {
   min-width: 50px;
   text-align: center;
   background-color: #fff;
-  -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
   padding: 0.8em;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -188,8 +188,8 @@ hr.home {
 
 .icon-content {
   background-color: #fff;
-  -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
   padding: 0.8em;
   width: 100%;
   z-index: 2;
@@ -369,7 +369,7 @@ body {
 }
 
 /*-------------Area Specific Styles-------------*/
-/*Granim & Particles BG*/
+/*Trianglify BG*/
 #bg {
   width: 100%;
   height: 100%;
@@ -536,14 +536,18 @@ a:hover {
 .home-nav a:link, .home-nav a:visited, .home-nav a:active {
   padding: 0 0.5em;
   color: #999;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
 }
 .home-nav a:hover {
   color: #444;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /*-------------Wrapper Nav------------*/
 .wrapper-nav {
+  font-family: "Saira Semi Condensed", sans-serif;
+  text-transform: uppercase;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -554,11 +558,9 @@ a:hover {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  font-family: "Saira Semi Condensed", sans-serif;
-  text-transform: uppercase;
   font-weight: 500;
 }
-.wrapper-nav a:link.wrapper-link, .wrapper-nav a:visited.wrapper-link, .wrapper-nav a:active.wrapper-link {
+.wrapper-nav a:link, .wrapper-nav a:visited, .wrapper-nav a:active.wrapper-link {
   color: #999;
   -webkit-transition: color 0.75s;
   transition: color 0.75s;
@@ -585,8 +587,8 @@ ul.social-links {
 }
 ul.social-links li a span {
   background-color: #fff;
-  -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
   font-size: 1.2em;
   height: 2.5em;
   width: 2.5em;
@@ -608,30 +610,24 @@ ul.social-links li:hover a span {
 }
 
 /*-------------Buttons------------*/
-button.btn-dark {
+a.btn-dark {
   display: block;
   padding: 1em;
-  text-align: center;
-  border-top: 1px solid #ddd;
-  background: #ddd;
-  background: linear-gradient(45deg, #f9f9f9, #ddd);
-  color: #444;
   width: 100%;
   margin-top: 0;
   margin-bottom: 0;
+  text-align: center;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  background-color: #2d2d2d;
+  color: #ddd;
   font-family: "Saira Semi Condensed", sans-serif;
   text-transform: uppercase;
 }
-
-button:hover.btn-dark {
+a.btn-dark:hover {
   text-decoration: none;
-  background: #131313;
-  background: linear-gradient(45deg, #464646, #131313);
+  background-color: #131313;
   color: #fff;
-}
-
-a:hover.btn-link {
-  text-decoration: none;
 }
 
 /*-------------Lists-------------*/
@@ -745,6 +741,8 @@ footer {
   border-radius: 0.75em;
   overflow: hidden;
   margin-bottom: 1em;
+  -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 #type {
@@ -758,9 +756,9 @@ footer {
 }
 
 #blinker {
-  display: inline-block;
   background: #f857a8;
   background: linear-gradient(45deg, #f857a8, #ff5858);
+  display: inline-block;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;

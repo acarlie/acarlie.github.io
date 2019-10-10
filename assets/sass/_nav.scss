@@ -18,31 +18,30 @@ a:hover{
     #{$links-not-hover}{
         padding: 0 .5em;
         color: $color-neutral-mddk;
+        transition: color .5s;
     }
 
     a:hover{
         color: $color-neutral-dk;
-        text-decoration: underline;
+        text-decoration: none;
     }
 
 }
 
 /*-------------Wrapper Nav------------*/
 .wrapper-nav{
+    @include headings-upper;
+
     display: flex;
     align-items: center;
     flex-direction: column;
-    @include headings-upper;
     font-weight: 500;
 
-    #{$links-not-hover} {
-        &.wrapper-link{
-            color: $color-neutral-mddk;
-            transition: color .75s;
-        }
-    
+    #{$links-not-hover}.wrapper-link{
+        color: $color-neutral-mddk;
+        transition: color .75s;
     }
-
+    
     a:hover.wrapper-link{
         color: $color-neutral-lt;
         text-decoration: none;
@@ -82,29 +81,21 @@ ul.social-links{
 }
 
 /*-------------Buttons------------*/
-button.btn-dark{
+a.btn-dark{
     display: block;
     padding: 1em;
-    text-align: center;
-    border-top: 1px solid $color-neutral-med;
-    @include light-gradient;
-    color: $color-neutral-dk;
     width: 100%;
     margin-top: 0;
     margin-bottom: 0;
+    text-align: center;
+    transition: all .5s;
+    background-color: $color-black-lt;
+    color: $color-neutral-med;
     @include headings-upper;
-    
+
+    &:hover{
+        text-decoration: none;
+        background-color: $color-black;
+        color: $color-neutral-lt;
+    }
 }
-
-
-button:hover.btn-dark{
-    text-decoration: none;
-    @include dark-gradient;
-    color: $color-neutral-lt;
-}
-
-a:hover.btn-link{
-    text-decoration: none;
-}
-
-
