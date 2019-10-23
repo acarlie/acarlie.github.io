@@ -565,7 +565,6 @@ ul.primary-list li:not(:first-child) {
   flex-direction: column;
   position: relative;
   overflow: hidden;
-  cursor: pointer;
   box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.125);
   height: 100%;
 }
@@ -611,6 +610,16 @@ ul.primary-list li:not(:first-child) {
   color: #999;
   font-family: "Saira Semi Condensed", sans-serif;
   text-transform: uppercase;
+}
+
+a:link.grid-item-link, a:visited.grid-item-link, a:active.grid-item-link {
+  color: #ddd;
+  transition: color 0.5s;
+}
+
+a:hover.grid-item-link {
+  color: white;
+  text-decoration: none;
 }
 
 footer {

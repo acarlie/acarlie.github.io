@@ -11,7 +11,6 @@
     @include col-flex;
     position: relative;
     overflow: hidden;
-    cursor: pointer;
     box-shadow: $shadow-dk;
     height: 100%;
 
@@ -60,4 +59,16 @@
     color: $color-neutral-mddk;
     font-family: $headings-font;
     text-transform: uppercase;
+}
+
+#{$links-not-hover}{
+    &.grid-item-link{
+        color: $color-neutral-med;
+        transition: color .5s;
+    }
+}
+
+a:hover.grid-item-link{
+    color: white;
+    text-decoration: none;
 }
