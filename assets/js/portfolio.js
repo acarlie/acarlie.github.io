@@ -1,6 +1,7 @@
 var port = {
     portfolio: document.getElementById('portfolio'),
     items: [
+      { title: "All Things {Front-End}", img: "assets/images/portfolio/all-things-front-end.JPG", desc: "'All Things {Front-End}' is an article scraper where users can add notes and save articles. Created with Node.js, MongoDB, Express, Handlebars, SCSS, BEM, Gulp, Cheerio, and Axios.", tags: [""], url: "https://agile-bayou-91638.herokuapp.com/", repo: "https://github.com/acarlie/mongo_scraper" },
       { title: "Color Me ____.", img: "assets/images/portfolio/color-me-4.JPG", desc: "'Color Me ___' is a word guessing game created with Vanilla JS.", tags: ["Vanilla JS", "UI/UX"], url: "https://acarlie.github.io/Word_Guess_Game/", repo: "https://github.com/acarlie/Word_Guess_Game" },
       { title: "Giphy Search", img: "assets/images/portfolio/giphy-2.JPG", desc: "'Giphy Search' was created using Giphy's API. Users can favorite gifs and copy gif embed links. Designed mobile first.", tags: ["jQuery, JavaScript, AJAX"], url: "https://acarlie.github.io/Giphy_Project/", repo: "https://github.com/acarlie/Giphy_Project" },
       { title: "Movie Comparison App", img: "assets/images/portfolio/movie-comp.JPG", desc: "Movie comparison app created with AJAX, jQuery, Chart.js, and Materialize. Designed mobile first.", tags: ["jQuery, JavaScript, UI/UX, Materialize, AJAX"], url: "http://acarlie.com/movie_comparison_app/", repo: "https://github.com/acarlie/movie_comparison_app" },
