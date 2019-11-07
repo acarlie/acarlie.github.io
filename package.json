@@ -20,6 +20,11 @@
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-clean-css": "^4.2.0",
-    "gulp-uglify": "^3.0.2"
-  }
+    "gulp-imagemin": "^6.1.1",
+    "gulp-jimp": "^1.2.9",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "jimp": "^0.8.5"
+  },
+  "dependencies": {}
 }
