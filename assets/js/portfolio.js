@@ -1,7 +1,7 @@
 var port = {
     portfolio: document.getElementById('portfolio'),
     items: [
-      { title: "All Things {Front-End}", img: "assets/dist/images/sm/all-things-front-end-sm.jpg", desc: "'All Things {Front-End}' is an article scraper where users can add notes and save articles. Created with Node.js, MongoDB, Express, Handlebars, SCSS, BEM, Gulp, Cheerio, and Axios.", tags: [""], url: "https://agile-bayou-91638.herokuapp.com/", repo: "https://github.com/acarlie/mongo_scraper" },
+      { title: "All Things {Front-End}", img: "assets/dist/images/sm/all-things-front-end-sm.jpg", desc: "'All Things {Front-End}' is an article scraper where users can add notes and save articles. Created with Node.js, MongoDB, Express, Handlebars, SCSS, BEM, Gulp, Cheerio, and Axios.", tags: [""], url: "https://all-things-fe.herokuapp.com/", repo: "https://github.com/acarlie/all_things_front-end" },
       { title: "Remember It", img: "assets/dist/images/sm/remember-it-sm.jpg", desc: "'Remember It' is a memory game created with React.", tags: ["React"], url: "http://acarlie.com/remember_it/", repo: "https://github.com/acarlie/remember_it"},
       { title: "Color Me ____.", img: "assets/dist/images/sm/color-me-4-sm.jpg", desc: "'Color Me ___' is a word guessing game created with Vanilla JS.", tags: ["Vanilla JS", "UI/UX"], url: "https://acarlie.com/Color_Me", repo: "https://github.com/acarlie/Color_Me" },
       { title: "Giphy Search", img: "assets/dist/images/sm/giphy-2-sm.jpg", desc: "'Giphy Search' was created using Giphy's API. Users can favorite gifs and copy gif embed links. Designed mobile first.", tags: ["jQuery, JavaScript, AJAX"], url: "https://acarlie.com/Giphy_Search/", repo: "https://github.com/acarlie/Giphy_Search" },
