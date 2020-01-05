@@ -81,3 +81,30 @@
         width: 100%;
     }
 }
+
+@keyframes link-wobble{
+    0% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  
+    25% {
+      -webkit-transform: translate3d(-7.5%, 0, 0) rotate3d(0, 0, 1, -3deg);
+      transform: translate3d(-7.5%, 0, 0) rotate3d(0, 0, 1, -3deg);
+    }
+  
+    50% {
+      -webkit-transform: translate3d(5%, 0, 0) rotate3d(0, 0, 1, 2deg);
+      transform: translate3d(5%, 0, 0) rotate3d(0, 0, 1, 2deg);
+    }
+  
+    75% {
+      -webkit-transform: translate3d(-2.5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+      transform: translate3d(-2.5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+    }
+  
+    100% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }

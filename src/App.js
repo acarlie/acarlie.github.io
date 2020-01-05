@@ -55,7 +55,6 @@ class App extends Component {
         loaded: true
       })
     }, 4000)
-    // this.getFilters(items);
   }
 
   setBg = () => {
@@ -124,8 +123,10 @@ class App extends Component {
                     <div id="type-wrap-inner" className="box">
                       <TypeWriter period={200} textArray={["Amelia Carlie", "Development", "& Design"]} />
                       <hr className="home" />
-                      <nav className="text-center home-nav">
-                        <a href="#about">About</a><a href="#work">Work</a><a href="#about">Contact</a>
+                      <nav className="text-center nav-main">
+                        <a href="#about">About</a>
+                        <a href="#work">Work</a>
+                        <a href="#about">Contact</a>
                       </nav>
                     </div>
   

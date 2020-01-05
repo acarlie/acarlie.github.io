@@ -10,12 +10,13 @@ a:hover{
 
 
 /*-------------Home Nav------------*/
-.home-nav{
+.nav-main{
 
     @include headings-upper;
     font-weight: 500;
 
     #{$links-not-hover}{
+        display: inline-block;
         padding: 0 .5em;
         color: $color-neutral-mddk;
         transition: color .5s;
@@ -24,6 +25,13 @@ a:hover{
     a:hover{
         color: $color-neutral-dk;
         text-decoration: none;
+    }
+
+    a:focus{
+        outline: none;
+        color: $color-black;
+        animation-name: link-wobble;
+        animation-duration: .5s;
     }
 
 }
@@ -50,33 +58,35 @@ a:hover{
 }
 
 /*-------------Social-------------*/
-ul.social-links{
+.social{
     list-style: none;
     @include no-space;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    li{
-        a span{
-            @include shadow-box;
-            font-size: 1.2em;
-            height: 2.5em;
-            width: 2.5em;
-            line-height: 2.5em;
-            text-align: center;
-            border-radius: 100%;
-            margin: .5em;
-            color: $color-neutral-dk;
-        }
+    &__icon{
+        @include shadow-box;
+        font-size: 1.2em;
+        height: 2.5em;
+        width: 2.5em;
+        line-height: 2.5em;
+        text-align: center;
+        border-radius: 100%;
+        margin: .5em;
+        color: $color-neutral-dk;
 
-        &:hover a span{
+        &:hover, &:focus{
             animation-name: social-hover;
             animation-duration: .75s;
             animation-fill-mode: forwards;
             transition-timing-function: cubic-bezier(.38,.38,.12,.96);
         }
-        
+
+        &:focus{
+            outline: none;
+        }
+
     }
 }
 
@@ -93,9 +103,13 @@ a.btn-dark{
     color: $color-neutral-med;
     @include headings-upper;
 
-    &:hover{
+    &:hover, &:focus{
         text-decoration: none;
         background-color: $color-black;
         color: $color-neutral-lt;
+    }
+
+    &:focus{
+        outline: none;
     }
 }
