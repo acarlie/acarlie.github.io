@@ -4,7 +4,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 function PortfolioItem (props) {
     return(
         <ScrollAnimation animateIn="fadeIn" animateOut='fadeOut' offset={100} duration={.5}>
-            <figure className="grid-item">
+            <figure className="grid-item" tabIndex='0'>
                 <img className="grid-item-img" src={process.env.PUBLIC_URL + '/assets/images/sm/' + props.img} alt={props.desc} />
                 <div className="grid-item-info">
                     <div className="grid-item-info-wrap">

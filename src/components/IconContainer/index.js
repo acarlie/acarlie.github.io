@@ -1,10 +1,11 @@
 import React from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
 
-function IconContainerInner (props) {
+function IconContainerInner(props) {
     const info = props.info ? 'icon-container-info' : '';
+    const tab = props.tabbable ? '0' : '-1';
     return (
-        <div className={`icon-container ${info}`}>
+        <div className={`icon-container ${info}`} tabIndex={tab}>
             <div className='icon-content'>
                 {props.children}
             </div>
@@ -15,17 +16,17 @@ function IconContainerInner (props) {
     );
 }
 
-function IconContainer (props) {
+function IconContainer(props) {
     const fade = props.fade ? 'fade-up' : '';
     return (
-        <> 
-            { 
+        <>
+            {
                 fade &&
                 <ScrollAnimation animateIn="fadeIn" animateOut='fadeOut' offset={0} duration={.5}>
-                    <IconContainerInner {...props} />
+                    <IconContainerInner {...props} tabbable />
                 </ScrollAnimation>
             }
-            { 
+            {
                 !fade &&
                 <IconContainerInner {...props} />
             }

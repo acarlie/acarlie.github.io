@@ -59,6 +59,14 @@ hr.home{
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: nowrap;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:focus .icon{
+        color: $color-primary;
+    }
 }
 
 
@@ -85,6 +93,12 @@ hr.home{
 
 .icon-container-info{
     margin-bottom: .5em;
+
+    &:focus{
+        outline: 0;
+        animation-name: container-wobble;
+        animation-duration: .5s;
+    }
 
     .icon{
         min-width: 90px;

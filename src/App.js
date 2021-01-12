@@ -29,7 +29,7 @@ const menuStyles = {
   })
 }
 class App extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props);
     this.state = {
       loaded: false,
@@ -41,7 +41,7 @@ class App extends Component {
     })
   }
 
-  componentDidMount () {
+  componentDidMount() {
     this.setBg();
     window.addEventListener("resize", this.setBg.bind(this));
     setTimeout(() => {
@@ -58,14 +58,14 @@ class App extends Component {
   }
 
   setBg = () => {
-      let pattern = Trianglify({
-          width: window.innerWidth,
-          height: window.innerHeight,
-          cell_size: 80,
-          variance: "0.89",
-          x_colors: ["#FFA9DC", "#F3CAFF", "#EB6087", "#E0004D", "#8F1368"]
-      });
-      pattern.canvas(document.getElementById('canvas-basic'));
+    let pattern = Trianglify({
+      width: window.innerWidth,
+      height: window.innerHeight,
+      cell_size: 80,
+      variance: "0.89",
+      x_colors: ["#FFA9DC", "#F3CAFF", "#EB6087", "#E0004D", "#8F1368"]
+    });
+    pattern.canvas(document.getElementById('canvas-basic'));
   }
 
   filterHandler = (input) => {
@@ -76,9 +76,9 @@ class App extends Component {
       const filteredTitles = [];
       for (let y of filters) {
         for (let x of items) {
-          if (x.tags.indexOf(y) > -1 && filteredTitles.indexOf(x.title) < 0){
-              filteredTitles.push(x.title);
-              filtered.push(x);
+          if (x.tags.indexOf(y) > -1 && filteredTitles.indexOf(x.title) < 0) {
+            filteredTitles.push(x.title);
+            filtered.push(x);
           }
         }
       }
@@ -91,7 +91,7 @@ class App extends Component {
     })
   }
 
-  render () {
+  render() {
     return (
       <div className="App">
 
@@ -105,16 +105,16 @@ class App extends Component {
             </div>
           </div>
         }
-  
+
         {/* Content */}
         <div id="fade-wrapper">
           <main>
-  
+
             {/* Background */}
-            <section className="container" id="bg">
+            <div className="container" id="bg">
               <canvas id="canvas-basic"></canvas>
-            </section>
-  
+            </div>
+
             {/* Home */}
             <section className="container" id="home">
               <div className="wrapper">
@@ -129,27 +129,27 @@ class App extends Component {
                         <a href="#about">Contact</a>
                       </nav>
                     </div>
-  
-                    <a href={process.env.PUBLIC_URL + '/assets/pdfs/AmeliaCarlie_Resume.pdf'} target="_blank" rel="noopener noreferrer" className="btn-dark">Download My Resume</a>
-  
+
+                    <a href={process.env.PUBLIC_URL + '/assets/pdfs/Amelia_Carlie_Resume.pdf'} target="_blank" rel="noopener noreferrer" className="btn-dark">Download My Resume</a>
+
                   </div>
-  
+
                   <SocialLinks />
                 </div>
               </div>
             </section>
-  
+
             {/* About */}
             <section className="container container-dark margin-bottom" id="about">
-  
+
               <div className="wrapper-nav">
                 <span className="fas fa-chevron-up"></span>
                 <a href="#home" className="wrapper-link">Home</a>
               </div>
-  
+
               <div className="wrapper">
                 <div className="row">
-  
+
                   <div className="col col-2">
                     <ScrollAnimation animateIn="fadeIn" animateOut='fadeOut' offset={0} duration={.5}>
                       <div id="profile-wrapper" className="profile-wrapper">
@@ -166,29 +166,26 @@ class App extends Component {
                       </div>
                     </ScrollAnimation>
                   </div>
-  
+
                   <div className="col col-4">
                     <IconContainer icon='info' info fade>
                       <p>
-                        I am a full-stack developer passionate about UI/UX. My love of coding started early on, styling Neopets guild layouts in the early 2000s. Since then, D.R.Y. has become a personal mantra.
-                      </p>
-                      <p>
-                        With 5 years experience in the graphic design field, I am now applying my knowledge of color theory and composition to my daily development projects.
+                        I am a front-end developer passionate about UI/UX. With 5 years experience in the graphic design field, I am now applying my knowledge of color theory and composition to my daily development projects. In 2019, I earned a certificate in Full-Stack Web Development from The Coding Bootcamp @ UNC.
                       </p>
                     </IconContainer>
                     <IconContainer icon='code' info fade>
-                        <ul className="primary-list">
-                          <li><span className="heading">Languages:</span> HTML5, CSS3, JavaScript(ES5 & ES6)</li>
-                          <li><span className="heading">Frameworks:</span> React</li>
-                          <li><span className="heading">Libraries:</span> jQuery, Materialize, Bootstrap</li>
-                          <li><span className="heading">Pre-Processors:</span> SASS</li>
-                          <li><span className="heading">Back-End:</span> Express, MySQL, MongoDB, Mongoose, Firebase</li>
-                          <li><span className="heading">Other Technologies:</span> Node.js</li>
-                        </ul>
+                      <ul className="primary-list">
+                        <li><span className="heading">Languages:</span> HTML5, CSS3, JavaScript(ES5 & ES6), TypeScript</li>
+                        <li><span className="heading">Frameworks:</span> React, Angular</li>
+                        <li><span className="heading">Libraries:</span> jQuery, Materialize, Bootstrap</li>
+                        <li><span className="heading">Pre-Processors:</span> SASS</li>
+                        <li><span className="heading">Back-End:</span> Express, MySQL, MongoDB, Mongoose, Firebase</li>
+                        <li><span className="heading">Other Technologies:</span> Node.js</li>
+                      </ul>
                     </IconContainer>
                     <IconContainer icon='pencil-ruler' info fade>
                       <ul className="primary-list">
-                        <li><span className="heading">Tools:</span> PhotoShop, Illustrator, InDesign, Adobe XD</li>
+                        <li><span className="heading">Tools:</span> PhotoShop, Illustrator, InDesign, Adobe XD, Figma</li>
                         <li><span className="heading">Design:</span> Color Theory, Illustration, Typography, Branding, Composition</li>
                       </ul>
                     </IconContainer>
@@ -200,27 +197,27 @@ class App extends Component {
                   </div>
                 </div>
               </div>
-  
+
               <div className="wrapper-nav">
                 <a href="#work" className="wrapper-link">Work</a>
                 <span className="fas fa-chevron-down"></span>
               </div>
-  
+
             </section>
-  
+
             {/* Work */}
             <section className="container container-dark" id="work">
-  
+
               <div className="wrapper-nav">
                 <span className="fas fa-chevron-up"></span>
                 <a href="#about" className="wrapper-link">About</a>
               </div>
-  
+
               <div className="wrapper">
                 <div className="row">
                   <div className='col col-6'>
-                    <Select 
-                      options={this.filterOptions} 
+                    <Select
+                      options={this.filterOptions}
                       isMulti
                       name="filter"
                       className="basic-multi-select"
@@ -245,9 +242,9 @@ class App extends Component {
                 </div>
                 <div className="row">
                   <div id="portfolio" className="col col-6 grid">
-                    { this.state.loader &&
+                    {this.state.loader &&
                       this.state.portfolio.map((item, i) => {
-                        return(
+                        return (
                           <PortfolioItem
                             key={i}
                             title={item.title}
@@ -259,31 +256,31 @@ class App extends Component {
                         );
                       })
                     }
-  
+
                   </div>
                 </div>
               </div>
-  
+
               <div className="wrapper-nav">
                 <span className="fas fa-chevron-up"></span>
                 <a href="#home" className="wrapper-link">Back to Top</a>
               </div>
-  
+
             </section>
-  
+
           </main>
-  
+
           <footer>
-  
-            <section id="social" className="footer-top">
+
+            <div id="social" className="footer-top">
               <SocialLinks />
-            </section>
-          
+            </div>
+
             <div className="text-center text-sm footer-bottom">
               <p> - Created with React <i className="fab fa-react"></i> - </p>
               <p>© Amelia Carlie 2019</p>
             </div>
-  
+
           </footer>
         </div>
       </div>
