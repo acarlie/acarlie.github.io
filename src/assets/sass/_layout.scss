@@ -1,17 +1,17 @@
 /*-------------General-------------*/
-html{
+html {
     min-height: 100%;
     scroll-behavior: smooth;
 }
 
-body{
+body {
     position: relative;
 
     min-height: 100%;
     @include no-space;
 }
 
-#loader{
+#loader {
     @include flex-col-center;
     color: #fff;
     position: fixed;
@@ -25,18 +25,18 @@ body{
     align-items: center;
 }
 
-#loader.done{
+#loader.done {
     animation: loaderOut 1s ease-in;
     animation-fill-mode: forwards;
 }
 
-#loader-inner{
- opacity: 0;
- animation: opacity 1s ease-in;
- animation-fill-mode: forwards;
+#loader-inner {
+    opacity: 0;
+    animation: opacity 1s ease-in;
+    animation-fill-mode: forwards;
 }
 
-#loader-expand{
+#loader-expand {
     @include main-gradient;
     width: 0;
     height: .25em;
@@ -47,7 +47,7 @@ body{
 
 /*-------------Area Specific Styles-------------*/
 /*Trianglify BG*/
-#bg{
+#bg {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -67,25 +67,22 @@ body{
 }
 
 /*Home*/
-#home .wrapper{
-    display: flex; 
-    flex-direction: row; 
-    align-items: center; 
-    justify-content: center; 
+#home .wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     min-height: 100vh;
 }
 
 /*-------------Layout-------------*/
-section{
+section {
     width: 100%;
 }
 
-.container{
-    width: 100%;
-    min-height: 100vh; /*Accounts for nav*/
-}
 
-.wrapper{
+
+.wrapper {
     width: calc(100% - 2em);
     margin-left: 1em;
     margin-right: 1em;
@@ -95,7 +92,7 @@ section{
     flex-direction: column;
 }
 
-.wrapper-nav{
+.wrapper-nav {
     padding: 2em;
     width: calc(100% - 2em);
     margin-left: 1em;
@@ -103,68 +100,67 @@ section{
     min-height: 4em;
 }
 
-.row{
+.row {
     display: flex;
     flex-direction: column;
 }
 
-.wrapper .row:not(:last-child){
+.wrapper .row:not(:last-child) {
     margin-bottom: 1em;
 }
 
 /*-------------Columns-------------*/
-.col{
+.col {
     display: flex;
     flex-direction: column;
     padding: 0px .5em;
 
 }
 
-[class*=" col-"]{
+[class*=" col-"] {
     width: 100%;
 }
 
-@media (min-width: 800px){
-    
-    .wrapper{
+@media (min-width: 800px) {
+
+    .wrapper {
         width: 65%;
         margin: 0 auto;
     }
 
-    .wrapper-footer{
+    .wrapper-footer {
         width: 65%;
         margin: 0 auto;
     }
 
-    .row{
+    .row {
         display: flex;
         flex-direction: row;
     }
 
-    .col-1{
+    .col-1 {
         width: $col-basis;
     }
-    
-    .col-2{
-        width: calc( #{$col-basis} * 2);
+
+    .col-2 {
+        width: calc(#{$col-basis} * 2);
     }
-    
-    .col-3{
+
+    .col-3 {
         width: 50%;
     }
-    
-    .col-4{
+
+    .col-4 {
         width: calc(#{$col-basis} * 4);
     }
-    
-    .col-5{
+
+    .col-5 {
         width: calc(#{$col-basis} * 5);
     }
-    
-    .col-6{
+
+    .col-6 {
         width: 100%;
     }
 
 
 }
-

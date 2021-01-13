@@ -1,0 +1,101 @@
+.g-container {
+    width: 100%;
+    min-height: 100vh;
+
+    &--dark {
+        background: $g-color-bg-dk;
+    }
+
+    &--light {
+        background-color: $g-color-bg-lt;
+    }
+}
+
+.g-wrapper {
+    height: 1
+}
+
+
+// From Geoff Graham: https://css-tricks.com/snippets/css/fluid-typography/
+@function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+    $u1: unit($min-vw);
+    $u2: unit($max-vw);
+    $u3: unit($min-font-size);
+    $u4: unit($max-font-size);
+
+    @if $u1==$u2 and $u1==$u3 and $u1==$u4 {
+        & {
+
+            font-size: $min-font-size;
+
+            @media screen and (min-width: $min-vw) {
+                font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+            }
+
+            @media screen and (min-width: $max-vw) {
+                font-size: $max-font-size;
+            }
+        }
+    }
+}
+
+
+.g-text {
+    @include fluid-type($g-breakpoint-mobile, $g-breakpoint-desktop, .875rem, 1rem);
+    color: $g-color-text;
+    font-family: $g-font-family-text;
+    line-height: $g-line-height-text;
+
+    &--on-dark {
+        color: $g-color-text-on-dk;
+    }
+
+    &--large {
+        @include fluid-type($g-breakpoint-mobile, $g-breakpoint-desktop, 1.125rem, 1.5rem);
+    }
+}
+
+.g-heading {
+    color: $g-color-heading;
+    font-family: $g-font-family-heading;
+    line-height: $g-line-height-heading;
+
+    &--on-dark {
+        color: $g-color-heading-on-dk;
+    }
+
+    &--label {
+        text-transform: capitalize;
+        font-weight: $g-font-weight-bold;
+        letter-spacing: 2px;
+    }
+
+    // $min-vw, $max-vw, $min-font-size, $max-font-size
+    &--1 {
+        @include fluid-type($g-breakpoint-mobile, $g-breakpoint-desktop, 2.25rem, 3rem);
+    }
+
+    &--2 {
+        @include fluid-type($g-breakpoint-mobile, $g-breakpoint-desktop, 1.5rem, 2rem);
+    }
+
+    &--3 {
+        @include fluid-type($g-breakpoint-mobile, $g-breakpoint-desktop, 1.125rem, 1.5rem);
+    }
+
+    &--4 {
+        @include fluid-type($g-breakpoint-mobile, $g-breakpoint-desktop, 1rem, 1.25rem);
+    }
+
+    &--5 {
+        @include fluid-type($g-breakpoint-mobile, $g-breakpoint-desktop, .875rem, 1rem);
+    }
+
+    &--6 {
+        @include fluid-type($g-breakpoint-mobile, $g-breakpoint-desktop, .75rem, .875rem);
+    }
+}
