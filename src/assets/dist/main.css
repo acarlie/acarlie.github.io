@@ -813,7 +813,10 @@ footer {
   line-height: 1.25; }
   .g-heading--on-dark {
     color: #E4E4E4; }
-  .g-heading--label {
+  .g-heading--uppercase-sm {
     text-transform: capitalize;
     font-weight: 700;
+    letter-spacing: 2px; }
+  .g-heading--uppercase {
+    text-transform: uppercase;
     letter-spacing: 2px; }

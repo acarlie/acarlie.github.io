@@ -68,11 +68,17 @@
         color: $g-color-heading-on-dk;
     }
 
-    &--label {
+    &--uppercase-sm {
         text-transform: capitalize;
         font-weight: $g-font-weight-bold;
         letter-spacing: 2px;
     }
+
+    &--uppercase {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
 
     // $min-vw, $max-vw, $min-font-size, $max-font-size
     &--1 {
