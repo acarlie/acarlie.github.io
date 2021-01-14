@@ -1,4 +1,4 @@
-.g-container {
+.g__container {
     width: 100%;
     min-height: 100vh;
 
@@ -11,8 +11,16 @@
     }
 }
 
-.g-wrapper {
-    height: 1
+.g__wrapper {
+    height: 100vh;
+
+    &--center {
+        height: 100vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 
@@ -44,7 +52,7 @@
 }
 
 
-.g-text {
+.g__text {
     @include fluid-type($g-breakpoint-mobile, $g-breakpoint-desktop, .875rem, 1rem);
     color: $g-color-text;
     font-family: $g-font-family-text;
@@ -59,7 +67,7 @@
     }
 }
 
-.g-heading {
+.g__heading {
     color: $g-color-heading;
     font-family: $g-font-family-heading;
     line-height: $g-line-height-heading;
@@ -78,7 +86,6 @@
         text-transform: uppercase;
         letter-spacing: 2px;
     }
-
 
     // $min-vw, $max-vw, $min-font-size, $max-font-size
     &--1 {
@@ -104,4 +111,13 @@
     &--6 {
         @include fluid-type($g-breakpoint-mobile, $g-breakpoint-desktop, .75rem, .875rem);
     }
+}
+
+.g__sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }

@@ -12,6 +12,7 @@ import makeAnimated from 'react-select/animated';
 //assets
 // import Profile from './assets/images/profile_square.png';
 import items from './assets/js/portfolioItems';
+import Logo from './components/Logo';
 
 
 const animatedComponents = makeAnimated();
@@ -88,16 +89,16 @@ class App extends Component {
 
 
             {/* Home */}
-            <section className="g-container g-container--dark" id="home">
-              <div className="wrapper">
+            <section className="g__container g__container--dark" id="home">
+              <div className="g__wrapper--center">
                 <div>
-                  Hello
+                  <Logo />
                 </div>
               </div>
             </section>
 
             {/* About */}
-            <section className="g-container g-container--light" id="about">
+            <section className="g__container g__container--light" id="about">
 
               <div className="wrapper">
                 <div className="row">
@@ -115,7 +116,7 @@ class App extends Component {
             </section>
 
             {/* Work */}
-            <section className="g-container g-container--dark" id="work">
+            <section className="g__container g__container--dark" id="work">
 
               <div className="wrapper">
                 <div className="row">
