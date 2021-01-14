@@ -1,0 +1,36 @@
+@import './scss/variables.scss';
+@import './scss/mixins.scss';
+@import './scss/shared.scss';
+
+.test {
+    color: red !important;
+
+    &__test {
+        color: red;
+    }
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+
+    &__dark {
+        background: $g-color-bg-dk;
+    }
+
+    &__light {
+        background-color: $g-color-bg-lt;
+    }
+}
+
+.wrapper {
+    height: 100vh;
+
+    &__center {
+        height: 100vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

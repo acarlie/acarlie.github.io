@@ -14,6 +14,8 @@ import makeAnimated from 'react-select/animated';
 import items from './assets/js/portfolioItems';
 import Logo from './components/Logo';
 
+import styles from './App.module.scss';
+
 
 const animatedComponents = makeAnimated();
 const menuStyles = {
@@ -89,16 +91,22 @@ class App extends Component {
 
 
             {/* Home */}
-            <section className="g__container g__container--dark" id="home">
-              <div className="g__wrapper--center">
+            <section className={styles.container + ' ' + styles.container__dark} id="home">
+              <div className={styles.wrapper__center}>
                 <div>
                   <Logo />
+                  <h1 className={styles.heading__5 + ' ' + styles.heading__uppercase}>
+                    <span className={styles.sr_only}>
+                      Amelia Carlie
+                    </span>
+                      Frontend Developer
+                  </h1>
                 </div>
               </div>
             </section>
 
             {/* About */}
-            <section className="g__container g__container--light" id="about">
+            <section className="container container__light" id="about">
 
               <div className="wrapper">
                 <div className="row">
@@ -116,7 +124,7 @@ class App extends Component {
             </section>
 
             {/* Work */}
-            <section className="g__container g__container--dark" id="work">
+            <section className="container container__dark" id="work">
 
               <div className="wrapper">
                 <div className="row">
