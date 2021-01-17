@@ -1,0 +1,108 @@
+@import './../../scss/variables.scss';
+
+.even {
+    flex-direction: row-reverse;
+}
+
+.odd {
+    flex-direction: row;
+}
+
+.item {
+    display: block;
+
+    &_inner {
+        display: flex;
+    }
+
+    &_img_cont {
+        background: #eee;
+    }
+
+    &_info {
+        padding: 2rem;
+    }
+
+    &_img_cont,
+    &_info {
+
+        display: block;
+        height: 50vh;
+        width: 50%;
+        overflow: hidden;
+    }
+
+    &_img_cont {
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // background: linear-gradient(-45deg, #444257, #ff43c0);
+        background: linear-gradient(-45deg, #444257, #aea4b9);
+        background: linear-gradient(-45deg, #2d2b3d, #ff76af);
+    }
+
+    &_img {
+        // width: 100%;
+        mix-blend-mode: overlay;
+        opacity: 90%;
+        height: 100%;
+    }
+
+    &_info {
+        background-color: $g-color-bg-lt;
+    }
+}
+
+// .grid {
+//     display: grid;
+//     grid-column-gap: 2rem;
+//     grid-row-gap: 1rem;
+//     grid-template-columns: 1fr;
+
+//     @media screen and (min-width: $g-breakpoint-desktop) {
+//         grid-template-columns: repeat(2, 1fr);
+//     }
+// }
+
+// .grid_item {
+//     display: flex;
+//     flex-direction: column;
+//     position: relative;
+//     overflow: hidden;
+//     // box-shadow: $shadow-dk;
+//     height: 100%;
+//     color: $g-color-text;
+
+// }
+
+// .grid_item_img {
+//     width: 100%;
+//     flex: 2;
+//     object-fit: cover;
+// }
+
+// .grid_item_info {
+//     // position: absolute;
+//     // bottom: 0;
+//     // height: 100%;
+//     flex: 1;
+//     width: 100%;
+//     padding: 1rem;
+//     display: flex;
+//     justify-content: flex-end;
+//     flex-direction: column;
+//     // background: rgba(0, 0, 0, .5);
+//     // background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, .85), rgba(0, 0, 0, 0));
+//     // background: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+//     // text-shadow: 0 0 10px rgba(0, 0, 0, .9);
+//     background: $g-color-bg-lt;
+
+//     // &_inner {
+//     //     box-shadow: -5px -5px -5px #000000;
+//     // }
+// }
+
+// .grid_item_cap {
+//     margin-bottom: .5em;
+// }

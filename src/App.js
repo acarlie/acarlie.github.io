@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 
 // packages
-import Select from 'react-select';
+// import Select from 'react-select';
 
 //components
 // import TypeWriter from './components/TypeWriter';
 import SocialLinks from './components/SocialLinks';
 // import IconContainer from './components/IconContainer';
-import PortfolioItem from './components/PortfolioItem';
-import makeAnimated from 'react-select/animated';
+// import makeAnimated from 'react-select/animated';
 //assets
 // import Profile from './assets/images/profile_square.png';
 import items from './assets/js/portfolioItems';
@@ -18,17 +17,18 @@ import Link from './components/Link';
 import styles from './App.module.scss';
 import resume from './assets/pdfs/AmeliaCarlie_Resume.pdf';
 import portfolio from './assets/pdfs/AmeliaCarlie_DesignPortfolio.pdf';
+import Portfolio from './components/Portfolio';
 
 
-const animatedComponents = makeAnimated();
-const menuStyles = {
-  menu: (provided, state) => ({
-    ...provided,
-    padding: 10
-    // borderRadius: 0
-    // overflow: 'hidden'
-  })
-}
+// const animatedComponents = makeAnimated();
+// const menuStyles = {
+//   menu: (provided, state) => ({
+//     ...provided,
+//     padding: 10
+//     // borderRadius: 0
+//     // overflow: 'hidden'
+//   })
+// }
 class App extends Component {
   constructor(props) {
     super(props);
@@ -43,18 +43,20 @@ class App extends Component {
   }
 
   componentDidMount() {
-
-    setTimeout(() => {
-      this.setState({
-        loader: 'done',
-        portfolio: [...items]
-      })
-    }, 3000)
-    setTimeout(() => {
-      this.setState({
-        loaded: true
-      })
-    }, 4000)
+    // this.setState({
+    //   portfolio: [...items]
+    // })
+    // setTimeout(() => {
+    //   this.setState({
+    //     loader: 'done',
+    //     portfolio: [...items]
+    //   })
+    // }, 3000)
+    // setTimeout(() => {
+    //   this.setState({
+    //     loaded: true
+    //   })
+    // }, 4000)
   }
 
 
@@ -166,9 +168,13 @@ class App extends Component {
 
             {/* Work */}
             <section className={styles.container + ' ' + styles.container__dark} id="work">
+              <h2 className="sr_only">Work</h2>
 
-              <div className="wrapper">
-                <div className="row">
+              <div className={styles.row}>
+                {/* <div className={styles.col}> */}
+                <Portfolio items={items} />
+                {/* </div> */}
+                {/* <div className="row">
                   <div className='col col-6'>
                     <Select
                       options={this.filterOptions}
@@ -193,26 +199,10 @@ class App extends Component {
                       })}
                     />
                   </div>
-                </div>
-                <div className="row">
-                  <div id="portfolio" className="col col-6 grid">
-                    {this.state.loader &&
-                      this.state.portfolio.map((item, i) => {
-                        return (
-                          <PortfolioItem
-                            key={i}
-                            title={item.title}
-                            img={item.img}
-                            url={item.url}
-                            repo={item.repo}
-                            desc={item.desc}
-                          />
-                        );
-                      })
-                    }
+                </div> */}
 
-                  </div>
-                </div>
+
+
               </div>
 
               <div className="wrapper-nav">
