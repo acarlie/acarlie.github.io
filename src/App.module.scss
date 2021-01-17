@@ -25,16 +25,23 @@
         height: 100vh;
     }
 
-    &__divided {
-        padding: 1rem 0;
+    &__inner {
+        padding: $g-space-two 0;
+    }
+
+    &__inner_divided {
+        @extend .row__inner;
 
         &:not(:first-child) {
             border-top: 1px solid $g-color-secondary;
         }
     }
 
+    &__stacked {
+        margin: 1rem 0 0 0;
+    }
 
-    @media screen and (min-width: $g-breakpoint-tablet),
+    @media screen and (min-width: $g-breakpoint-desktop),
     print {
         flex-direction: row;
     }
@@ -54,6 +61,10 @@
 
 .col {
     padding: $g-space-two;
+
+    &__dk {
+        background-color: $g-color-bg-dk;
+    }
 }
 
 
@@ -65,8 +76,18 @@
 }
 
 .list {
+    &__links {
+        padding-bottom: 4px;
+    }
+
     &_item {
         display: block;
-        margin-bottom: 1rem;
+        margin-bottom: $g-space-one;
+
+        &__link {
+            &:not(:first-child) {
+                margin-top: $g-space-quarter;
+            }
+        }
     }
 }

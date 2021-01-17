@@ -112,27 +112,34 @@ class App extends Component {
             <section className={styles.container + ' ' + styles.container__light} id="about">
               <h2 className="sr_only">About</h2>
               <div className={styles.row + ' ' + styles.row__100}>
-                <div className={styles.col + ' ' + styles.col__3 + ' ' + styles.col__center}>
+                <div className={styles.col + ' ' + styles.col__3 + ' ' + styles.col__center + ' ' + styles.col__dk}>
                   <Headshot />
                 </div>
 
                 <div className={styles.col + ' ' + styles.col__3 + ' ' + styles.col__center}>
                   <div>
-                    <div className={styles.row__divided + ' ' + 'text__large'}>
-                      I am a frontend developer passionate about UI/UX. With 5 years experience in the graphic design field, I am now applying my knowledge of color theory and composition to my daily development projects.
-                      <ul>
-                        <li>
-                          <Link href={resume} blank={true} text="Download my resume →" />
-                        </li>
-                        <li>
-                          <a href={portfolio} target="_blank" rel="noopener noreferrer">Download my design portfolio → <span className="sr_only">, opens in new tab</span></a>
-                        </li>
-                      </ul>
+                    <div className={styles.row__inner_divided}>
+                      <p className=" text__large">
+                        I am a frontend developer
+                        passionate about UI/UX. With
+                        5 years experience in the
+                        graphic design field, I am now
+                        applying my knowledge of color
+                        theory and composition to my
+                        development projects.
+                      </p>
+                      <div className={styles.row__stacked}>
+                        <ul className={styles.list__links}>
+                          <li className={styles.list_item__link}>
+                            <Link href={resume} blank={true} text="Download my resume →" />
+                          </li>
+                          <li className={styles.list_item__link}>
+                            <Link href={portfolio} blank={true} text="Download my design portfolio →" />
+                          </li>
+                        </ul>
+                      </div>
                     </div>
-                    <div className={styles.row__divided}>
-
-                    </div>
-                    <div className={styles.row__divided}>
+                    <div className={styles.row__inner_divided}>
                       <ul className="text__small">
                         <li className={styles.list_item}>
                           <h3 className="heading__6 heading__uppercase_sm">Frontend</h3>

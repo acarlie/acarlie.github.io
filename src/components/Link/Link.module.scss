@@ -1,5 +1,32 @@
 @import './../../scss/variables.scss';
 
 .link {
-    color: red;
+    color: $g-color-text;
+    text-decoration: none;
+    position: relative;
+    margin-bottom: 4px;
+
+    &::before {
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        content: ' ';
+        width: 100%;
+        height: 6px;
+        background: $g-color-primary;
+        opacity: .3;
+        transition: height .25s;
+    }
+
+    &:hover {
+        &::before {
+            height: 8px;
+        }
+    }
+}
+
+.inner {
+    position: relative;
+
+    // z-index: 1000;
 }

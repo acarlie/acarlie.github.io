@@ -8,11 +8,19 @@ function Link(props) {
         <>
             {
                 blank &&
-                <a className={link.link} href={href} target="_blank" rel="noopener noreferrer">{text} <span className="sr_only">, opens in new tab</span></a>
+                <a className={link.link} href={href} target="_blank" rel="noopener noreferrer">
+                    <span className={link.inner}>
+                        {text} <span className="sr_only">, opens in new tab</span>
+                    </span>
+                </a>
             }
             {
                 !blank &&
-                <a className={link.link} href={href}>{text}</a>
+                <a className={link.link} href={href}>
+                    <span className={link.inner}>
+                        {text}
+                    </span>
+                </a>
             }
         </>
 

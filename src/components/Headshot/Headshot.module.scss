@@ -1,14 +1,18 @@
 @import './../../scss/variables.scss';
 
 .container {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 15rem;
-    overflow: hidden;
+    padding: .3rem;
+    background: linear-gradient(to left, $g-color-bg-dk, $g-color-neutral-med-dk);
     border-radius: 20em;
 }
 
 .image {
-    width: 100%
+    max-width: 15rem;
+    width: 100%;
+    border-radius: 20em;
+    position: relative;
 }
