@@ -1,0 +1,73 @@
+@import './../../scss/variables.scss';
+
+.item {
+    display: block;
+    border-radius: 2rem;
+    overflow: hidden;
+
+    &:not(:first-child) {
+        margin: 2rem 0 0 0;
+    }
+}
+
+.inner {
+
+    @media screen and (min-width: $g-breakpoint-desktop),
+    print {
+        display: flex;
+    }
+}
+
+
+.even {
+
+    @media screen and (min-width: $g-breakpoint-desktop),
+    print {
+        flex-direction: row-reverse;
+    }
+}
+
+.odd {
+
+    @media screen and (min-width: $g-breakpoint-desktop),
+    print {
+        flex-direction: row;
+    }
+}
+
+.img_cont,
+.info {
+    display: block;
+    overflow: hidden;
+
+    @media screen and (min-width: $g-breakpoint-desktop),
+    print {
+        width: 50%;
+    }
+}
+
+.img_cont {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(-45deg, #2d2b3d, #ad3466);
+}
+
+.img {
+    mix-blend-mode: screen;
+    opacity: 90%;
+    width: 110%;
+}
+
+.info {
+    padding: 2rem;
+    background-color: $g-color-bg-lt;
+
+    >* {
+        &:not(:first-child) {
+
+            margin: 1rem 0 0 0;
+        }
+    }
+}

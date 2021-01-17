@@ -63,6 +63,10 @@ body {
         &__small {
             font-size: .875rem;
         }
+
+        &__xsmall {
+            font-size: .75rem;
+        }
     }
 
     .heading {
@@ -78,7 +82,7 @@ body {
         &__uppercase_sm {
             text-transform: uppercase;
             font-weight: $g-font-weight-bold;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
         }
 
         &__uppercase {
@@ -128,4 +132,23 @@ body {
         height: 1px;
         overflow: hidden;
     }
+
+
+    .list {
+        &__links {
+            padding-bottom: 4px;
+        }
+
+        &_item {
+            display: block;
+            margin-bottom: $g-space-one;
+
+            &__link {
+                &:not(:first-child) {
+                    margin-top: $g-space-quarter;
+                }
+            }
+        }
+    }
+
 }

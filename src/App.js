@@ -131,11 +131,11 @@ class App extends Component {
                         development projects.
                       </p>
                       <div className={styles.row__stacked}>
-                        <ul className={styles.list__links}>
-                          <li className={styles.list_item__link}>
+                        <ul className="list__links">
+                          <li className="list_item__link">
                             <Link href={resume} blank={true} text="Download my resume →" />
                           </li>
-                          <li className={styles.list_item__link}>
+                          <li className="list_item__link">
                             <Link href={portfolio} blank={true} text="Download my design portfolio →" />
                           </li>
                         </ul>
@@ -143,19 +143,19 @@ class App extends Component {
                     </div>
                     <div className={styles.row__inner_divided}>
                       <ul className="text__small">
-                        <li className={styles.list_item}>
+                        <li className='list_item'>
                           <h3 className="heading__6 heading__uppercase_sm">Frontend</h3>
                           JavaScript, React, Angular, TypeScript, HTML5, CSS3, Sass, Web Accessibility
                         </li>
-                        <li className={styles.list_item}>
+                        <li className='list_item'>
                           <h3 className="heading__6 heading__uppercase_sm">Backend</h3>
                           Node.js, Express, MySQL, MongoDB
                        </li>
-                        <li className={styles.list_item}>
+                        <li className='list_item'>
                           <h3 className="heading__6 heading__uppercase_sm">Design Tools</h3>
                           PhotoShop, Illustrator, InDesign, Adobe XD, Figma
                         </li>
-                        <li className={styles.list_item}>
+                        <li className='list_item'>
                           <h3 className="heading__6 heading__uppercase_sm">Design</h3>
                           Color Theory, Illustration, Typography, Branding, Composition
                         </li>

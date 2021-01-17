@@ -22,7 +22,7 @@
     flex-direction: column;
 
     &__100 {
-        height: 100vh;
+        min-height: 100vh;
     }
 
     &__inner {
@@ -72,22 +72,5 @@
 @for $i from 1 through 6 {
     .col__#{$i} {
         flex: #{$i};
-    }
-}
-
-.list {
-    &__links {
-        padding-bottom: 4px;
-    }
-
-    &_item {
-        display: block;
-        margin-bottom: $g-space-one;
-
-        &__link {
-            &:not(:first-child) {
-                margin-top: $g-space-quarter;
-            }
-        }
     }
 }
