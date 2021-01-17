@@ -133,10 +133,10 @@ class App extends Component {
                       <div className={styles.row__stacked}>
                         <ul className="list__links">
                           <li className="list_item__link">
-                            <Link href={resume} blank={true} text="Download my resume →" />
+                            <Link href={resume} blank={true}>Download my resume →</Link>
                           </li>
                           <li className="list_item__link">
-                            <Link href={portfolio} blank={true} text="Download my design portfolio →" />
+                            <Link href={portfolio} blank={true}>Download my design portfolio →</Link>
                           </li>
                         </ul>
                       </div>
@@ -200,9 +200,6 @@ class App extends Component {
                     />
                   </div>
                 </div> */}
-
-
-
               </div>
 
               <div className="wrapper-nav">
@@ -214,7 +211,7 @@ class App extends Component {
 
           </main>
 
-          <footer>
+          <footer className={styles.container__dark}>
 
             <div id="social" className="footer-top">
               <SocialLinks />

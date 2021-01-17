@@ -2,7 +2,7 @@ import React from 'react';
 import link from './Link.module.scss';
 
 function Link(props) {
-    const { blank, href, text } = props;
+    const { blank, href } = props;
 
     return (
         <>
@@ -10,7 +10,8 @@ function Link(props) {
                 blank &&
                 <a className={link.link} href={href} target="_blank" rel="noopener noreferrer">
                     <span className={link.inner}>
-                        {text} <span className="sr_only">, opens in new tab</span>
+                        {props.children}
+                        <span className="sr_only">, opens in new tab</span>
                     </span>
                 </a>
             }
@@ -18,7 +19,7 @@ function Link(props) {
                 !blank &&
                 <a className={link.link} href={href}>
                     <span className={link.inner}>
-                        {text}
+                        {props.children}
                     </span>
                 </a>
             }

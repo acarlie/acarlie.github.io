@@ -12,6 +12,10 @@
         background: $g-color-bg-dk;
     }
 
+    &__dark_gradient {
+        background: linear-gradient(-45deg, $g-color-bg-dk, $g-color-neutral-med-dk);
+    }
+
     &__light {
         background-color: $g-color-bg-lt;
     }

@@ -1,6 +1,11 @@
 @import './../../scss/variables.scss';
 
 .wrapper {
-    padding: 5rem;
+    padding: 2rem;
     background: $g-color-bg-dk;
+
+    @media screen and (min-width: $g-breakpoint-tablet),
+    print {
+        padding: 5rem;
+    }
 }

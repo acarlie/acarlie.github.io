@@ -18,8 +18,8 @@ function PortfolioItem(props) {
                     <h3 className="heading__6 heading__uppercase_sm">{props.title}</h3>
                     <div className="text__small">{props.desc}</div>
                     <ul className="list__links text__small">
-                        {props.url && <li className="list_item__link"><Link href={props.url} blank text="View deployment ⟶" /></li>}
-                        {props.repo && <li className="list_item__link"><Link href={props.repo} blank text="View the repo ⟶" /></li>}
+                        {props.url && <li className="list_item__link"><Link href={props.url} blank>View the deployment <span className="sr_only">of {props.title}</span>  ⟶ </Link></li>}
+                        {props.repo && <li className="list_item__link"><Link href={props.repo} blank>View the repo <span className="sr_only">for {props.title}</span> ⟶  </Link></li>}
                     </ul>
                 </div>
             </div>
