@@ -25,97 +25,99 @@
     }
 }
 
-.g__container {
-    width: 100%;
-    min-height: 100vh;
+:global {
+    .g__container {
+        width: 100%;
+        min-height: 100vh;
 
-    &--dark {
-        background: $g-color-bg-dk;
+        &--dark {
+            background: $g-color-bg-dk;
+        }
+
+        &--light {
+            background-color: $g-color-bg-lt;
+        }
     }
 
-    &--light {
-        background-color: $g-color-bg-lt;
-    }
-}
-
-.g__wrapper {
-    height: 100vh;
-
-    &--center {
+    .g__wrapper {
         height: 100vh;
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-}
+        &--center {
+            height: 100vh;
 
-.g__text {
-    @include fluid-type($g-breakpoint-mobile, $g-breakpoint-desktop, .875rem, 1rem);
-    color: $g-color-text;
-    font-family: $g-font-family-text;
-    line-height: $g-line-height-text;
-
-    &--on-dark {
-        color: $g-color-text-on-dk;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
 
-    &--large {
-        @include fluid-type($g-breakpoint-mobile, $g-breakpoint-desktop, 1.125rem, 1.5rem);
-    }
-}
-
-.g__heading {
-    color: $g-color-heading;
-    font-family: $g-font-family-heading;
-    line-height: $g-line-height-heading;
-
-    &--on-dark {
-        color: $g-color-heading-on-dk;
-    }
-
-    &--uppercase-sm {
-        text-transform: capitalize;
-        font-weight: $g-font-weight-bold;
-        letter-spacing: 2px;
-    }
-
-    &--uppercase {
-        text-transform: uppercase;
-        letter-spacing: 2px;
-    }
-
-    // $min-vw, $max-vw, $min-font-size, $max-font-size
-    &--1 {
-        @include fluid-type($g-breakpoint-mobile, $g-breakpoint-desktop, 2.25rem, 3rem);
-    }
-
-    &--2 {
-        @include fluid-type($g-breakpoint-mobile, $g-breakpoint-desktop, 1.5rem, 2rem);
-    }
-
-    &--3 {
-        @include fluid-type($g-breakpoint-mobile, $g-breakpoint-desktop, 1.125rem, 1.5rem);
-    }
-
-    &--4 {
-        @include fluid-type($g-breakpoint-mobile, $g-breakpoint-desktop, 1rem, 1.25rem);
-    }
-
-    &--5 {
+    .g__text {
         @include fluid-type($g-breakpoint-mobile, $g-breakpoint-desktop, .875rem, 1rem);
+        color: $g-color-text;
+        font-family: $g-font-family-text;
+        line-height: $g-line-height-text;
+
+        &--on-dark {
+            color: $g-color-text-on-dk;
+        }
+
+        &--large {
+            @include fluid-type($g-breakpoint-mobile, $g-breakpoint-desktop, 1.125rem, 1.5rem);
+        }
     }
 
-    &--6 {
-        @include fluid-type($g-breakpoint-mobile, $g-breakpoint-desktop, .75rem, .875rem);
-    }
-}
+    .g__heading {
+        color: $g-color-heading;
+        font-family: $g-font-family-heading;
+        line-height: $g-line-height-heading;
 
-.g__sr-only {
-    position: absolute;
-    left: -10000px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
+        &--on-dark {
+            color: $g-color-heading-on-dk;
+        }
+
+        &--uppercase-sm {
+            text-transform: capitalize;
+            font-weight: $g-font-weight-bold;
+            letter-spacing: 2px;
+        }
+
+        &--uppercase {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        // $min-vw, $max-vw, $min-font-size, $max-font-size
+        &--1 {
+            @include fluid-type($g-breakpoint-mobile, $g-breakpoint-desktop, 2.25rem, 3rem);
+        }
+
+        &--2 {
+            @include fluid-type($g-breakpoint-mobile, $g-breakpoint-desktop, 1.5rem, 2rem);
+        }
+
+        &--3 {
+            @include fluid-type($g-breakpoint-mobile, $g-breakpoint-desktop, 1.125rem, 1.5rem);
+        }
+
+        &--4 {
+            @include fluid-type($g-breakpoint-mobile, $g-breakpoint-desktop, 1rem, 1.25rem);
+        }
+
+        &--5 {
+            @include fluid-type($g-breakpoint-mobile, $g-breakpoint-desktop, .875rem, 1rem);
+        }
+
+        &--6 {
+            @include fluid-type($g-breakpoint-mobile, $g-breakpoint-desktop, .75rem, .875rem);
+        }
+    }
+
+    .g__sr-only {
+        position: absolute;
+        left: -10000px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+    }
 }

@@ -44,81 +44,88 @@ body {
     line-height: $g-line-height-text;
 }
 
-.text {
-    font-size: 1rem;
-    color: $g-color-text;
-    font-family: $g-font-family-text;
-    line-height: $g-line-height-text;
+:global {
 
-    &__on_dark {
-        color: $g-color-text-on-dk;
+    .text {
+        font-size: 1rem;
+        color: $g-color-text;
+        font-family: $g-font-family-text;
+        line-height: $g-line-height-text;
+
+        &__on_dark {
+            color: $g-color-text-on-dk;
+        }
+
+        &__large {
+            font-size: 1.25rem;
+        }
+
+        &__small {
+            font-size: .875rem;
+        }
     }
 
-    &__large {
-        font-size: 1.25rem;
+    .heading {
+        color: $g-color-heading;
+        font-family: $g-font-family-heading;
+        line-height: $g-line-height-heading;
+        font-weight: $g-font-weight-default;
+
+        &__on_dark {
+            color: $g-color-heading-on-dk;
+        }
+
+        &__uppercase_sm {
+            text-transform: uppercase;
+            font-weight: $g-font-weight-bold;
+            letter-spacing: 2px;
+        }
+
+        &__uppercase {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: $g-color-heading-on-dk;
+            text-align: center;
+        }
+
+        // $min-vw, $max-vw, $min-font-size, $max-font-size
+        &__1 {
+            @extend .heading;
+            font-size: 3rem;
+        }
+
+        &__2 {
+            @extend .heading;
+            font-size: 2rem;
+        }
+
+        &__3 {
+            @extend .heading;
+            font-size: 1.5rem;
+        }
+
+        &__4 {
+            @extend .heading;
+            font-size: 1.25rem;
+        }
+
+        &__5 {
+            @extend .heading;
+            font-size: 1rem
+        }
+
+        &__6 {
+            @extend .heading;
+            font-size: .875rem;
+        }
     }
-}
 
-.heading {
-    color: $g-color-heading;
-    font-family: $g-font-family-heading;
-    line-height: $g-line-height-heading;
-    font-weight: $g-font-weight-default;
-
-    &__on_dark {
-        color: $g-color-heading-on-dk;
+    .sr_only {
+        position: absolute;
+        left: -10000px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
     }
-
-    &__uppercase_sm {
-        text-transform: uppercase;
-        font-weight: $g-font-weight-bold;
-        letter-spacing: 2px;
-    }
-
-    &__uppercase {
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        color: $g-color-heading-on-dk;
-        text-align: center;
-    }
-
-    // $min-vw, $max-vw, $min-font-size, $max-font-size
-    &__1 {
-        @extend .heading;
-        font-size: 3rem;
-    }
-
-    &__2 {
-        @extend .heading;
-        font-size: 2rem;
-    }
-
-    &__3 {
-        @extend .heading;
-        font-size: 1.5rem;
-    }
-
-    &__4 {
-        @extend .heading;
-        font-size: 1.25rem;
-    }
-
-    &__5 {
-        @extend .heading;
-        font-size: 1rem
-    }
-
-    &__6 {
-        @extend .heading;
-        font-size: .875rem;
-    }
-}
-
-.sr_only {
-    position: absolute;
-    left: -10000px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
 }

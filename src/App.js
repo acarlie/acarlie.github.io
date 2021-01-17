@@ -14,7 +14,10 @@ import makeAnimated from 'react-select/animated';
 import items from './assets/js/portfolioItems';
 import Logo from './components/Logo';
 import Headshot from './components/Headshot';
+import Link from './components/Link';
 import styles from './App.module.scss';
+import resume from './assets/pdfs/AmeliaCarlie_Resume.pdf';
+import portfolio from './assets/pdfs/AmeliaCarlie_DesignPortfolio.pdf';
 
 
 const animatedComponents = makeAnimated();
@@ -95,8 +98,8 @@ class App extends Component {
               <div className={styles.row + ' ' + styles.row__100 + ' ' + styles.row__center}>
                 <div className={styles.col}>
                   <Logo />
-                  <h1 className={styles.heading__5 + ' ' + styles.heading__uppercase}>
-                    <span className={styles.sr_only}>
+                  <h1 className="heading__5 heading__uppercase">
+                    <span className="sr_only">
                       Amelia Carlie
                     </span>
                       Frontend Developer
@@ -107,7 +110,7 @@ class App extends Component {
 
             {/* About */}
             <section className={styles.container + ' ' + styles.container__light} id="about">
-              <h2 className={styles.sr_only}>About</h2>
+              <h2 className="sr_only">About</h2>
               <div className={styles.row + ' ' + styles.row__100}>
                 <div className={styles.col + ' ' + styles.col__3 + ' ' + styles.col__center}>
                   <Headshot />
@@ -115,32 +118,39 @@ class App extends Component {
 
                 <div className={styles.col + ' ' + styles.col__3 + ' ' + styles.col__center}>
                   <div>
-                    <div className={styles.row__divided + ' ' + styles.text__large}>
+                    <div className={styles.row__divided + ' ' + 'text__large'}>
                       I am a frontend developer passionate about UI/UX. With 5 years experience in the graphic design field, I am now applying my knowledge of color theory and composition to my daily development projects.
-                  </div>
+                      <ul>
+                        <li>
+                          <Link href={resume} blank={true} text="Download my resume →" />
+                        </li>
+                        <li>
+                          <a href={portfolio} target="_blank" rel="noopener noreferrer">Download my design portfolio → <span className="sr_only">, opens in new tab</span></a>
+                        </li>
+                      </ul>
+                    </div>
                     <div className={styles.row__divided}>
 
                     </div>
                     <div className={styles.row__divided}>
-                      <ul>
+                      <ul className="text__small">
                         <li className={styles.list_item}>
-                          <h3 className={styles.heading__6 + ' ' + styles.heading__uppercase_sm}>Frontend</h3>
+                          <h3 className="heading__6 heading__uppercase_sm">Frontend</h3>
                           JavaScript, React, Angular, TypeScript, HTML5, CSS3, Sass, Web Accessibility
                         </li>
                         <li className={styles.list_item}>
-                          <h3 className={styles.heading__6 + ' ' + styles.heading__uppercase_sm}>Backend</h3>
+                          <h3 className="heading__6 heading__uppercase_sm">Backend</h3>
                           Node.js, Express, MySQL, MongoDB
                        </li>
                         <li className={styles.list_item}>
-                          <h3 className={styles.heading__6 + ' ' + styles.heading__uppercase_sm}>Design Tools</h3>
+                          <h3 className="heading__6 heading__uppercase_sm">Design Tools</h3>
                           PhotoShop, Illustrator, InDesign, Adobe XD, Figma
                         </li>
                         <li className={styles.list_item}>
-                          <h3 className={styles.heading__6 + ' ' + styles.heading__uppercase_sm}>Design</h3>
+                          <h3 className="heading__6 heading__uppercase_sm">Design</h3>
                           Color Theory, Illustration, Typography, Branding, Composition
                         </li>
                       </ul>
-
                     </div>
                   </div>
                 </div>
