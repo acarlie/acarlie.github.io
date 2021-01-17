@@ -1,11 +1,10 @@
 // Colors
-$g-color-highlight-1: #00C294;
-$g-color-highlight-2: #EBFE6C;
+$g-color-primary: #e7004c;
 $g-color-text: #222222;
 $g-color-text-on-dk: #E4E4E4;
-$g-color-heading: #747791;
+$g-color-heading: #77898d;
 $g-color-heading-on-dk:#E4E4E4;
-$g-color-bg-dk: #20244C;
+$g-color-bg-dk: #191919;
 $g-color-bg-lt: #FFFFFF;
 
 // Typography
@@ -30,3 +29,9 @@ $g-font-weight-default: 400;
 
 $g-breakpoint-mobile: 360px;
 $g-breakpoint-desktop: 992px;
+
+$g-space-half: .5rem;
+$g-space-one: 1rem;
+$g-space-one-and-half: 1.5rem;
+$g-space-two: 2rem;
+$g-space-three: 3rem;

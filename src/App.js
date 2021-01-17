@@ -92,7 +92,7 @@ class App extends Component {
 
             {/* Home */}
             <section className={styles.container + ' ' + styles.container__dark} id="home">
-              <div className={styles.wrapper__center}>
+              <div className={styles.wrapper + ' ' + styles.wrapper__center}>
                 <div>
                   <Logo />
                   <h1 className={styles.heading__5 + ' ' + styles.heading__uppercase}>
@@ -106,25 +106,21 @@ class App extends Component {
             </section>
 
             {/* About */}
-            <section className="container container__light" id="about">
+            <section className={styles.container + ' ' + styles.container__light} id="about">
+              <h2 className={styles.sr_only}>About</h2>
+              <div className={styles.wrapper}>
+                <div className={styles.col + ' ' + styles.col__3}>
+                  hello there
+                </div>
 
-              <div className="wrapper">
-                <div className="row">
-
-                  <div className="col col-3">
-                    hello there
-                  </div>
-
-                  <div className="col col-3">
-                    reallly
-                  </div>
+                <div className={styles.col + ' ' + styles.col__3}>
+                  reallly
                 </div>
               </div>
-
             </section>
 
             {/* Work */}
-            <section className="container container__dark" id="work">
+            <section className={styles.container + ' ' + styles.container__dark} id="work">
 
               <div className="wrapper">
                 <div className="row">

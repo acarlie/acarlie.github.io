@@ -1,9 +1,9 @@
 import React from 'react';
-import logo from './Logo.module.css';
+import logo from './Logo.module.scss';
 
 function Logo(props) {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" width="400" viewBox="0 0 841.04 80.75">
+        <svg xmlns="http://www.w3.org/2000/svg" className={logo.svg} viewBox="0 0 841.04 80.75">
             <path class={logo.stroke} d="M319.53 6.23v71.64" />
             <path class={logo.stroke} d="M144.22 16.16v61.35" />
             <path class={logo.stroke} d="M82.18 77.51V5.87l31.34 36.18 30.7-36.18" />

@@ -1,5 +1,6 @@
 // Altered BEM for component SCSS
 // element_name__modifier_name
+
 @import './variables.scss';
 @import './mixins.scss';
 
@@ -31,8 +32,19 @@
     }
 }
 
+html {
+    @include fluid-type($g-breakpoint-mobile, $g-breakpoint-desktop, 16px, 22px);
+}
+
+body {
+    font-family: $g-font-family-text;
+    font-weight: $g-font-weight-default;
+    line-height: $g-line-height-text;
+}
+
+
 .text {
-    @include fluid-type($g-breakpoint-mobile, $g-breakpoint-desktop, .875rem, 1rem);
+    font-size: 1rem;
     color: $g-color-text;
     font-family: $g-font-family-text;
     line-height: $g-line-height-text;
@@ -42,7 +54,7 @@
     }
 
     &__large {
-        @include fluid-type($g-breakpoint-mobile, $g-breakpoint-desktop, 1.125rem, 1.5rem);
+        font-size: 1.5rem;
     }
 }
 
@@ -66,37 +78,38 @@
         text-transform: uppercase;
         letter-spacing: 2px;
         color: $g-color-heading-on-dk;
+        text-align: center;
     }
 
     // $min-vw, $max-vw, $min-font-size, $max-font-size
     &__1 {
         @extend .heading;
-        @include fluid-type($g-breakpoint-mobile, $g-breakpoint-desktop, 2.25rem, 3rem);
+        font-size: 3rem;
     }
 
     &__2 {
         @extend .heading;
-        @include fluid-type($g-breakpoint-mobile, $g-breakpoint-desktop, 1.5rem, 2rem);
+        font-size: 2rem;
     }
 
     &__3 {
         @extend .heading;
-        @include fluid-type($g-breakpoint-mobile, $g-breakpoint-desktop, 1.125rem, 1.5rem);
+        font-size: 1.5rem;
     }
 
     &__4 {
         @extend .heading;
-        @include fluid-type($g-breakpoint-mobile, $g-breakpoint-desktop, 1rem, 1.25rem);
+        font-size: 1.25rem;
     }
 
     &__5 {
         @extend .heading;
-        @include fluid-type($g-breakpoint-mobile, $g-breakpoint-desktop, .875rem, 1rem);
+        font-size: 1rem
     }
 
     &__6 {
         @extend .heading;
-        @include fluid-type($g-breakpoint-mobile, $g-breakpoint-desktop, .75rem, .875rem);
+        font-size: .875rem;
     }
 }
 

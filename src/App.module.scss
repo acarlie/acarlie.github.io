@@ -1,14 +1,8 @@
+@import './scss/reset.scss';
 @import './scss/variables.scss';
 @import './scss/mixins.scss';
 @import './scss/shared.scss';
 
-.test {
-    color: red !important;
-
-    &__test {
-        color: red;
-    }
-}
 
 .container {
     width: 100%;
@@ -25,12 +19,20 @@
 
 .wrapper {
     height: 100vh;
+    display: flex;
 
     &__center {
-        height: 100vh;
-
-        display: flex;
         align-items: center;
         justify-content: center;
+    }
+}
+
+.col {
+    padding: $g-space-three;
+}
+
+@for $i from 1 through 6 {
+    .col__#{$i} {
+        flex: #{$i};
     }
 }

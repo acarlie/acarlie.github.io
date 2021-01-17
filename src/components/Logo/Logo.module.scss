@@ -1,0 +1,52 @@
+$spacing: 1rem;
+$color-primary: #ec0062;
+$color-secondary:#334;
+$color-dark: #223;
+$color-black: #112;
+
+@keyframes draw {
+
+    40%,
+    80% {
+        opacity: 1;
+        stroke-dashoffset: 0;
+        stroke: #fff;
+    }
+
+    95%,
+    100% {
+        stroke-dashoffset: 0;
+        stroke: #fff;
+        opacity: 1;
+    }
+}
+
+.svg {
+    width: 20rem;
+}
+
+.stroke {
+    fill: none;
+    stroke: #000000;
+    stroke-width: 4.75;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+    stroke-dasharray: 200;
+    animation: draw 7s forwards ease-in-out;
+    stroke-dashoffset: 200;
+
+    &-reverse {
+        stroke-dashoffset: -200;
+    }
+
+    &-forwards {
+        stroke-dashoffset: 200;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .container {
+        width: 70%;
+        margin: 0 auto;
+    }
+}
