@@ -17,22 +17,55 @@
     }
 }
 
-.wrapper {
-    height: 100vh;
+.row {
     display: flex;
+    flex-direction: column;
 
+    &__100 {
+        height: 100vh;
+    }
+
+    &__divided {
+        padding: 1rem 0;
+
+        &:not(:first-child) {
+            border-top: 1px solid $g-color-secondary;
+        }
+    }
+
+
+    @media screen and (min-width: $g-breakpoint-tablet),
+    print {
+        flex-direction: row;
+    }
+
+
+}
+
+.row,
+.col {
     &__center {
+        display: flex;
         align-items: center;
         justify-content: center;
+
     }
 }
 
 .col {
-    padding: $g-space-three;
+    padding: $g-space-two;
 }
+
+
 
 @for $i from 1 through 6 {
     .col__#{$i} {
         flex: #{$i};
+    }
+}
+
+.list {
+    &_item {
+        display: block;
     }
 }

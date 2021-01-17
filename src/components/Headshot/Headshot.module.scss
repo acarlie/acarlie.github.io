@@ -1,0 +1,14 @@
+@import './../../scss/variables.scss';
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 15rem;
+    overflow: hidden;
+    border-radius: 20em;
+}
+
+.image {
+    width: 100%
+}

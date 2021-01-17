@@ -2,7 +2,8 @@
 $g-color-primary: #e7004c;
 $g-color-text: #222222;
 $g-color-text-on-dk: #E4E4E4;
-$g-color-heading: #77898d;
+$g-color-secondary: #77898d;
+$g-color-heading: $g-color-secondary;
 $g-color-heading-on-dk:#E4E4E4;
 $g-color-bg-dk: #191919;
 $g-color-bg-lt: #FFFFFF;
@@ -28,6 +29,7 @@ $g-font-weight-default: 400;
 // $g-screen-large-desktop-up: 1800px;
 
 $g-breakpoint-mobile: 360px;
+$g-breakpoint-tablet: 568px;
 $g-breakpoint-desktop: 992px;
 
 $g-space-half: .5rem;

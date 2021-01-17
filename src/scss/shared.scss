@@ -1,8 +1,9 @@
 // Altered BEM for component SCSS
 // element_name__modifier_name
-
 @import './variables.scss';
 @import './mixins.scss';
+
+
 
 // Responsive text sizing mixins from Geoff Graham:
 // https://css-tricks.com/snippets/css/fluid-typography/
@@ -32,8 +33,9 @@
     }
 }
 
+
 html {
-    @include fluid-type($g-breakpoint-mobile, $g-breakpoint-desktop, 16px, 22px);
+    @include fluid-type($g-breakpoint-mobile, $g-breakpoint-desktop, 14px, 18px);
 }
 
 body {
@@ -41,7 +43,6 @@ body {
     font-weight: $g-font-weight-default;
     line-height: $g-line-height-text;
 }
-
 
 .text {
     font-size: 1rem;
@@ -54,7 +55,7 @@ body {
     }
 
     &__large {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
 }
 

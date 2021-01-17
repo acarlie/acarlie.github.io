@@ -1,8 +1,5 @@
-$spacing: 1rem;
-$color-primary: #ec0062;
-$color-secondary:#334;
-$color-dark: #223;
-$color-black: #112;
+@import './../../scss/variables.scss';
+
 
 @keyframes draw {
 
@@ -10,43 +7,34 @@ $color-black: #112;
     80% {
         opacity: 1;
         stroke-dashoffset: 0;
-        stroke: #fff;
+        stroke: $g-color-text-on-dk;
     }
 
     95%,
     100% {
-        stroke-dashoffset: 0;
-        stroke: #fff;
         opacity: 1;
+        stroke-dashoffset: 0;
+        stroke: $g-color-text-on-dk;
     }
+
 }
 
 .svg {
-    width: 20rem;
+    width: 100%;
+
+    @media screen and (min-width: $g-breakpoint-tablet),
+    print {
+        width: 20rem;
+    }
 }
 
 .stroke {
     fill: none;
-    stroke: #000000;
+    stroke: $g-color-bg-dk;
     stroke-width: 4.75;
     stroke-linecap: round;
     stroke-miterlimit: 10;
     stroke-dasharray: 200;
     animation: draw 7s forwards ease-in-out;
     stroke-dashoffset: 200;
-
-    &-reverse {
-        stroke-dashoffset: -200;
-    }
-
-    &-forwards {
-        stroke-dashoffset: 200;
-    }
-}
-
-@media only screen and (min-width: 800px) {
-    .container {
-        width: 70%;
-        margin: 0 auto;
-    }
 }
