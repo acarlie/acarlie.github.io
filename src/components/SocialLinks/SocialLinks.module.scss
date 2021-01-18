@@ -1,0 +1,13 @@
+@import './../../scss/variables.scss';
+
+.list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    &:not(:first-child) {
+        margin-left: .5rem;
+    }
+}

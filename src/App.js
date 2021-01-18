@@ -88,89 +88,92 @@ class App extends Component {
     return (
       <div className="App">
         {/* Content */}
-        <div id="fade-wrapper">
-          <main>
-            {/* Home */}
-            <section className={styles.container + ' ' + styles.container__dark} id="home">
-              <div className={styles.row + ' ' + styles.row__100 + ' ' + styles.row__center}>
-                <div className={styles.col}>
-                  <Logo />
-                  <h1 className={styles.row__stacked + ' heading__5 heading__uppercase'}>
-                    <span className="sr_only">
-                      Amelia Carlie
-                    </span>
-                      Frontend Developer
-                  </h1>
-                </div>
+        <main>
+          {/* Home */}
+          <section className={styles.container + ' ' + styles.container__dark} id="home">
+            <div className={styles.splash + ' ' + styles.row + ' ' + styles.row__100 + ' ' + styles.row__center}>
+              <div className={styles.col}>
+                <Logo />
+                <h1 className={styles.row__stacked + ' heading__5 heading__uppercase'}>
+                  <span className="sr_only">
+                    Amelia Carlie
+                  </span>
+                  Frontend Developer
+                </h1>
+
               </div>
-              <InPageLink href="#about" ariaLabel="About me" down />
-            </section>
+              <div className={styles.splash_nav}>
 
-            {/* About */}
-            <section className={styles.container + ' ' + styles.container__light} id="about">
-              <h2 className="sr_only">About</h2>
-              <div className={styles.row + ' ' + styles.row__100}>
-                <div className={styles.col + ' ' + styles.col__3 + ' ' + styles.col__center + ' ' + styles.col__dk}>
-                  <Headshot />
-                </div>
+                <InPageLink href="#about" ariaLabel="About me" down />
+              </div>
+            </div>
+          </section>
 
-                <div className={styles.col + ' ' + styles.col__3 + ' ' + styles.col__center}>
-                  <div>
-                    <div className={styles.row__inner_divided}>
-                      <p className=" text__large">
-                        I am a frontend developer
-                        passionate about UI/UX. With
-                        5 years experience in the
-                        graphic design field, I am now
-                        applying my knowledge of color
-                        theory and composition to my
-                        development projects.
+          {/* About */}
+          <section className={styles.container + ' ' + styles.container__light} id="about">
+            <h2 className="sr_only">About</h2>
+            <div className={styles.row + ' ' + styles.row__100}>
+              <div className={styles.col + ' ' + styles.col__3 + ' ' + styles.col__center + ' ' + styles.col__dk}>
+                <Headshot />
+              </div>
+
+              <div className={styles.col + ' ' + styles.col__3 + ' ' + styles.col__center}>
+                <div>
+                  <div className={styles.row__inner_divided}>
+                    <p className=" text__large">
+                      I am a frontend developer
+                      passionate about UI/UX. With
+                      5 years experience in the
+                      graphic design field, I am now
+                      applying my knowledge of color
+                      theory and composition to my
+                      development projects.
                       </p>
-                      <div className={styles.row__stacked}>
-                        <ul className="list__links">
-                          <li className="list_item__link">
-                            <Link href={resume} blank={true}>Download my resume →</Link>
-                          </li>
-                          <li className="list_item__link">
-                            <Link href={portfolio} blank={true}>Download my design portfolio →</Link>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div className={styles.row__inner_divided}>
-                      <ul className="text__small">
-                        <li className='list_item'>
-                          <h3 className="heading__6 heading__uppercase_sm">Frontend</h3>
-                          JavaScript, React, Angular, TypeScript, HTML5, CSS3, Sass, Web Accessibility
+                    <div className={styles.row__stacked}>
+                      <ul className="list__links">
+                        <li className="list_item__link">
+                          <Link href={resume} blank={true}>Download my resume →</Link>
                         </li>
-                        <li className='list_item'>
-                          <h3 className="heading__6 heading__uppercase_sm">Backend</h3>
-                          Node.js, Express, MySQL, MongoDB
-                       </li>
-                        <li className='list_item'>
-                          <h3 className="heading__6 heading__uppercase_sm">Design Tools</h3>
-                          PhotoShop, Illustrator, InDesign, Adobe XD, Figma
-                        </li>
-                        <li className='list_item'>
-                          <h3 className="heading__6 heading__uppercase_sm">Design</h3>
-                          Color Theory, Illustration, Typography, Branding, Composition
+                        <li className="list_item__link">
+                          <Link href={portfolio} blank={true}>Download my design portfolio →</Link>
                         </li>
                       </ul>
                     </div>
                   </div>
+                  <div className={styles.row__inner_divided}>
+                    <ul className="text__small">
+                      <li className='list_item'>
+                        <h3 className="heading__6 heading__uppercase_sm">Frontend</h3>
+                          JavaScript, React, Angular, TypeScript, HTML5, CSS3, Sass, Web Accessibility
+                        </li>
+                      <li className='list_item'>
+                        <h3 className="heading__6 heading__uppercase_sm">Backend</h3>
+                          Node.js, Express, MySQL, MongoDB
+                       </li>
+                      <li className='list_item'>
+                        <h3 className="heading__6 heading__uppercase_sm">Design Tools</h3>
+                          PhotoShop, Illustrator, InDesign, Adobe XD, Figma
+                        </li>
+                      <li className='list_item'>
+                        <h3 className="heading__6 heading__uppercase_sm">Design</h3>
+                          Color Theory, Illustration, Typography, Branding, Composition
+                        </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </section>
+            </div>
+          </section>
 
-            {/* Work */}
-            <section className={styles.container + ' ' + styles.container__dark} id="work">
-              <h2 className="sr_only">Work</h2>
+          {/* Work */}
+          <section className={styles.container + ' ' + styles.container__dark} id="work">
+            <h2 className="sr_only">Work</h2>
 
-              <div className={styles.row}>
-                {/* <div className={styles.col}> */}
-                <Portfolio items={items} />
-                {/* </div> */}
-                {/* <div className="row">
+            <div className={styles.row}>
+              {/* <div className={styles.col}> */}
+              <Portfolio items={items} />
+              {/* </div> */}
+              {/* <div className="row">
                   <div className='col col-6'>
                     <Select
                       options={this.filterOptions}
@@ -196,30 +199,29 @@ class App extends Component {
                     />
                   </div>
                 </div> */}
-              </div>
-
-              <div className="wrapper-nav">
-                <span className="fas fa-chevron-up"></span>
-                <a href="#home" className="wrapper-link">Back to Top</a>
-              </div>
-
-            </section>
-
-          </main>
-
-          <footer className={styles.container__dark}>
-
-            <div id="social" className="footer-top">
-              <SocialLinks />
             </div>
+          </section>
+        </main>
 
-            <div className="text-center text-sm footer-bottom">
-              <p> - Created with React <i className="fab fa-react"></i> - </p>
-              <p>© Amelia Carlie 2021</p>
-            </div>
+        <footer className={styles.container__dark}>
 
-          </footer>
-        </div>
+          <h2 className={'heading__5 heading__uppercase'}>
+            Connect with me
+          </h2>
+          <div className={styles.row__stacked}>
+
+            <SocialLinks />
+          </div>
+
+          <div className={styles.col + ' ' + styles.col__center}>
+            <InPageLink href="#home" ariaLabel="Back to top" up />
+          </div>
+
+          {/* <div className="text-center text-sm footer-bottom">
+            <p> - Created with React <i className="fab fa-react"></i> - </p>
+            <p>© Amelia Carlie 2021</p>
+          </div> */}
+        </footer>
       </div>
     );
   }

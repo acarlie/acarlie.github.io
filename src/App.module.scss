@@ -83,7 +83,20 @@
     }
 }
 
+.splash {
+    position: relative;
 
+    &_nav {
+        padding: 2rem;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+}
 
 @for $i from 1 through 6 {
     .col__#{$i} {
