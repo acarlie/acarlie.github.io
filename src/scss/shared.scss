@@ -1,9 +1,7 @@
-// Altered BEM for component SCSS
+// Altered BEM for React
 // element_name__modifier_name
 @import './variables.scss';
 @import './mixins.scss';
-
-
 
 // Responsive text sizing mixins from Geoff Graham:
 // https://css-tricks.com/snippets/css/fluid-typography/
@@ -37,7 +35,6 @@
 html {
     @include fluid-type($g-breakpoint-mobile, $g-breakpoint-desktop, 14px, 18px);
     scroll-behavior: smooth;
-
 }
 
 body {
@@ -47,7 +44,6 @@ body {
 }
 
 :global {
-
     .text {
         font-size: 1rem;
         color: $g-color-text;
@@ -155,5 +151,4 @@ body {
             }
         }
     }
-
 }

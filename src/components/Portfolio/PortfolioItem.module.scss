@@ -54,26 +54,24 @@
     background: linear-gradient(-45deg, #2d2b3d, #ad3466);
 }
 
-.even {
-    .img {
-
-        border-radius: 0 2rem 2rem 0;
-    }
-}
-
-.odd {
-    .img {
-        border-radius: 2rem 0 0 2rem;
-    }
-}
-
 .img {
     overflow: hidden;
-    mix-blend-mode: screen;
-    transform: translate3d(0, 0, 0);
-    // will-change: opacity;
-    opacity: 90%;
+    opacity: .9;
     width: 110%;
+    max-width: 150%;
+    min-height: 100%;
+}
+
+@supports (mix-blend-mode:screen) {
+    .img {
+        mix-blend-mode: screen;
+    }
+}
+
+@supports not (mix-blend-mode:screen) {
+    .img {
+        opacity: .6;
+    }
 }
 
 .info {

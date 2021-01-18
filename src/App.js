@@ -1,34 +1,28 @@
 import React, { Component } from 'react';
 
-// packages
-// import Select from 'react-select';
-
-//components
-// import TypeWriter from './components/TypeWriter';
+/**
+ * Components
+ */
 import SocialLinks from './components/SocialLinks';
-// import IconContainer from './components/IconContainer';
-// import makeAnimated from 'react-select/animated';
-//assets
-// import Profile from './assets/images/profile_square.png';
-import items from './assets/js/portfolioItems';
+import Portfolio from './components/Portfolio';
+import InPageLink from './components/InPageLink';
 import Logo from './components/Logo';
 import Headshot from './components/Headshot';
 import Link from './components/Link';
+
+/**
+ * Styles
+ */
 import styles from './App.module.scss';
+
+/**
+ * Assets
+ */
+import items from './assets/js/portfolioItems';
 import resume from './assets/pdfs/AmeliaCarlie_Resume.pdf';
 import portfolio from './assets/pdfs/AmeliaCarlie_DesignPortfolio.pdf';
-import Portfolio from './components/Portfolio';
-import InPageLink from './components/InPageLink';
 
-// const animatedComponents = makeAnimated();
-// const menuStyles = {
-//   menu: (provided, state) => ({
-//     ...provided,
-//     padding: 10
-//     // borderRadius: 0
-//     // overflow: 'hidden'
-//   })
-// }
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -36,59 +30,18 @@ class App extends Component {
       loaded: false,
       loader: ''
     }
-    this.filters = ["React", "Node", "Express", "MERN", "MongoDB", "MySQL", "UI/UX", "Mobile-First", "Vanilla JS", "AJAX", "ES6", "Sass", "Bootstrap", "Materialize", "jQuery"]
-    this.filterOptions = this.filters.map(x => {
-      return { value: x, label: x }
-    })
   }
 
   componentDidMount() {
-    // this.setState({
-    //   portfolio: [...items]
-    // })
-    // setTimeout(() => {
-    //   this.setState({
-    //     loader: 'done',
-    //     portfolio: [...items]
-    //   })
-    // }, 3000)
-    // setTimeout(() => {
-    //   this.setState({
-    //     loaded: true
-    //   })
-    // }, 4000)
-  }
-
-
-
-  filterHandler = (input) => {
-    const filterArr = input || false;
-    let filtered = [];
-    if (filterArr && filterArr.length > 0) {
-      const filters = filterArr.map(x => x.value);
-      const filteredTitles = [];
-      for (let y of filters) {
-        for (let x of items) {
-          if (x.tags.indexOf(y) > -1 && filteredTitles.indexOf(x.title) < 0) {
-            filteredTitles.push(x.title);
-            filtered.push(x);
-          }
-        }
-      }
-
-    } else {
-      filtered = [...items];
-    }
-    this.setState({
-      portfolio: [...filtered]
-    })
   }
 
   render() {
     return (
       <div className="App">
+
         {/* Content */}
         <main>
+
           {/* Home */}
           <section className={styles.container + ' ' + styles.container__dark} id="home">
             <div className={styles.splash + ' ' + styles.row + ' ' + styles.row__100 + ' ' + styles.row__center}>
@@ -97,13 +50,10 @@ class App extends Component {
                 <h1 className={styles.row__stacked + ' heading__5 heading__uppercase'}>
                   <span className="sr_only">
                     Amelia Carlie
-                  </span>
-                  Frontend Developer
+                  </span> Frontend Developer
                 </h1>
-
               </div>
               <div className={styles.splash_nav}>
-
                 <InPageLink href="#about" ariaLabel="About me" down />
               </div>
             </div>
@@ -113,6 +63,7 @@ class App extends Component {
           <section className={styles.container + ' ' + styles.container__light} id="about">
             <h2 className="sr_only">About</h2>
             <div className={styles.row + ' ' + styles.row__100}>
+
               <div className={styles.col + ' ' + styles.col__3 + ' ' + styles.col__center + ' ' + styles.col__dk}>
                 <Headshot />
               </div>
@@ -168,59 +119,19 @@ class App extends Component {
           {/* Work */}
           <section className={styles.container + ' ' + styles.container__dark} id="work">
             <h2 className="sr_only">Work</h2>
-
             <div className={styles.row}>
-              {/* <div className={styles.col}> */}
               <Portfolio items={items} />
-              {/* </div> */}
-              {/* <div className="row">
-                  <div className='col col-6'>
-                    <Select
-                      options={this.filterOptions}
-                      isMulti
-                      name="filter"
-                      className="basic-multi-select"
-                      classNamePrefix="select"
-                      placeholder='Filter by tags...'
-                      components={animatedComponents}
-                      onChange={this.filterHandler}
-                      styles={menuStyles}
-                      theme={theme => ({
-                        ...theme,
-                        borderRadius: 8,
-                        colors: {
-                          ...theme.colors,
-                          primary: '#FF4F69',
-                          primary75: '#FF6F84',
-                          primary50: '#FF8F9F',
-                          primary25: '#FFAFBA'
-                        }
-                      })}
-                    />
-                  </div>
-                </div> */}
             </div>
           </section>
         </main>
 
-        <footer className={styles.container__dark}>
-
+        {/* Footer */}
+        <footer className={styles.footer}>
           <h2 className={'heading__5 heading__uppercase'}>
             Connect with me
           </h2>
-          <div className={styles.row__stacked}>
-
-            <SocialLinks />
-          </div>
-
-          <div className={styles.col + ' ' + styles.col__center}>
-            <InPageLink href="#home" ariaLabel="Back to top" up />
-          </div>
-
-          {/* <div className="text-center text-sm footer-bottom">
-            <p> - Created with React <i className="fab fa-react"></i> - </p>
-            <p>© Amelia Carlie 2021</p>
-          </div> */}
+          <SocialLinks />
+          <InPageLink href="#home" ariaLabel="Back to top" up />
         </footer>
       </div>
     );

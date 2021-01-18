@@ -5,20 +5,22 @@ import Link from './../Link';
 
 function PortfolioItem(props) {
     const direction = props.odd ? portfolioItem.odd : portfolioItem.even;
+    const isCodepen = props.url.indexOf("codepen") > -1;
 
     return (
         <li className={portfolioItem.item}>
             <div className={portfolioItem.inner + ' ' + direction}>
 
                 <div className={portfolioItem.img_cont}>
-                    <img className={portfolioItem.img} src={process.env.PUBLIC_URL + '/assets/images/sm/' + props.img} alt={props.desc} />
+                    <img className={portfolioItem.img} src={process.env.PUBLIC_URL + '/assets/images/sm/' + props.img} alt={'Screen capture of ' + props.title} />
                 </div>
                 <div className={portfolioItem.info}>
                     {props.even}
                     <h3 className="heading__6 heading__uppercase_sm">{props.title}</h3>
                     <div className="text__small">{props.desc}</div>
-                    <ul className="list__links text__small">
-                        {props.url && <li className="list_item__link"><Link href={props.url} blank>View the deployment <span className="sr_only">of {props.title}</span>  ⟶ </Link></li>}
+                    <ul className="list__links text__small" aria-label="Related links">
+                        {props.url && !isCodepen && <li className="list_item__link"><Link href={props.url} blank>View the deployment <span className="sr_only">of {props.title}</span>  ⟶ </Link></li>}
+                        {props.url && isCodepen && <li className="list_item__link"><Link href={props.url} blank>View <span className="sr_only">{props.title}</span> on CodePen ⟶  </Link></li>}
                         {props.repo && <li className="list_item__link"><Link href={props.repo} blank>View the repo <span className="sr_only">for {props.title}</span> ⟶  </Link></li>}
                     </ul>
                 </div>
@@ -27,29 +29,12 @@ function PortfolioItem(props) {
         </li>
     )
 }
-// function PortfolioItem(props) {
-//     return (
-//         <li className={portfolioItem.grid_item}>
-//             <img className={portfolioItem.grid_item_img} src={process.env.PUBLIC_URL + '/assets/images/sm/' + props.img} alt={props.desc} />
-//             <div className={portfolioItem.grid_item_info}>
-//                 <div className={portfolioItem.grid_item_info_inner}>
-//                     <h3 className={portfolioItem.grid_item_title}>{props.title}</h3>
-//                     <div className={portfolioItem.grid_item_cap}>{props.desc}</div>
-//                     <ul>
-//                         {props.url && <li><a href={props.url} target="_blank" text="">View Deployed Project ⟶</a></li>}
-//                         {props.repo && <li><a href={props.repo} target="_blank" text="">View the Repo ⟶</a></li>}
-//                     </ul>
-//                 </div>
-//             </div>
-//         </li>
-//     )
-// }
 
 function Portfolio(props) {
     return (
         <div className={portfolio.wrapper}>
 
-            <ul id="portfolio">
+            <ul id="portfolio" aria-label="Portfolio items">
                 {props.items &&
                     props.items.map((item, i) => {
                         return (
