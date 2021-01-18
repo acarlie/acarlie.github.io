@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.40a56b5e.chunk.css",
+    "main.css": "/static/css/main.3a6c127c.chunk.css",
     "main.js": "/static/js/main.00c497e9.chunk.js",
     "main.js.map": "/static/js/main.00c497e9.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.3c4bf554.js",
@@ -8,9 +8,9 @@
     "static/js/2.bc6b89c6.chunk.js": "/static/js/2.bc6b89c6.chunk.js",
     "static/js/2.bc6b89c6.chunk.js.map": "/static/js/2.bc6b89c6.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.1c1b17a0425487799f994ac2b62d15c4.js": "/precache-manifest.1c1b17a0425487799f994ac2b62d15c4.js",
+    "precache-manifest.7739744f38071b566672ae3fd12a6a73.js": "/precache-manifest.7739744f38071b566672ae3fd12a6a73.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.40a56b5e.chunk.css.map": "/static/css/main.40a56b5e.chunk.css.map",
+    "static/css/main.3a6c127c.chunk.css.map": "/static/css/main.3a6c127c.chunk.css.map",
     "static/js/2.bc6b89c6.chunk.js.LICENSE": "/static/js/2.bc6b89c6.chunk.js.LICENSE",
     "static/media/AmeliaCarlie_DesignPortfolio.pdf": "/static/media/AmeliaCarlie_DesignPortfolio.6c48556c.pdf",
     "static/media/AmeliaCarlie_Resume.pdf": "/static/media/AmeliaCarlie_Resume.34d2f4d0.pdf",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.3c4bf554.js",
     "static/js/2.bc6b89c6.chunk.js",
-    "static/css/main.40a56b5e.chunk.css",
+    "static/css/main.3a6c127c.chunk.css",
     "static/js/main.00c497e9.chunk.js"
   ]
 }
