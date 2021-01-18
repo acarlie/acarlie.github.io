@@ -25,3 +25,9 @@
         }
     }
 }
+
+@mixin focus-reset {
+    border: none;
+    box-shadow: none;
+    outline: none;
+}

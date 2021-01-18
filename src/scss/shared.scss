@@ -36,6 +36,8 @@
 
 html {
     @include fluid-type($g-breakpoint-mobile, $g-breakpoint-desktop, 14px, 18px);
+    scroll-behavior: smooth;
+
 }
 
 body {
@@ -141,11 +143,14 @@ body {
 
         &_item {
             display: block;
-            margin-bottom: $g-space-one;
+
+            &:not(:first-child) {
+                margin: $g-space-one 0 0 0;
+            }
 
             &__link {
                 &:not(:first-child) {
-                    margin-top: $g-space-quarter;
+                    margin: $g-space-quarter 0 0 0;
                 }
             }
         }

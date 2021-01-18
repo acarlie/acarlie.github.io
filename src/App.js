@@ -18,7 +18,7 @@ import styles from './App.module.scss';
 import resume from './assets/pdfs/AmeliaCarlie_Resume.pdf';
 import portfolio from './assets/pdfs/AmeliaCarlie_DesignPortfolio.pdf';
 import Portfolio from './components/Portfolio';
-
+import InPageLink from './components/InPageLink';
 
 // const animatedComponents = makeAnimated();
 // const menuStyles = {
@@ -87,20 +87,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-
-
-
         {/* Content */}
         <div id="fade-wrapper">
           <main>
-
-
             {/* Home */}
             <section className={styles.container + ' ' + styles.container__dark} id="home">
               <div className={styles.row + ' ' + styles.row__100 + ' ' + styles.row__center}>
                 <div className={styles.col}>
                   <Logo />
-                  <h1 className="heading__5 heading__uppercase">
+                  <h1 className={styles.row__stacked + ' heading__5 heading__uppercase'}>
                     <span className="sr_only">
                       Amelia Carlie
                     </span>
@@ -108,6 +103,7 @@ class App extends Component {
                   </h1>
                 </div>
               </div>
+              <InPageLink href="#about" ariaLabel="About me" down />
             </section>
 
             {/* About */}

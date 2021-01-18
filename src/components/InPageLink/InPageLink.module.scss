@@ -1,0 +1,24 @@
+@import './../../scss/variables.scss';
+@import './../../scss/mixins.scss';
+
+.link {
+    display: inline-block;
+    padding: .75rem 1.15rem .6rem 1.15rem;
+    border-radius: 3rem;
+
+    &:focus {
+        @include focus-reset;
+        border: 1px $g-color-primary solid;
+    }
+
+    &:hover {}
+}
+
+.arrow {
+    height: 1.5rem;
+    fill: none;
+    stroke: $g-color-text-on-dk;
+    stroke-width: 4.75;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+}
