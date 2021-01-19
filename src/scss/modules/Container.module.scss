@@ -1,0 +1,21 @@
+@import './../variables.scss';
+@import './../mixins.scss';
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+
+    &:not(:first-child) {
+        border-top: 1px solid $g-color-neutral-med-dk;
+    }
+}
+
+.dark {
+    @extend .container;
+    background: $g-color-bg-dk;
+}
+
+.light {
+    @extend .container;
+    background-color: $g-color-bg-lt;
+}

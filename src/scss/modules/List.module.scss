@@ -1,0 +1,10 @@
+@import './../variables.scss';
+@import './../mixins.scss';
+
+.item {
+    display: block;
+
+    &:not(:first-child) {
+        margin: $g-space-one 0 0 0;
+    }
+}

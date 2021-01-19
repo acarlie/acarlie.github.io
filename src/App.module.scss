@@ -1,93 +1,22 @@
 @import './scss/reset.scss';
 @import './scss/variables.scss';
 @import './scss/mixins.scss';
-@import './scss/shared.scss';
 
-// Modified BEM for React: element_name__modifier_name
-
-.container {
-    width: 100%;
-    min-height: 100vh;
-
-    &:not(:first-child) {
-        border-top: 1px solid $g-color-neutral-med-dk;
-    }
-
-    &__dark {
-        background: $g-color-bg-dk;
-    }
-
-    &__dark_gradient {
-        background: linear-gradient(-45deg, $g-color-bg-dk, $g-color-neutral-med-dk);
-    }
-
-    &__light {
-        background-color: $g-color-bg-lt;
-    }
+html {
+    @include fluid-type($g-breakpoint-mobile, $g-breakpoint-desktop, 14px, 18px);
+    scroll-behavior: smooth;
 }
 
-.row {
-    display: flex;
-    flex-direction: column;
-
-    &__100 {
-        min-height: 100vh;
-    }
-
-    &__inner {
-        padding: $g-space-two 0;
-
-        &:first-child {
-            padding: 0 0 $g-space-two 0;
-        }
-
-        &:last-child {
-            padding: $g-space-two 0 0 0;
-        }
-    }
-
-    &__inner_divided {
-        @extend .row__inner;
-
-        &:not(:first-child) {
-            border-top: 1px solid $g-color-secondary;
-        }
-    }
-
-    &__stacked {
-        margin: 1rem 0 0 0;
-    }
-
-    @media screen and (min-width: $g-breakpoint-desktop),
-    print {
-        flex-direction: row;
-    }
-
-
-}
-
-.row,
-.col {
-    &__center {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-    }
-}
-
-.col {
-    padding: $g-space-two;
-
-    &__dk {
-        background-color: $g-color-bg-dk;
-    }
+body {
+    font-family: $g-font-family-text;
+    font-weight: $g-font-weight-default;
+    line-height: $g-line-height-text;
 }
 
 .splash {
     position: relative;
 
-    &_nav {
+    &__nav {
         padding: 2rem;
         position: absolute;
         bottom: 0;
@@ -113,8 +42,3 @@
     }
 }
 
-@for $i from 1 through 6 {
-    .col__#{$i} {
-        flex: #{$i};
-    }
-}

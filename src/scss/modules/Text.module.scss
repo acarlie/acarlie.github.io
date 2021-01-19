@@ -1,0 +1,15 @@
+@import './../variables.scss';
+@import './../mixins.scss';
+
+.xsmall {
+    @include text-xsmall;
+}
+.small {
+    @include text-small;
+}
+.medium {
+    @include text-medium;
+}
+.large {
+    @include text-large;
+}

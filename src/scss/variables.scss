@@ -13,7 +13,6 @@ $g-color-heading-on-dk:$g-color-neutral-lt;
 $g-color-bg-dk: $g-color-neutral-dk;
 $g-color-bg-lt: #FFFFFF;
 
-// Typography
 $g-font-size: 16px;
 $g-font-family-text: 'Montserrat',
 sans-serif;
@@ -23,15 +22,6 @@ $g-line-height-text: 1.5;
 $g-line-height-heading: 1.25;
 $g-font-weight-bold: 700;
 $g-font-weight-default: 400;
-
-// Media queries
-// $g-screen-mobile-small: 360px;
-// $g-screen-mobile-only: 567.98px;
-// $g-screen-mobile-landscape-up: 568px;
-// $g-screen-tablet-portrait-up: 768px;
-// $g-screen-tablet-landscape-up: 992px;
-// $g-screen-desktop-up: 1200px;
-// $g-screen-large-desktop-up: 1800px;
 
 $g-breakpoint-mobile: 360px;
 $g-breakpoint-tablet: 568px;

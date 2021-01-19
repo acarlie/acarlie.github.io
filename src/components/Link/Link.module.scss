@@ -26,7 +26,6 @@
 
     &:focus {
         @include focus-reset;
-        // border: 1px $g-color-primary solid;
         box-shadow: $g-focus-ring;
 
         &::before {
@@ -38,6 +37,4 @@
 
 .inner {
     position: relative;
-
-    // z-index: 1000;
 }
