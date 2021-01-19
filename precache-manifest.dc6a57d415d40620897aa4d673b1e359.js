@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e12eb09e5adb46442bf901a1318c0440",
+    "revision": "39f3029b3db02b98e63184cb085dc656",
     "url": "/index.html"
   },
   {
-    "revision": "34757bcbaea283dfa011",
+    "revision": "63ecaa795cf181b3a9cc",
     "url": "/static/css/main.4e21ea39.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.abda11cd.chunk.js.LICENSE"
   },
   {
-    "revision": "34757bcbaea283dfa011",
-    "url": "/static/js/main.f7be9c13.chunk.js"
+    "revision": "63ecaa795cf181b3a9cc",
+    "url": "/static/js/main.ff0ed19e.chunk.js"
   },
   {
     "revision": "a941e102d80c0e1c5984",
@@ -28,8 +28,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/AmeliaCarlie_DesignPortfolio.66bf1082.pdf"
   },
   {
-    "revision": "b164f92cba1b4748874b43141999d874",
-    "url": "/static/media/AmeliaCarlie_Resume.b164f92c.pdf"
+    "revision": "77135492ee7f059fb9517d59178772b6",
+    "url": "/static/media/AmeliaCarlie_Resume.77135492.pdf"
   },
   {
     "revision": "d5a59ed9304e8d327bba63f78c78c348",
