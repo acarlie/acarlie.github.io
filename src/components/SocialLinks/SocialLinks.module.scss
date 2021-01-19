@@ -1,4 +1,5 @@
 @import './../../scss/variables.scss';
+@import './../../scss/mixins.scss';
 
 .list {
     display: flex;
@@ -10,4 +11,31 @@
     &:not(:first-child) {
         margin-left: .5rem;
     }
+}
+
+.link {
+    color: $g-color-text-on-dk;
+    opacity: .85;
+    font-size: 1.5rem;
+    padding: .5rem .75rem;
+    transition: opacity .25s;
+
+    &:focus {
+        @include focus-reset;
+        box-shadow: $g-focus-ring;
+    }
+
+    &:hover {
+        opacity: 1;
+
+        .span {
+            text-shadow: 3.5px 3.5px rgba(231, 0, 76, .9);
+        }
+    }
+
+}
+
+.span {
+    text-shadow: 3px 3px rgba(231, 0, 76, .75);
+    transition: text-shadow .25s;
 }

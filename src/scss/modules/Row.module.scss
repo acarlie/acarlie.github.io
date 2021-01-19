@@ -1,0 +1,40 @@
+@import './../variables.scss';
+@import './../mixins.scss';
+
+.row {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: $g-breakpoint-desktop),
+    print {
+        flex-direction: row;
+    }
+}
+
+.full {
+    @extend .row;
+    min-height: 100vh;
+}
+
+.divided {
+    padding: $g-space-two 0;
+
+    &:first-child {
+        padding: 0 0 $g-space-two 0;
+    }
+
+    &:last-child {
+        padding: $g-space-two 0 0 0;
+    }
+
+    &:not(:first-child) {
+        border-top: 1px solid $g-color-secondary;
+    }
+}
+
+.center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+

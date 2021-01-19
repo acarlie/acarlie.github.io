@@ -1,0 +1,13 @@
+@import './../variables.scss';
+@import './../mixins.scss';
+
+.list {
+    padding-bottom: 4px;
+}
+
+.item {
+    @include text;
+    &:not(:first-child) {
+        margin: $g-space-quarter 0 0 0;
+    }
+}

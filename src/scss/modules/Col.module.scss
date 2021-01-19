@@ -1,0 +1,23 @@
+@import './../variables.scss';
+@import './../mixins.scss';
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col {
+    padding: $g-space-two;
+}
+
+.dk {
+    background-color: $g-color-bg-dk;
+}
+
+@for $i from 1 through 6 {
+    .col#{$i} {
+        @extend .col;
+        flex: #{$i};
+    }
+}
