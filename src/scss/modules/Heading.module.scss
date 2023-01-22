@@ -9,6 +9,12 @@
     text-transform: uppercase;
 }
 
+.large { 
+    @include heading-2;
+    color: $g-color-heading;
+    font-weight: $g-font-weight-bold;
+}
+
 .small {
     @include heading-6;
     color: $g-color-secondary;

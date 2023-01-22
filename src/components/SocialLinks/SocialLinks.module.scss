@@ -3,22 +3,21 @@
 
 .list {
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.item {
-    &:not(:first-child) {
-        margin-left: .5rem;
-    }
+    gap: 1rem;
 }
 
 .link {
-    color: $g-color-text-on-dk;
-    opacity: .85;
-    font-size: 1.5rem;
-    padding: .5rem .75rem;
-    transition: opacity .25s;
+    box-sizing: border-box;
+    background-color: rgba(231, 0, 76, .2);
+    border: 1px solid transparent;
+    transition: border .5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 100%;
 
     &:focus {
         @include focus-reset;
@@ -26,16 +25,26 @@
     }
 
     &:hover {
-        opacity: 1;
-
-        .span {
-            text-shadow: 3.5px 3.5px rgba(231, 0, 76, .9);
+        border: 1px solid rgba(231, 0, 76, 1);
+        .path {
+            stroke-dashoffset: 400px;
         }
     }
 
 }
 
 .span {
-    text-shadow: 3px 3px rgba(231, 0, 76, .75);
+    text-shadow: 3px 3px rgba(88, 89, 106, .3);
     transition: text-shadow .25s;
+}
+
+.path {
+    transition: stroke-dashoffset 2s;
+    stroke-dasharray: 200px 200px 200px;
+    stroke-dashoffset: 0px;
+    stroke: rgba(231, 0, 76, 1);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Headshot.module.scss';
-import image from './../../assets/images/profile_square.png';
+import image from './../../assets/images/portrait-illustration.png';
 
 function Headshot(props) {
     return (
