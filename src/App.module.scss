@@ -14,18 +14,53 @@ body {
 }
 
 .splash {
-    position: relative;
+    height: 100vh;
+    display: grid;
+    padding: 2rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fill, max-content);
+    gap: 2rem;
 
-    &__nav {
-        padding: 2rem;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
+    img {
+        max-width: 60%;
     }
+
+
+    @media screen and (min-width: $g-breakpoint-tablet),
+    print {
+        grid-template-rows: min-content min-content min-content;
+
+        img {
+            max-width: 50%;
+        }
+    }
+
+    @media screen and (min-width: $g-breakpoint-desktop),
+    print {
+        height: 100vh;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr min-content;
+        padding: 2rem 5rem;
+
+            
+        :last-child {
+            grid-column: span 2;
+        }
+
+        img {
+            max-width: 80%;
+        }
+    
+    }
+
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    gap: 2rem;
 }
 
 .footer {
@@ -33,7 +68,6 @@ body {
     flex-direction: column;
     align-items: center;
     padding-bottom: 4rem;
-    background-color: $g-color-bg-dk;
 
     >* {
         &:not(:first-child) {

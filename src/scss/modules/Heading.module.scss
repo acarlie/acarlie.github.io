@@ -1,14 +1,6 @@
 @import './../variables.scss';
 @import './../mixins.scss';
 
-.main {
-    @include heading-5;
-    color: $g-color-text-on-dk;
-    letter-spacing: 1px;
-    text-align: center;
-    text-transform: uppercase;
-}
-
 .large { 
     @include heading-2;
     color: $g-color-heading;
@@ -17,7 +9,7 @@
 
 .small {
     @include heading-6;
-    color: $g-color-secondary;
+    color: $g-color-primary-100;
     font-weight: $g-font-weight-bold;
     letter-spacing: 1px;
     text-transform: uppercase;

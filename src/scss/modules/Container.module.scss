@@ -4,18 +4,18 @@
 .container {
     width: 100%;
     min-height: 100vh;
-
-    &:not(:first-child) {
-        border-top: 1px solid $g-color-neutral-med-dk;
-    }
 }
 
-.dark {
+.gradient {
     @extend .container;
-    background: $g-color-bg-dk;
+    background: $g-gradient-lt;
 }
 
 .light {
     @extend .container;
-    background: $g-gradient-lt;
+    background: $g-color-bg-lt;
+}
+
+.inset {
+    box-shadow: inset 0px 30px 50px -20px $g-color-primary-shadow, inset 0px -30px 50px -20px $g-color-primary-shadow;
 }

@@ -5,7 +5,7 @@ import image from './../../assets/images/portrait-illustration.png';
 function Headshot(props) {
     return (
         <div className={styles.container}>
-            <img className={styles.image} src={image} alt="Headshot photograph" />
+            <img src={image} alt="Portrait illustration" />
         </div>
     );
 }

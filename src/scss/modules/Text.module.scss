@@ -4,12 +4,19 @@
 .xsmall {
     @include text-xsmall;
 }
+
 .small {
     @include text-small;
 }
+
 .medium {
     @include text-medium;
 }
+
 .large {
     @include text-large;
+}
+
+.bold {
+    font-weight: $g-font-weight-bold;
 }

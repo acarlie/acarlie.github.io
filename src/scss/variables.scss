@@ -1,20 +1,30 @@
 // Colors
-$g-color-primary: #e7004c;
-$g-color-secondary: #77898d;
-$g-color-neutral-lt: #E4E4E4;
-$g-color-neutral-med-dk: #464754;
-$g-color-neutral-dk: #191919;
+$g-color-primary-100: #7053C5;
+$g-color-primary-200: #C4C3F7;
+$g-color-primary-300: #DED3FF;
+$g-color-primary-shadow: rgba(224, 224, 235, .75);
 
-$g-color-text: $g-color-neutral-med-dk;
-$g-color-text-on-dk: $g-color-neutral-lt;
-$g-color-heading: $g-color-neutral-med-dk;
-$g-color-heading-secondary: $g-color-secondary;
-$g-color-heading-on-dk:$g-color-neutral-lt;
+$g-color-neutral-100: #2b2d3bff;
+$g-color-neutral-200: #424457ff;
+$g-color-neutral-300: #55576dff;
+$g-color-neutral-400: #676b83ff;
+$g-color-neutral-500: #7c7e98ff;
+$g-color-neutral-600: #8f8fa8ff;
+$g-color-neutral-700: #a6a6baff;
+$g-color-neutral-800: #bcbccdff;
+$g-color-neutral-900: #d2d2deff;
+$g-color-neutral-1000: #e8e8eeff;
+$g-color-neutral-1100: #f3f3f6;
 
-$g-color-bg-dk: $g-color-neutral-dk;
-$g-color-bg-lt: #FFFFFF;
+$g-color-white: #FFFFFF;
 
-$g-gradient-lt: linear-gradient(120deg, #FFFFFF, #F3F4FE);
+$g-color-text: $g-color-neutral-200;
+$g-color-heading: $g-color-neutral-200;
+$g-color-heading-secondary: $g-color-neutral-400;
+
+$g-color-bg-lt: $g-color-neutral-1100;
+
+$g-gradient-lt: linear-gradient(120deg, $g-color-white, $g-color-neutral-1100);
 
 $g-font-size: 16px;
 $g-font-family-text: 'Montserrat',
@@ -37,4 +47,4 @@ $g-space-one-and-half: 1.5rem;
 $g-space-two: 2rem;
 $g-space-three: 3rem;
 
-$g-focus-ring: 0 0 0 1px $g-color-primary;
+$g-focus-ring: 0 0 0 1px $g-color-primary-100;

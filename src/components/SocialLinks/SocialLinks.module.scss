@@ -8,7 +8,7 @@
 
 .link {
     box-sizing: border-box;
-    background-color: rgba(231, 0, 76, .2);
+    background-color: $g-color-primary-300;
     border: 1px solid transparent;
     transition: border .5s;
     display: flex;
@@ -25,24 +25,19 @@
     }
 
     &:hover {
-        border: 1px solid rgba(231, 0, 76, 1);
-        .path {
-            stroke-dashoffset: 400px;
-        }
+        border: 1px solid $g-color-primary-100;
+        // .path {
+        //     stroke-dashoffset: 400px;
+        // }
     }
 
 }
 
-.span {
-    text-shadow: 3px 3px rgba(88, 89, 106, .3);
-    transition: text-shadow .25s;
-}
-
 .path {
-    transition: stroke-dashoffset 2s;
-    stroke-dasharray: 200px 200px 200px;
-    stroke-dashoffset: 0px;
-    stroke: rgba(231, 0, 76, 1);
+    // transition: stroke-dashoffset 2s;
+    // stroke-dasharray: 200px 200px 200px;
+    // stroke-dashoffset: 0px;
+    stroke: $g-color-primary-100;
     stroke-width: 2;
     stroke-linecap: round;
     stroke-linejoin: round;

@@ -2,11 +2,31 @@
 
 .container {
     padding: 2rem;
-    background: $g-color-bg-dk;
+    background: $g-color-bg-lt;
 
     @media screen and (min-width: $g-breakpoint-tablet),
     print {
         padding: 5rem;
+    }
+
+    @media screen and (min-width: $g-breakpoint-desktop),
+    print {
+        padding: 5rem 8rem;
+    }
+}
+
+.portfolio {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    grid-auto-rows: max-content;
+
+    @media screen and (min-width: $g-breakpoint-tablet),
+    print {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        gap: 2rem;
+        grid-auto-rows: max-content;
     }
 }
 
@@ -14,46 +34,20 @@
     display: block;
     border-radius: 2rem;
     overflow: hidden;
-
-    &:not(:first-child) {
-        margin: 2rem 0 0 0;
-    }
+    box-shadow: 0 4px 40px $g-color-primary-shadow, 0 4px 15px $g-color-primary-shadow;
 }
 
 .inner {
-
-    @media screen and (min-width: $g-breakpoint-desktop),
-    print {
-        display: flex;
-    }
-}
-
-
-.even {
-
-    @media screen and (min-width: $g-breakpoint-desktop),
-    print {
-        flex-direction: row-reverse;
-    }
-}
-
-.odd {
-
-    @media screen and (min-width: $g-breakpoint-desktop),
-    print {
-        flex-direction: row;
-    }
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 1fr 1fr;
+   height: 100%;
 }
 
 .wrapper,
 .info {
     display: block;
     overflow: hidden;
-
-    @media screen and (min-width: $g-breakpoint-desktop),
-    print {
-        width: 50%;
-    }
 }
 
 .wrapper {
@@ -61,14 +55,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(-45deg, #2d2b3d, #ad3466);
+    background: linear-gradient(-45deg, $g-color-neutral-100, #716693);
 }
 
 .img {
     overflow: hidden;
     opacity: .9;
-    width: 110%;
-    max-width: 150%;
+    width: 120%;
+    max-width: 200%;
     min-height: 100%;
 }
 
@@ -86,12 +80,5 @@
 
 .info {
     padding: 2rem;
-    background-color: $g-color-bg-lt;
 
-    >* {
-        &:not(:first-child) {
-
-            margin: 1rem 0 0 0;
-        }
-    }
 }
